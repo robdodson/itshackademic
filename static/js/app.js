@@ -1,1 +1,1 @@
-(function(){var e,t;e=window.devicePixelRatio>1,e&&(t=document.getElementById("badge").getAttribute("src"),document.getElementById("badge").setAttribute("src",t.replace(".png","@2x.png")))}).call(this);
+var retina=window.devicePixelRatio>1;if(retina){var src=document.getElementById("badge").getAttribute("src");document.getElementById("badge").setAttribute("src",src.replace(".png","@2x.png"))}

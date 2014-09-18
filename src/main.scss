@@ -1,0 +1,202 @@
+@mixin box-shadow() {
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+}
+
+$body-bg: #eff2f3;
+$badge-bg: #445963;
+$date-bg: #41a4f4;
+$white: #fff;
+
+body {
+  margin: 0;
+  background-color: $body-bg;
+  background-image: url("../images/bg1.png");
+  background-size: 30px 17.25px;
+  background-position: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 48px;
+  a {
+    background-color: white;
+    display: inline-block;
+    @include box-shadow;
+    &:hover {
+      .polymer-logo {
+        opacity: 0.7;
+      }
+    }
+    .polymer-logo {
+      display: block;
+      width: 90px;
+      padding: 12px;
+      transition: opacity 100ms;
+    }
+  }
+}
+
+.badge-section {
+  position: relative;
+  background-color: $badge-bg;
+  background-image: url("../images/bg2.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid $white;
+  }
+  &::before {
+    top: 8px;
+  }
+  &::after {
+    bottom: 8px;
+  }
+}
+
+#badge {
+  width: 280px;
+  height: auto;
+  margin: 48px 0 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.badge-shadow {
+  display: block;
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  margin-left: -120px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.date {
+  margin: 0 auto;
+  padding-bottom:48px;
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.register-section {
+  margin-top: 56px;
+  text-align: center;
+  a {
+    display: inline-block;
+    background-color: $date-bg;
+    @include box-shadow;
+    &:hover {
+      background-color: lighten($date-bg, 6%);
+    }
+    .register {
+      padding: 24px 36px;
+      display: block;
+      width: 280px;
+    }
+  }
+}
+
+footer {
+  margin-top: 48px;
+  text-align: center;
+  background: white;
+  @include box-shadow;
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    padding: 24px;
+    line-height: 27px;
+    vertical-align: middle;
+    a {
+      display: block;
+      width: 27px;
+      height: 27px;
+      position: relative;
+      &:hover {
+        img {
+          opacity: 0.7;
+        }
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 100ms;
+    }
+  }
+}
+
+@media (min-width: 1480px) {
+  header {
+    a {
+      .polymer-logo {
+        width: 120px;
+        padding: 12px;
+      }
+    }
+  }
+  #badge {
+    width: 360px;
+    margin: 72px 0 24px;
+  }
+  .badge-shadow {
+    width: 310px;
+    height: 310px;
+    top: 100px;
+    margin-left: -155px;
+  }
+
+  .date {
+    padding-bottom: 72px;
+    width: 300px;
+  }
+  .register-section {
+    margin-top: 72px;
+    a {
+      .register {
+        padding: 24px 48px;
+        width: 380px;
+      }
+    }
+  }
+  footer {
+    li {
+      padding: 24px;
+      line-height: 40px;
+      a {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media (min-height: 720px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {
+  .badge-section {
+    background-image: url("../images/bg2@2x.png");
+    background-size: cover;
+  }
+}
