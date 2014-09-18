@@ -48,7 +48,7 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    border-bottom: 1px solid $white;
+    border-bottom: 2px solid $white;
   }
   &::before {
     top: 8px;
@@ -66,18 +66,18 @@ header {
   z-index: 2;
 }
 
-.badge-shadow {
-  display: block;
-  width: 240px;
-  height: 240px;
-  position: absolute;
-  top: 68px;
-  left: 50%;
-  margin-left: -120px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+// .badge-shadow {
+//   display: block;
+//   width: 240px;
+//   height: 240px;
+//   position: absolute;
+//   top: 68px;
+//   left: 50%;
+//   margin-left: -120px;
+//   border-radius: 50%;
+//   box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.2);
+//   z-index: 1;
+// }
 
 .date {
   margin: 0 auto;
