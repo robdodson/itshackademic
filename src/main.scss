@@ -100,7 +100,7 @@ header {
     .register {
       padding: 24px 36px;
       display: block;
-      width: 280px;
+      width: 240px;
     }
   }
 }
@@ -183,6 +183,16 @@ footer {
       a {
         width: 40px;
         height: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .register-section {
+    a {
+      .register {
+        width: 280px;
       }
     }
   }
