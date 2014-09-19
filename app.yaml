@@ -31,6 +31,6 @@ handlers:
   upload: static/(.*\.txt)
 
 # image files
-- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
   static_files: static/\1
-  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
