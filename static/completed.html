@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Google I/O 2014 CodeLabs</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/shadowdom-shim.css" shim-shadowdom>
+  <link rel="stylesheet" href="/static/css/landing.css">
+  <script src="/static/bower_components/platform/platform.js"></script>
+  <link rel="import" href="/static/vulcanized.html">
+</head>
+<body unresolved>
+<template is="auto-binding" id="t">
+  <core-header-panel mode="waterfall">
+    <div class="core-header">
+      <a href="/"><img src="/static/img/iologo2014_small.png"></a>
+        <h2>codelabs</h2>
+        <codelist-dropdown
+            codelabs="{{codelabs}}"
+            on-codelab-list="{{onResponse}}">
+        </codelist-dropdown>
+    </div>
+    <div id="maincontent">
+      <div class="splash-content">
+        <h2>Congratulations, you've completed your codelab!</h2>
+        <div class="button-wrapper">
+          <paper-button label="Start another codelab" on-tap="{{goToCodelabList}}"></paper-button>
+        </div>
+      </div>
+    </div>
+  </core-header-panel>
+</template>
+
+<script>
+(function() {
+  document.addEventListener('polymer-ready', function(e) {
+    var t = document.querySelector('#t');
+    t.goToCodelabList = function() {
+      window.location = '/codelabs/';
+    }
+    t.onResponse = function(e) {
+      // Log a pageview when the codelab names have been populated.
+      analytics.pageview();
+    };
+  });
+})();
+</script>
+</body>
+</html>

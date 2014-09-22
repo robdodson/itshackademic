@@ -1,0 +1,65 @@
+#maincontent {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 3px;
+  padding: 1.5em 1em;
+  min-height: 500px;
+}
+@media (min-width: 600px) {
+   #maincontent {
+    margin: 3em;
+    padding: 2.5em 3em;
+  }
+}
+codelab-panel {
+  margin-top: 1em;
+  margin-bottom: -.33em;
+  padding: .25em 1em;
+  border-radius: inherit;
+}
+body /deep/ h2,
+h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+body /deep/ a,
+a {
+  text-decoration: none;
+}
+
+paper-tabs {
+  background-color: #ddd;
+  /*border-radius: 3px;*/
+  /*background: -webkit-linear-gradient(top, #eee 40%, #ddd);*/
+  text-transform: uppercase;
+}
+
+paper-tabs::shadow #selectionBar {
+  background-color: #ccc;
+  height: 3px;
+}
+paper-tabs paper-tab::shadow #ink {
+  color: white;
+  opacity: 0.6;
+}
+paper-tab.core-selected {
+  background: #eee;
+}
+
+paper-tab {
+  color: white;
+}
+
+paper-tab.all {
+  background: #999;
+}

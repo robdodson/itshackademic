@@ -10,15 +10,23 @@ handlers:
   static_files: static/index.html
   upload: static/index.html
 
-- url: /(.*\.css)
-  mime_type: text/css
-  static_files: static/\1
-  upload: static/(.*\.css)
+- url: /metadata/
+  script: app.app
+
+- url: /static/codelabs/(.*)/
+  mime_type: text/html
+  static_files: static/codelabs/\1/index.html
+  upload: static/codelabs/.*/index.html
 
 - url: /(.*\.html)
   mime_type: text/html
   static_files: static/\1
   upload: static/(.*\.html)
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: static/\1
+  upload: static/(.*\.css)
 
 - url: /(.*\.js)
   mime_type: text/javascript
@@ -30,7 +38,6 @@ handlers:
   static_files: static/\1
   upload: static/(.*\.txt)
 
-# image files
 - url: /(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
   static_files: static/\1
   upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))

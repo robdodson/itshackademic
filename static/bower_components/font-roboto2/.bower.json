@@ -1,0 +1,13 @@
+{
+  "name": "font-roboto2",
+  "homepage": "https://github.com/Polymer/font-roboto2",
+  "_release": "9fcb6ea215",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9fcb6ea2151121b0a73d1ba80abe303f15a8d954"
+  },
+  "_source": "git://github.com/Polymer/font-roboto2.git",
+  "_target": "master",
+  "_originalSource": "Polymer/font-roboto2"
+}

@@ -1,0 +1,49 @@
+a {
+  color: rgb(79, 125, 201);
+}
+
+/* app.css */
+paper-tab.android {
+  background: rgb(165, 197, 71);
+}
+
+paper-tab.cloud {
+  background: rgb(19, 104, 233);
+}
+
+paper-tab.web {
+  background: rgb(217, 69, 49);
+}
+
+paper-tab.services {
+  background: rgb(225, 160, 4);
+}
+
+#menu .android-label {
+  color: rgb(165, 197, 71);
+}
+
+#menu .cloud-label, .blue {
+  color: rgb(19, 104, 233);
+}
+
+#menu .web-label, .red {
+  color: rgb(217, 69, 49);
+}
+
+#menu .services-label {
+  color: rgb(225, 160, 4);
+}
+
+body.io-kiosk .extended {
+  display: none;
+}
+
+body.io-extended .kiosk {
+  display: none;
+}
+
+/* paper-menu background override */
+paper-menu-button .paper-menu-button-overlay-bg {
+  opacity: 1 !important;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "paper-toggle-button",
+  "private": true,
+  "dependencies": {
+    "font-roboto2": "Polymer/font-roboto2#master",
+    "paper-radio-button": "Polymer/paper-radio-button#master"
+  },
+  "homepage": "https://github.com/Polymer/paper-toggle-button",
+  "_release": "481a262326",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "481a262326f825d4ab533bf4f4a7fe15b2e56976"
+  },
+  "_source": "git://github.com/Polymer/paper-toggle-button.git",
+  "_target": "master",
+  "_originalSource": "Polymer/paper-toggle-button"
+}
