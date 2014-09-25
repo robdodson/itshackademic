@@ -8,7 +8,7 @@ This codelab uses **Chrome Dev Editor**, a Chrome app IDE.
 <div class="kiosk">
   Run Chrome Dev Editor by clicking its icon at the bottom of your screen:
   <figure>
-  <img src="/static/img/app-icons/chrome_dev_editor_screenshot.png">
+  <img src="/static/images/app-icons/chrome_dev_editor_screenshot.png">
   </figure>
 </div>
 
