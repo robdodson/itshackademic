@@ -1,3 +1,4 @@
 .sass-cache
 *.codekit
 env
+.DS_Store
