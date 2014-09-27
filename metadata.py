@@ -69,9 +69,9 @@ def _generate_codelabs_by_category(base_dir_path, codelabs, sorted_categories,
             codelabs_by_category[category].append(
                 {'title': codelabs[key]['title'], 'slug': codelabs[key]['slug']}
             )
-    # Within each category, sort by title.
+    # Within each category, sort by slug.
     for key in codelabs_by_category:
-        codelabs_by_category[key].sort(key=lambda codelab: codelab['title'])
+        codelabs_by_category[key].sort(key=lambda codelab: codelab['slug'])
     return codelabs_by_category
 
 

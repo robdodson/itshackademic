@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vulcanize imports.html --inline --strip
+vulcanize imports.html -o vulcanized.html --inline --strip

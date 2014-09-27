@@ -15,12 +15,17 @@
 <template is="auto-binding" id="t">
   <core-header-panel mode="waterfall">
     <div class="core-header">
-      <a href="/"><img src="/static/img/iologo2014_small.png"></a>
-        <h2>codelabs</h2>
-        <codelist-dropdown
-            codelabs="{{codelabs}}"
-            on-codelab-list="{{onResponse}}">
-        </codelist-dropdown>
+      <div class="core-header-logo" layout horizontal center>
+        <a href="/" layout horizontal center>
+          <img src="/static/images/polymer-logo-outline.png">
+          <h2>Polytechnic</h2>
+        </a>
+      </div>
+      <h2>codelabs</h2>
+      <codelist-dropdown
+          codelabs="{{codelabs}}"
+          on-codelab-list="{{onResponse}}">
+      </codelist-dropdown>
     </div>
 
     <div id="maincontent">
@@ -38,6 +43,7 @@
     var t = document.querySelector('#t');
 
     t.onResponse = function(e, detail, sender) {
+      debugger;
       this.filtered = detail.orderedCodelabs;
       this.orderedCodelabs = detail.orderedCodelabs;
 
