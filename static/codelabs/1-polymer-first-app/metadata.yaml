@@ -1,0 +1,46 @@
+title: "Polymer: Your first application"
+summary: "In this tutorial, you’ll build a small Polymer application – a very
+basic client for a social networking service."
+
+description: "This project will introduce you to most of the key concepts in
+working with Polymer. Don’t worry if you don’t understand everything. Each of
+the concepts presented here is described in detail in the Polymer documentation."
+
+prerequisites:
+  - Basic understanding of HTML, CSS, and web development
+  - Knowledge of an MVC framework (helpful, but not required)
+
+level: Beginner
+logo: p-logo-square.png
+categories:
+  - web
+duration: 60 min
+keywords:
+  - Beginner
+  - Chrome Dev Editor
+  - Data binding
+  - HTML5
+  - Node
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    title: "Creating the app structure"
+    blurb: "Use some pre-built Polymer elements to create the basic application
+    structure, with a toolbar and tabs."
+  -
+    title: "Creating your own element"
+    blurb: "Create a <post-card> element that controls the layout and styling of
+    its children"
+  -
+    title: "Using data binding"
+    blurb: "Pull data from a web service and use Polymer’s data binding to
+    render it as a series of cards."
+  -
+    title: "Finishing touches"
+    blurb: "Finish up the app by adding a favorite button to the cards and
+    connecting the tabs to the <post-list> control"
+  -
+    title: "That's all folks"
+    blurb: "More resources..."
