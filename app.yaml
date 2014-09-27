@@ -15,25 +15,30 @@ handlers:
   static_files: static/index.html
   upload: static/index.html
 
-- url: /static/codelabs/polymer-build-maps/
+- url: /static/codelabs/1-polymer-first-app/
   mime_type: text/html
-  static_files: static/codelabs/polymer-build-maps/index.html
-  upload: static/codelabs/polymer-build-maps/index.html
+  static_files: static/codelabs/polymer-first-app/index.html
+  upload: static/codelabs/polymer-first-app/index.html
 
-- url: /static/codelabs/polymer-build-mobile/
+- url: /static/codelabs/2-polymer-build-maps/
   mime_type: text/html
-  static_files: static/codelabs/polymer-build-mobile/index.html
-  upload: static/codelabs/polymer-build-mobile/index.html
+  static_files: static/codelabs/2-polymer-build-maps/index.html
+  upload: static/codelabs/2-polymer-build-maps/index.html
 
-- url: /static/codelabs/polymer-drive-client/
+- url: /static/codelabs/3-polymer-build-mobile/
   mime_type: text/html
-  static_files: static/codelabs/polymer-drive-client/index.html
-  upload: static/codelabs/polymer-drive-client/index.html
+  static_files: static/codelabs/3-polymer-build-mobile/index.html
+  upload: static/codelabs/3-polymer-build-mobile/index.html
 
-- url: /static/codelabs/polymer-map-visualization/
+- url: /static/codelabs/4-polymer-drive-client/
   mime_type: text/html
-  static_files: static/codelabs/polymer-map-visualization/index.html
-  upload: static/codelabs/polymer-map-visualization/index.html
+  static_files: static/codelabs/4-polymer-drive-client/index.html
+  upload: static/codelabs/4-polymer-drive-client/index.html
+
+- url: /static/codelabs/5-polymer-map-visualization/
+  mime_type: text/html
+  static_files: static/codelabs/5-polymer-map-visualization/index.html
+  upload: static/codelabs/5-polymer-map-visualization/index.html
 
 - url: /completed/?
   mime_type: text/html

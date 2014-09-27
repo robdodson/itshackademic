@@ -21,7 +21,6 @@ metadata = generate_metadata(
 """ Transform Metadata to json """
 class Metadata(webapp2.RequestHandler):
   def get(self):
-    print metadata
     self.response.out.write(json.dumps(metadata))
 
 app = webapp2.WSGIApplication([
