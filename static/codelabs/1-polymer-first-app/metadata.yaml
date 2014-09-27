@@ -26,6 +26,9 @@ keywords:
 
 steps:
   -
+    title: "Getting set up"
+    blurb: "Scaffold a new Polymer application using the Chrome Dev Editor."
+  -
     title: "Creating the app structure"
     blurb: "Use some pre-built Polymer elements to create the basic application
     structure, with a toolbar and tabs."

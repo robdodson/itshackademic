@@ -17,8 +17,8 @@ handlers:
 
 - url: /static/codelabs/1-polymer-first-app/
   mime_type: text/html
-  static_files: static/codelabs/polymer-first-app/index.html
-  upload: static/codelabs/polymer-first-app/index.html
+  static_files: static/codelabs/1-polymer-first-app/index.html
+  upload: static/codelabs/1-polymer-first-app/index.html
 
 - url: /static/codelabs/2-polymer-build-maps/
   mime_type: text/html

@@ -1,5 +1,20 @@
 <toc-element></toc-element>
 
+### What you'll build
+
+In this tutorial, you'll build a small Polymer application -- a very basic client for a social networking service. The end result will look like this:
+
+<figure layout vertical center>
+  <a href="//polymer-project.org/apps/polymer-tutorial/finished/" layout horizontal class="unquote-link">
+    <img src="//polymer-project.org/images/tutorial/finished.png" alt="Finished tutorial">
+  </a>
+  <figcaption>
+    Click screenshot for demo
+  </figcaption>
+</figure>
+
+There's a lot of ground to cover, so let's get started!
+
 ### Create a new project
 
 <!-- Chrome Dev Editor callout block -->
@@ -30,9 +45,7 @@ Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer".
 
 <div class="stepbystep">
   <ul>
-    <!-- TODO (asolovay): Do they put quotes around the project name? If not, we
-      should set off PolymerMapsCodelab in bold but with no quotes. -->
-    <li>Enter <b>"PolymerMapsCodelab"</b> as the <b>Project name</b>.</li>
+    <li>Enter <b>"PolymerApp"</b> as the <b>Project name</b>.</li>
     <li>In the <b>Project type</b> dropdown, select "JavaScript web app using
        Polymer".</li>
     <li>Click the <b>Create</b> button.</li>
@@ -47,7 +60,7 @@ background, it also uses [Bower](http://bower.io/) to download and install a
 list of dependencies (including `polymer.js`) into the `bower_components/`
 folder. You'll learn more about using Bower in the next step.
 
-    PolymerMapsCodelab/
+    PolymerApp/
       bower_components/ <!-- installed dependencies from Bower -->
       bower.json  <!-- Bower metadata file. Used for managing dependencies -->
       index.html  <!-- your app -->
