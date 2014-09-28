@@ -1,7 +1,5 @@
 <toc-element></toc-element>
 
-## Step 2: Your own element
-
 Now that you have a basic application structure, you can start building a card element to display a post. The finished card includes space for a profile picture, name, favorite button, and a content area.
 
 <div layout vertical center>
@@ -30,10 +28,9 @@ inside a DOM element, with local styles and markup that are decoupled from the r
 Shadow DOM polyfill docs</a>.</p>
 </aside>
 
-### Edit post-card.html
+### Create a `<post-card>` element
 
-Open `post-card.html` in your editor. This file contains the skeleton of a    
-custom element, starting with some imports:
+Open `post-card.html` in your editor. This file contains the skeleton of a custom element, starting with some imports:
 
     <link rel="import" 
       href="../components/polymer/polymer.html">
@@ -90,10 +87,10 @@ template tag.</p>
 At the end of the element definition is a `<script>` tag:
 
     ...
-      &lt;script>
+      <script>
       Polymer({});
-      &lt;/script>
-    &lt;/polymer-element>
+      </script>
+    </polymer-element>
 
 <ul>
 <li>The <code>Polymer</code> call at the end of the file <em>registers</em> the element so 
@@ -117,21 +114,18 @@ To render the <code>&lt;h3&gt;</code> inside your <code>&lt;post-card&gt;</code>
 the shadow DOM tree.</p>
 </aside>
 
-<hr>
-
-Create the card structure.
+#### Create the card structure.
 
 Find the `CARD CONTENTS GO HERE` comment and replace it with the `<div>` and
 `<content>` tags shown below.
 
+    </style>
 
-</style>
-
-<div class="card-header" layout horizontal center>
-  <content select="img"></content>
-  <content select="h2"></content>
-</div>
-<content></content>
+    <div class="card-header" layout horizontal center>
+      <content select="img"></content>
+      <content select="h2"></content>
+    </div>
+    <content></content>
 
 <ul>
   <li>The <code>layout horizontal center</code> attributes are Polymer shorthand to
@@ -155,9 +149,7 @@ CSS selectors](http://w3c.github.io/webcomponents/spec/shadow/#satisfying-matchi
 You can only select direct children of the host node, not descendents.</p>
 </aside>
 
-<hr>
-
-Style the imported content.
+#### Style the imported content.
 
 There are a number of new CSS selectors to work with. The `post-card.html` 
 file already includes a `:host` selector, discussed earlier, to style the 
@@ -201,7 +193,7 @@ following CSS inside the `<style>` tag after the existing rules:
 <code>::content</code> pseudo element is always used with a descendent selector.</p>
 </aside>
 
-### Edit index.html
+### Import `<post-card>` into your app
 
 Import the new element into `index.html`.
 
@@ -219,10 +211,7 @@ the import for `post-card.html` after your existing imports:
   <li>This makes the <code>&lt;post-card&gt;</code> element available for use in <code>index.html</code>.</li>
 </ul>
 
-<hr>
-
-Add a `<post-card>` element to `index.html` directly after the    
-`<core-toolbar>` element:
+Add a `<post-card>` element to `index.html` directly after the `<core-toolbar>` element:
 
     ...   
     <div class="container" layout vertical center>
@@ -243,9 +232,9 @@ Add a `<post-card>` element to `index.html` directly after the
       <code>&lt;post-card&gt;</code> element's insertion points.</li>
 </ul>
 
-### Test your work
+### Run the app
 
-Save your changes and reload the page. Your application should now look like this:
+Hit the <img src="img/runbutton.png" class="icon"> button! Your application should now look like this:
 
 <div layout vertical center>
   <img class="sample" src="//polymer-project.org/images/tutorial/step-2.png">

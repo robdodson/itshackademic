@@ -1,7 +1,5 @@
 <toc-element></toc-element>
 
-## Step 1: Creating the app structure
-
 In this step, you'll use some pre-built Polymer elements to create the basic application structure, with a toolbar and tabs.
 
 In this step, you'll learn about:
@@ -9,7 +7,7 @@ In this step, you'll learn about:
 -   Using HTML imports.
 -   Using Polymer elements with standard HTML, CSS and JavaScript.
 
-### Edit index.html
+### Import dependencies
 
 Go to the `starter` directory and open the `index.html` file. The starting file looks like this:
 
@@ -57,7 +55,6 @@ The <code>unresolved</code> attribute on the <code>&lt;body></code> element is u
       (FOUC) on browsers that lack native support for custom elements. For details, see the 
       <a href="//polymer-project.org/docs/polymer/styling.html#fouc-prevention">Polymer styling reference</a>.
 
-<hr>
 
 OK, time to write some code!
 
@@ -81,9 +78,8 @@ OK, time to write some code!
 
 Polymer uses <a href="//polymer-project.org/platform/html-imports.html">HTML imports</a> to load components. HTML imports provide dependency management, ensuring that your elements and all of their dependencies are loaded before you use them.
 
-<hr>
 
-#### Add a toolbar
+### Add a toolbar
 
 &rarr; To add a toolbar, add the following code inside the `<body>` tag.
 
@@ -107,7 +103,6 @@ Polymer uses <a href="//polymer-project.org/platform/html-imports.html">HTML imp
       as a container for tabs, menu buttons, and other controls.</li>
 </ul>
 
-<hr>
 
 #### Add the tabs
 
@@ -147,7 +142,6 @@ tabs.
   </li>
 </ul>
 
-<hr>
 
 #### Add styles for the new elements
 
@@ -205,7 +199,6 @@ tabs.
   </li>
 </ul>
 
-<hr>
 
 ### Run the app
 

@@ -493,6 +493,20 @@ analytics.init();
         font-family: 'Source Code Pro', Helvetica, Arial !important;
         overflow-x: auto;
       }
+      pre.side-by-side {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 55%;
+      }
+      ul.side-by-side {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+      }
+      .side-by-side li {
+        margin-bottom: 15px;
+      }
       core-selector {
         display: block;
       }
@@ -873,6 +887,12 @@ analytics.init();
             if (a.href.match(/^http/)) {
               a.target = '_blank';
             }
+          });
+          // Make codeblocks display side by side
+          var code = markedEl.querySelectorAll('.lang-side-by-side');
+          code.array().forEach(function(instance) {
+            var pre = instance.parentElement;
+            pre.classList.add('side-by-side');
           });
         });
       },
