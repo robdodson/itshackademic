@@ -20,22 +20,22 @@ header {
       padding: 12px;
       transition: opacity 100ms; }
 
-.badge-section {
+.hero-section {
   position: relative;
   background-color: #445963;
   background-image: url("../images/bg2.png");
   background-size: cover;
   background-position: center;
   text-align: center; }
-  .badge-section::before, .badge-section::after {
+  .hero-section::before, .hero-section::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     border-bottom: 2px solid white; }
-  .badge-section::before {
+  .hero-section::before {
     top: 8px; }
-  .badge-section::after {
+  .hero-section::after {
     bottom: 8px; }
 
 #badge {
@@ -137,6 +137,6 @@ footer {
     left: 0;
     right: 0; } }
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {
-  .badge-section {
+  .hero-section {
     background-image: url("../images/bg2@2x.png");
     background-size: cover; } }
