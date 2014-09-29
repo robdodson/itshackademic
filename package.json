@@ -9,6 +9,7 @@
     "grunt-contrib-watch": "latest"
   },
   "devDependencies": {
-    "grunt-contrib-connect": "^0.8.0"
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-autoprefixer": "^1.0.1"
   }
 }

@@ -1,0 +1,28 @@
+// colors
+$c-pink: #ff5c92;
+$c-blue: #41a4f4;
+$c-light-blue: lighten($c-blue, 6%);
+$c-dark-blue: #445963;
+$c-light-gray: #eff2f3;
+$c-white: #fff;
+
+// spacing
+$nav-h: 24px;
+$nav-vpad: 12px;
+$nav-outerh: $nav-h + ($nav-vpad * 2);
+$section-inner-pad: 48px;
+
+// media query
+$lg-media: 1480px;
+$md-media: 768px;
+
+// style mixins
+@mixin box-shadow() {
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+}
+@mixin titling() {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  font-weight: normal;
+}

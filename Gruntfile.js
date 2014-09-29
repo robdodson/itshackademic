@@ -31,6 +31,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    autoprefixer: {
+      options: {
+        // options
+      },
+      overwrite: {
+        src: 'static/css/main.css'
+      }
+    },
     watch: {
       js: {
         files: ['src/javascript/*.js'],
@@ -41,7 +49,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['src/scss/*.scss'],
-        tasks: ['sass:style'],
+        tasks: ['sass:style', 'autoprefixer:overwrite'],
         options: {
           livereload: true,
         }
@@ -69,5 +77,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
 };

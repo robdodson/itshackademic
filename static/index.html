@@ -6,23 +6,78 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/icon" href="/images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header>
-      <a href="https://www.polymer-project.org/" target="blank"><img class="polymer-logo" src="images/polymer.svg" /></a>
+      <nav>
+        <ul>
+          <li class="polymer-logo"><a href="https://www.polymer-project.org/" target="blank"><img src="images/polymer.svg" /></a></li>
+          <li><a href="#events">Find an Event</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section class="hero-section">
+
+      <section class="hero padded dynamic" data-stellar-offset-parent="true">
+        <div class="dynamic-bg-1" data-stellar-background-ratio="0.125"></div>
+        <div class="dynamic-bg-2" data-stellar-background-ratio="0.25" data-stellar-horizontal-offset="12" data-stellar-vertical-offset="25"></div>
+        <div class="dynamic-bg-3" data-stellar-background-ratio="0.375" data-stellar-horizontal-offset="24" data-stellar-vertical-offset="50"></div>
         <img id="badge" src="images/badge.png" height="422" width="420" />
-        <img class="date" src="images/date.svg" />
+        <img class="date" src="images/hackingbegins.svg" />
       </section>
-      <section class="register-section">
-        <a href="https://docs.google.com/a/google.com/forms/d/1dgrW9uxeWFQXD1viARC1sv872eMCH4fWncvYr2O2pr8/viewform"
-           onclick="trackOutboundLink('https://docs.google.com/a/google.com/forms/d/1dgrW9uxeWFQXD1viARC1sv872eMCH4fWncvYr2O2pr8/viewform'); return false;">
-          <img class="register" src="images/register.svg" />
-        </a>
+
+      <section class="info">
+        <div class="container">
+          <div class="col-full">
+            <h1>Get hackademic with Polymer</h1>
+            <p>Built new Web Components standards, Polymer makes it easier and faster to create anything from a button to a complete application across desktop, mobile and beyond.</p>
+          </div>
+        </div>
       </section>
+
+      <section class="polymer padded">
+        <div class="container">
+          <div class="col-full">
+            [[POLYMER LOGO]]
+            <p>Polytechnic copy here...easier and faster to create anything from a button to a complete application across desktop, mobile and beyond.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="events">
+        <div class="container">
+          <div class="col-full">
+            <h1>Find an Event</h1>
+            [[MAP HERE]]
+          </div>
+        </div>
+      </section>
+
+      <section class="resources padded dynamic" data-stellar-offset-parent="true">
+        <div class="dynamic-bg-1" data-stellar-background-ratio="0.125"></div>
+        <div class="dynamic-bg-2" data-stellar-background-ratio="0.25" data-stellar-horizontal-offset="12" data-stellar-vertical-offset="25"></div>
+        <div class="dynamic-bg-3" data-stellar-background-ratio="0.375" data-stellar-horizontal-offset="24" data-stellar-vertical-offset="50"></div>
+        <div class="container">
+          <div class="col-full">
+            <h1>Organizer Resources</h1>
+            [[RESOURCES]]
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <div class="col-full">
+            <h1>Frequently asked questions</h1>
+            [[FAQs HERE]]
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <footer>
@@ -34,6 +89,8 @@
       </ul>
     </footer>
 
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.stellar.js"></script>
     <script src="js/app.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

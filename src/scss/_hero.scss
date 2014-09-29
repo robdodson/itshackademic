@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  text-align: center;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid $c-white;
+  }
+  &::before {
+    top: 8px;
+  }
+  &::after {
+    bottom: 8px;
+  }
+}
+
+#badge {
+  width: 280px;
+  height: auto;
+  margin: 24px 0 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.date {
+  margin: 0 auto 24px;
+  display: block;
+  width: 400px;
+  height: auto;
+}
+
+@media (min-width: $lg-media) {
+  #badge {
+    width: 360px;
+    margin: 24px 0;
+  }
+  .date {
+    width: 600px;
+  }
+}

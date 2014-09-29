@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: $c-dark-blue;
+  background-color: $c-light-gray;
+  background-image: url("../images/bg1.png");
+  background-size: 30px 17.25px;
+  background-position: center;
+}
+
+section {
+  margin: 48px 0;
+
+  &.padded {
+    padding: $section-inner-pad 0;
+  }
+
+  &.dynamic {
+    position: relative;
+    background-color: $c-dark-blue;
+    @include box-shadow;
+    .dynamic-bg-1,
+    .dynamic-bg-2,
+    .dynamic-bg-3 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-size: 1600px 500px;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .dynamic-bg-1 {
+      background-image: url("../images/bg2a.png");
+      z-index: 3;
+    }
+    .dynamic-bg-2 {
+      background-image: url("../images/bg2b.png");
+      z-index: 2;
+    }
+    .dynamic-bg-3 {
+      background-image: url("../images/bg2c.png");
+      z-index: 1;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {
+  section.dynamic {
+    .dynamic-bg-1 {
+      background-image: url("../images/bg2a@2x.png");
+    }
+    .dynamic-bg-2 {
+      background-image: url("../images/bg2b@2x.png");
+    }
+    .dynamic-bg-3 {
+      background-image: url("../images/bg2c@2x.png");
+    }
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 820px;
+  margin: 0 auto;
+  @include clearfix;
+
+  .col-left,
+  .col-right {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+  }
+  .col-full {
+    width: 100%;
+  }
+}
+
+h1, h2, h3 {
+  @include titling;
+}
+
+h1 {
+  font-size: 48px;
+}

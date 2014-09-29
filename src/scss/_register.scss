@@ -1,0 +1,39 @@
+.register {
+  margin-top: 56px;
+  text-align: center;
+  a {
+    display: inline-block;
+    background-color: $c-blue;
+    @include box-shadow;
+    &:hover {
+      background-color: $c-light-blue;
+    }
+    .register {
+      padding: 24px 36px;
+      display: block;
+      width: 240px;
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .register {
+    a {
+      .register {
+        width: 280px;
+      }
+    }
+  }
+}
+
+@media (min-width: $lg-media) {
+  .register {
+    margin-top: 72px;
+    a {
+      .register {
+        padding: 24px 48px;
+        width: 380px;
+      }
+    }
+  }
+}
