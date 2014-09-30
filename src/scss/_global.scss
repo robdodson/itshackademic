@@ -2,12 +2,13 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.8;
   color: $c-dark-blue;
   background-color: $c-light-gray;
   background-image: url("../images/bg1.png");
   background-size: 30px 17.25px;
-  background-position: center;
+  background-position: top center;
 }
 
 section {
@@ -49,6 +50,7 @@ section {
 
   h1 {
     margin-top: 0;
+    line-height: 1.1;
   }
 }
 

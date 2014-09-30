@@ -4,6 +4,7 @@ $c-blue: #41a4f4;
 $c-light-blue: lighten($c-blue, 6%);
 $c-dark-blue: #445963;
 $c-light-gray: #eff2f3;
+$c-dark-gray: #6c6c6c;
 $c-white: #fff;
 
 // spacing
@@ -16,6 +17,13 @@ $section-inner-pad: 48px;
 $lg-media: 1480px;
 $md-media: 768px;
 
+// faqs
+$faq-icon-di: 16px;
+$faq-pad: 20px;
+
+// timing
+$timing-transitions: 200ms;
+
 // style mixins
 @mixin box-shadow() {
   box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
@@ -24,5 +32,5 @@ $md-media: 768px;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.125em;
-  font-weight: normal;
+  font-weight: 300;
 }

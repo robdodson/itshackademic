@@ -1,3 +1,80 @@
 .faq {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include box-shadow;
+    li {
+      input {
+        display: none;
+      }
+      label {
+        position: relative;
+        @include titling;
+        font-size: 24px;
+        display: block;
+        background-color: $c-white;
+        padding: $faq-pad $faq-pad $faq-pad ($faq-pad + 40px);
+        cursor: pointer;
+        line-height: 1;
+        &:active {
+          background-color: $c-light-gray;
+        }
+        &::before {
+          content: url(../images/icon-plus.svg);
+          position: absolute;
+          top: $faq-pad;
+          left: $faq-pad;
+          height: $faq-icon-di;
+          width: $faq-icon-di;
+          background-color: $c-dark-gray;
+          font-family: "Helvetica", "Arial", sans-serif;
+          color: $c-white;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 0;
+          text-align: center;
+          padding: 4px;
+          border-radius: 2px;
+          transition: background-color $timing-transitions;
+        }
+      }
+      div {
+        max-height: 0;
+        overflow-y: hidden;
+        background-color: $c-dark-blue;
+        color: $c-white;
+        box-sizing: border-box;
+        padding: 0 24px 2px 24px;
+        transition: none;
+      }
+      // active state
+      input:checked {
+        // label
+        & ~ label::before {
+          content: url(../images/icon-minus.svg);
+          background-color: $c-blue;
+        }
+        // open content
+        & ~ div {
+          max-height: initial;
+          padding: $faq-pad $faq-pad $faq-pad ($faq-pad + 40px);
+        }
+      }
+    }
+  }
+}
 
+@media (min-width: $lg-media) {
+  .faq {
+    ul {
+      li {
+        label {
+          &:hover {
+            background-color: $c-light-gray;
+          }
+        }
+      }
+    }
+  }
 }

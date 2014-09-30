@@ -2,12 +2,13 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  font-weight: 300;
   line-height: 1.8;
   color: #445963;
   background-color: #eff2f3;
   background-image: url("../images/bg1.png");
   background-size: 30px 17.25px;
-  background-position: center; }
+  background-position: top center; }
 
 section {
   margin: 48px 0; }
@@ -38,7 +39,8 @@ section {
       background-image: url("../images/bg2c.png");
       z-index: 1; }
   section h1 {
-    margin-top: 0; }
+    margin-top: 0;
+    line-height: 1.1; }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {
   section.dynamic .dynamic-bg-1 {
@@ -68,7 +70,7 @@ h1, h2, h3 {
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.125em;
-  font-weight: normal; }
+  font-weight: 300; }
 
 h1 {
   font-size: 48px; }
@@ -80,7 +82,7 @@ header {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.125em;
-    font-weight: normal; }
+    font-weight: 300; }
   header ul {
     list-style: none;
     margin: 0;
@@ -194,6 +196,65 @@ header {
 .resources {
   color: white; }
 
+.faq ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); }
+  .faq ul li input {
+    display: none; }
+  .faq ul li label {
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    font-weight: 300;
+    font-size: 24px;
+    display: block;
+    background-color: white;
+    padding: 20px 20px 20px 60px;
+    cursor: pointer;
+    line-height: 1; }
+    .faq ul li label:active {
+      background-color: #eff2f3; }
+    .faq ul li label::before {
+      content: url(../images/icon-plus.svg);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      height: 16px;
+      width: 16px;
+      background-color: #6c6c6c;
+      font-family: "Helvetica", "Arial", sans-serif;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 0;
+      text-align: center;
+      padding: 4px;
+      border-radius: 2px;
+      -webkit-transition: background-color 200ms;
+              transition: background-color 200ms; }
+  .faq ul li div {
+    max-height: 0;
+    overflow-y: hidden;
+    background-color: #445963;
+    color: white;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    padding: 0 24px 2px 24px;
+    -webkit-transition: none;
+            transition: none; }
+  .faq ul li input:checked ~ label::before {
+    content: url(../images/icon-minus.svg);
+    background-color: #41a4f4; }
+  .faq ul li input:checked ~ div {
+    max-height: initial;
+    padding: 20px 20px 20px 60px; }
+
+@media (min-width: 1480px) {
+  .faq ul li label:hover {
+    background-color: #eff2f3; } }
 footer {
   margin-top: 48px;
   text-align: center;
