@@ -3,7 +3,7 @@
 Now that you have a basic application structure, you can start building a card element to display a post. The finished card includes space for a profile picture, name, favorite button, and a content area.
 
 <div layout vertical center>
-  <img class="sample" src="//polymer-project.org/images/tutorial/card.png">
+  <img class="sample" src="img/s3-card.png" style="border: 1px solid #ccc;">
 </div>
 
 In this step, you'll create a `<post-card>` element that controls the layout and styling of its children, so you can create a card like the one above using simple markup like this:
@@ -23,49 +23,53 @@ In this step, you'll learn about:
   <b>Learn more:</b>
 
   <p>Shadow DOM provides you a way to add a local DOM tree
-inside a DOM element, with local styles and markup that are decoupled from the rest of the web page.</p>
-<p>To learn more about shadow DOM, see the <a href="//polymer-project.org/platform/shadow-dom.html">
-Shadow DOM polyfill docs</a>.</p>
+  inside a DOM element, with local styles and markup that are decoupled from the rest of the web page.</p>
+  <p>To learn more about shadow DOM, see the <a href="//polymer-project.org/platform/shadow-dom.html">
+  Shadow DOM polyfill docs</a>.</p>
 </aside>
 
 ### Create a `<post-card>` element
 
 Open `post-card.html` in your editor. This file contains the skeleton of a custom element, starting with some imports:
 
-    <link rel="import" 
-      href="../components/polymer/polymer.html">
-    <link rel="import" 
-      href="../components/core-icon-button/core-icon-button.html">
-    ...
+```side-by-side
+<link rel="import" 
+  href="../components/polymer/polymer.html">
+<link rel="import" 
+  href="../components/core-icon-button/core-icon-button.html">
+...
+```
 
-<ul>
+<ul class="side-by-side">
   <li>As in the previous step, <code>&lt;link rel="import"&gt;</code> is used to import elements the <code>post-card</code> element relies on.</li>
 </ul>
 
 Next is the definition of the element itself:
 
-    <polymer-element name="post-card">
-      <template>
-        <style>
-        :host {
-          display: block;
-          position: relative;
-          background-color: white;
-          padding: 20px;
-          width: 100%;
-          font-size: 1.2rem;
-          font-weight: 300;
-        }
-        .card-header {
-          margin-bottom: 10px;
-        }
-        </style>
+```side-by-side
+<polymer-element name="post-card">
+  <template>
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    .card-header {
+      margin-bottom: 10px;
+    }
+    </style>
 
-        <!-- CARD CONTENTS GO HERE -->
-      </template>
-      ...
+    <!-- CARD CONTENTS GO HERE -->
+  </template>
+  ...
+```
 
-<ul>
+<ul class="side-by-side">
   <li>The <code>&lt;polymer-element&gt;</code> element is how you define a new custom element in Polymer. In this case, you're creating an element called
   "post-card".</li>
 <li>The <code>&lt;template&gt;</code> defines the element's internal DOM structure, or <em>shadow DOM</em>. This is where 
@@ -86,48 +90,47 @@ template tag.</p>
 
 At the end of the element definition is a `<script>` tag:
 
-    ...
-      <script>
-      Polymer({});
-      </script>
-    </polymer-element>
+```side-by-side
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>
+```
 
-<ul>
-<li>The <code>Polymer</code> call at the end of the file <em>registers</em> the element so 
-    it's recognized by the browser. You'll do more with this in a later 
-    step as well.</li>
+<ul class="side-by-side">
+<li>The <code>Polymer</code> call at the end of the file <em>registers</em> the element so it's recognized by the browser. You'll do more with this in a later step as well.</li>
 </ul>
 
 <aside class="callout">
   <b>Learn More:</b>
 
-  <p>When you create an instance of <code>&lt;post-card&gt;</code>, the contents from its  
-shadow DOM <code>&lt;template&gt;</code> are inserted as the element's <em>shadow root</em>. These elements are 
-rendered in the browser, but are not included in the element's
-<code>children</code> collection.</p>
-<p>By default, any children added by the user don't render. For example:</p>
-<pre>&lt;post-card&gt;&lt;h3&gt;Hello!&lt;/h3&gt;&lt;/post-card&gt;</pre>
+  <p>When you create an instance of <code>&lt;post-card&gt;</code>, the contents from its shadow DOM <code>&lt;template&gt;</code> are inserted as the element's <em>shadow root</em>. These elements are rendered in the browser, but are not included in the element's <code>children</code> collection.</p>
+  <p>By default, any children added by the user don't render. For example:</p>
+  <pre>&lt;post-card&gt;&lt;h3&gt;Hello!&lt;/h3&gt;&lt;/post-card&gt;</pre>
 
-<p>Creates a <code>&lt;post-card&gt;</code> with a single <code>&lt;h3&gt;</code> element as a child.
-To render the <code>&lt;h3&gt;</code> inside your <code>&lt;post-card&gt;</code>, you need to add an
-<em>insertion point</em>, which tells the browser where to render children in
-the shadow DOM tree.</p>
+  <p>Creates a <code>&lt;post-card&gt;</code> with a single <code>&lt;h3&gt;</code> element as a child.
+  To render the <code>&lt;h3&gt;</code> inside your <code>&lt;post-card&gt;</code>, you need to add an
+  <em>insertion point</em>, which tells the browser where to render children in
+  the shadow DOM tree.</p>
 </aside>
+
+<hr>
 
 #### Create the card structure.
 
 Find the `CARD CONTENTS GO HERE` comment and replace it with the `<div>` and
 `<content>` tags shown below.
 
-    </style>
+```side-by-side
+<!-- Add the following code: -->
+<div class="card-header" layout horizontal center>
+  <content select="img"></content>
+  <content select="h2"></content>
+</div>
+<content></content>
+```
 
-    <div class="card-header" layout horizontal center>
-      <content select="img"></content>
-      <content select="h2"></content>
-    </div>
-    <content></content>
-
-<ul>
+<ul class="side-by-side">
   <li>The <code>layout horizontal center</code> attributes are Polymer shorthand to
 create a flexbox layout. </li>
   <li>The three <code>&lt;content&gt;</code> elements create <em>insertion points</em>. <br />
@@ -149,6 +152,8 @@ CSS selectors](http://w3c.github.io/webcomponents/spec/shadow/#satisfying-matchi
 You can only select direct children of the host node, not descendents.</p>
 </aside>
 
+<hr>
+
 #### Style the imported content.
 
 There are a number of new CSS selectors to work with. The `post-card.html` 
@@ -158,32 +163,29 @@ top-level `<post-card>` element.
 To style the children added using the `<content>` element, add the 
 following CSS inside the `<style>` tag after the existing rules:
 
-    .card-header {
-      margin-bottom: 10px;
-    }
-    .card-header ::content h2 {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 300;
-    }
-    .card-header ::content img {
-      width: 70px;
-      border-radius: 50%;
-      margin: 10px;
-    }
-    </style>
+```side-by-side
+.card-header {
+  margin-bottom: 10px;
+}
+/* Add the following styles: */
+.card-header ::content h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.card-header ::content img {
+  width: 70px;
+  border-radius: 50%;
+  margin: 10px;
+}
+</style>
+```
 
-
-<ul>
+<ul class="side-by-side">
   <li>The <code>::content</code> pseudo element selects an insertion point (created by 
   a <code>&lt;content&gt;</code> tag).  
   Here, <code>::content h2</code> selects any <code>h2</code> that's distributed through an
   insertion point.</li>
-  <li>For browsers that don't support shadow DOM natively the<br />
-  <code>polyfill-next-selector</code> rule tells the shadow DOM polyfill how to
-  transform the <code>::content</code> rule into a non-shadow DOM rule. For 
-  example, without shadow DOM, <code>post-card h2</code> matches any <code>&lt;h2&gt;</code> element
-  inside the card.</li>
 </ul>
 
 <aside class="callout">
@@ -195,39 +197,43 @@ following CSS inside the `<style>` tag after the existing rules:
 
 ### Import `<post-card>` into your app
 
-Import the new element into `index.html`.
+<div class="stepbystep">
+  <ul>
+    <li>Save the `post-card.html` file and open `index.html` in your editor.</li>
+    <li>Add the import for `post-card.html` after your existing imports:</li>
+  </ul>
+</div>
 
-Save the `post-card.html` file and open `index.html` in your editor. Add 
-the import for `post-card.html` after your existing imports:
+```side-by-side
+<link rel="import"
+  href="../components/paper-tabs/paper-tabs.html">
+<!-- Add the following import: -->
+<link rel="import" href="post-card.html">
+```
 
-    ...
-    <link rel="import"
-      href="../components/paper-tabs/paper-tabs.html">
-    <link rel="import" href="post-card.html">
-    ...
-
-
-<ul>
+<ul class="side-by-side">
   <li>This makes the <code>&lt;post-card&gt;</code> element available for use in <code>index.html</code>.</li>
 </ul>
 
-Add a `<post-card>` element to `index.html` directly after the `<core-toolbar>` element:
+<hr>
 
-    ...   
-    <div class="container" layout vertical center>
+&rarr; Add a `<post-card>` element to `index.html` directly after the `<core-toolbar>` element:
 
-      <post-card>
-        <img width="70" height="70" 
-          src="../images/avatar-07.svg">
-        <h2>Another Developer</h2>
-        <p>I'm composing with shadow DOM!</p>
-      </post-card>
-      
-    </div>
-    ...
+```side-by-side
+<!-- Add the following code: -->
+<div class="container" layout vertical center>
 
+  <post-card>
+    <img width="70" height="70" 
+      src="../images/avatar-07.svg">
+    <h2>Another Developer</h2>
+    <p>I'm composing with shadow DOM!</p>
+  </post-card>
+  
+</div>
+```
 
-<ul>
+<ul class="side-by-side">
   <li>The child elements you specify here are <em>distributed</em> into the 
       <code>&lt;post-card&gt;</code> element's insertion points.</li>
 </ul>
@@ -237,7 +243,7 @@ Add a `<post-card>` element to `index.html` directly after the `<core-toolbar>` 
 Hit the <img src="img/runbutton.png" class="icon"> button! Your application should now look like this:
 
 <div layout vertical center>
-  <img class="sample" src="//polymer-project.org/images/tutorial/step-2.png">
+  <img class="sample" src="img/s3-app.png">
 </div>
 
 The card still needs a favorite button, but it's starting to take shape. 
@@ -260,10 +266,9 @@ also try swapping the two `select=` attributes in `post-card.html`.</p>
 
 In this step, you learned how to:
 
-- Install the `<google-map>` element using Bower
--  Use the element and declaratively place a marker
-- Style a custom element using CSS
+- Create a custom element using Polymer
+- Work with shadow DOM
 
 ### Next up
 
-Add driving directions.
+Using Data Binding

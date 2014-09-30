@@ -497,6 +497,7 @@ analytics.init();
         box-sizing: border-box;
         display: inline-block;
         width: 55%;
+        margin-bottom: 30px;
       }
       ul.side-by-side {
         box-sizing: border-box;
@@ -504,8 +505,21 @@ analytics.init();
         width: 40%;
         vertical-align: top;
       }
+      @media screen and (max-width: 1100px) {
+        pre.side-by-side,
+        ul.side-by-side {
+          display: block;
+          width: 100%;
+        }
+      }
       .side-by-side li {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+      }
+      hr {
+        margin: 30px 0;
+        height: 3px;
+        background: #eaeaea;
+        border: none;
       }
       core-selector {
         display: block;

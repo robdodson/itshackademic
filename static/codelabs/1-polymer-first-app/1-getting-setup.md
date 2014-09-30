@@ -6,7 +6,7 @@ In this tutorial, you'll build a small Polymer application -- a very basic clien
 
 <figure layout vertical center>
   <a href="//polymer-project.org/apps/polymer-tutorial/finished/" layout horizontal class="unquote-link">
-    <img src="//polymer-project.org/images/tutorial/finished.png" alt="Finished tutorial">
+    <img src="img/s1-app.png" alt="Finished tutorial">
   </a>
   <figcaption>
     Click screenshot for demo
@@ -23,7 +23,7 @@ This codelab uses **Chrome Dev Editor**, a Chrome app IDE.
 <div class="kiosk">
   Run Chrome Dev Editor by clicking its icon at the bottom of your screen:
   <figure>
-  <img src="/static/images/app-icons/chrome_dev_editor_screenshot.png">
+    <img src="/static/images/app-icons/chrome_dev_editor_screenshot.png">
   </figure>
 </div>
 
