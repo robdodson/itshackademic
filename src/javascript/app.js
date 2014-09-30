@@ -12,3 +12,9 @@ $(document).stellar();
 $('#faq label').click(function() {
   $(this).parents('li').toggleClass('open');
 });
+
+// scroll navigation
+$('.scroll-to').click(function() {
+  $('html, body').animate({scrollTop: $( $(this).attr('href') ).offset().top }, 750);
+  return false;
+});
