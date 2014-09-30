@@ -10,6 +10,10 @@ body {
   background-size: 30px 17.25px;
   background-position: top center; }
 
+a {
+  text-decoration: none;
+  color: #ff5c92; }
+
 section {
   margin: 48px 0; }
   section.padded {
@@ -192,23 +196,117 @@ header {
 .polymer {
   background-color: white;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); }
+  .polymer .col-full {
+    position: relative; }
+    .polymer .col-full:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .polymer .polymer-icon {
+    width: 16%;
+    height: auto;
+    float: left; }
+    .polymer .polymer-icon img {
+      width: 100%;
+      height: auto;
+      display: block; }
+  .polymer .polymer-right {
+    float: right;
+    width: 80%; }
+  .polymer p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 .resources {
   color: white; }
+  .resources h1 {
+    margin-bottom: 12px; }
+  .resources .subtitle {
+    margin-top: 0;
+    margin-bottom: 24px; }
+  .resources .resource {
+    background-color: #eff2f3;
+    z-index: 9;
+    position: relative;
+    margin-bottom: 1.5%; }
+    .resources .resource h1 {
+      background-color: #41a4f4;
+      display: block;
+      font-size: 24px;
+      text-align: center;
+      padding: 16px 0;
+      margin: 0; }
+    .resources .resource div {
+      color: #445963;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+      padding: 24px 16px; }
+      .resources .resource div p {
+        margin-top: 0; }
+      .resources .resource div ul {
+        list-style: none;
+        padding: 0; }
+        .resources .resource div ul a {
+          padding: 12px;
+          border-radius: 4px;
+          font-family: 'Roboto Condensed', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 0.125em;
+          font-weight: 300;
+          color: #6c6c6c;
+          letter-spacing: 0;
+          display: block;
+          -webkit-transition: box-shadow 200ms;
+                  transition: box-shadow 200ms;
+          font-size: 16px;
+          line-height: 16px;
+          box-shadow: 0px 2px 6px rgba(0, 0, 0, 0); }
+          .resources .resource div ul a .icon {
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            background-color: #6c6c6c;
+            border-radius: 2px;
+            margin-right: 4px; }
+          .resources .resource div ul a:hover {
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); }
+    .resources .resource:nth-child(even) h1 {
+      background-color: #ff5c92; }
 
+@media screen and (min-width: 768px) {
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+  .resource {
+    width: 32%;
+    float: left;
+    margin-right: 1.5%;
+    height: 346px; }
+    .resource:last-child {
+      margin-right: 0; } }
 .faq ul {
   list-style: none;
   margin: 0;
   padding: 0;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); }
-  .faq ul li input {
-    display: none; }
   .faq ul li label {
     position: relative;
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.125em;
     font-weight: 300;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     font-size: 24px;
     display: block;
     background-color: white;
@@ -232,9 +330,7 @@ header {
       line-height: 0;
       text-align: center;
       padding: 4px;
-      border-radius: 2px;
-      -webkit-transition: background-color 200ms;
-              transition: background-color 200ms; }
+      border-radius: 2px; }
   .faq ul li div {
     max-height: 0;
     overflow-y: hidden;
@@ -242,13 +338,11 @@ header {
     color: white;
     -moz-box-sizing: border-box;
          box-sizing: border-box;
-    padding: 0 24px 2px 24px;
-    -webkit-transition: none;
-            transition: none; }
-  .faq ul li input:checked ~ label::before {
+    padding: 0 24px 2px 24px; }
+  .faq ul li.open label::before {
     content: url(../images/icon-minus.svg);
     background-color: #41a4f4; }
-  .faq ul li input:checked ~ div {
+  .faq ul li.open div {
     max-height: initial;
     padding: 20px 20px 20px 60px; }
 

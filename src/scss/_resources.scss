@@ -1,3 +1,83 @@
 .resources {
   color: $c-white;
+  h1 {
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .resource {
+    background-color: $c-light-gray;
+    z-index: 9;
+    position: relative;
+    margin-bottom: 1.5%;
+
+    h1 {
+      background-color: $c-blue;
+      display: block;
+      font-size: $f-md;
+      text-align: center;
+      padding: 16px 0;
+      margin: 0;
+    }
+
+    div {
+      color: $c-dark-blue;
+      box-sizing: border-box;
+      padding: 24px 16px;
+      p {
+        margin-top: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        a {
+          padding: 12px;
+          border-radius: 4px;
+          @include titling;
+          color: $c-dark-gray;
+          letter-spacing: 0;
+          display: block;
+          transition: box-shadow $timing-transitions;
+          font-size: $f-sm;
+          line-height: $f-sm;
+          box-shadow: 0px 2px 6px rgba(0,0,0,0);
+
+          .icon {
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            background-color: $c-dark-gray;
+            border-radius: 2px;
+            margin-right: 4px;
+          }
+          &:hover {
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+          }
+        }
+      }
+    }
+    &:nth-child(even) {
+      h1 {
+        background-color: $c-pink;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $md-media) {
+  .row {
+    @include clearfix;
+  }
+  .resource {
+    width: 32%;
+    float: left;
+    margin-right: 1.5%;
+    height: 346px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

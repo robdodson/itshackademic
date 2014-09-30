@@ -21,6 +21,11 @@ $md-media: 768px;
 $faq-icon-di: 16px;
 $faq-pad: 20px;
 
+// font sizes
+$f-lg: 48px;
+$f-md: 24px;
+$f-sm: 16px;
+
 // timing
 $timing-transitions: 200ms;
 
@@ -33,4 +38,12 @@ $timing-transitions: 200ms;
   text-transform: uppercase;
   letter-spacing: 0.125em;
   font-weight: 300;
+}
+@mixin no-select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

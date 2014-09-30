@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: $f-sm;
   font-weight: 300;
   line-height: 1.8;
   color: $c-dark-blue;
@@ -9,6 +9,11 @@ body {
   background-image: url("../images/bg1.png");
   background-size: 30px 17.25px;
   background-position: top center;
+}
+
+a {
+  text-decoration: none;
+  color: $c-pink;
 }
 
 section {
@@ -90,5 +95,5 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: $f-lg;
 }

@@ -5,13 +5,11 @@
     padding: 0;
     @include box-shadow;
     li {
-      input {
-        display: none;
-      }
       label {
         position: relative;
         @include titling;
-        font-size: 24px;
+        @include no-select;
+        font-size: $f-md;
         display: block;
         background-color: $c-white;
         padding: $faq-pad $faq-pad $faq-pad ($faq-pad + 40px);
@@ -30,13 +28,12 @@
           background-color: $c-dark-gray;
           font-family: "Helvetica", "Arial", sans-serif;
           color: $c-white;
-          font-size: 24px;
+          font-size: $f-md;
           font-weight: bold;
           line-height: 0;
           text-align: center;
           padding: 4px;
           border-radius: 2px;
-          transition: background-color $timing-transitions;
         }
       }
       div {
@@ -46,17 +43,13 @@
         color: $c-white;
         box-sizing: border-box;
         padding: 0 24px 2px 24px;
-        transition: none;
       }
-      // active state
-      input:checked {
-        // label
-        & ~ label::before {
+      &.open {
+        label::before {
           content: url(../images/icon-minus.svg);
           background-color: $c-blue;
         }
-        // open content
-        & ~ div {
+        div {
           max-height: initial;
           padding: $faq-pad $faq-pad $faq-pad ($faq-pad + 40px);
         }
