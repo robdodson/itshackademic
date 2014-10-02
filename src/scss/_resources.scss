@@ -33,27 +33,35 @@
         list-style: none;
         padding: 0;
         a {
-          padding: 12px;
-          border-radius: 4px;
-          @include titling;
+        //   padding: 12px;
+        //   border-radius: 4px;
+        //   @include titling;
           color: $c-dark-gray;
-          letter-spacing: 0;
-          display: block;
-          transition: box-shadow $timing-transitions;
-          font-size: $f-sm;
-          line-height: $f-sm;
-          box-shadow: 0px 2px 6px rgba(0,0,0,0);
+        //   letter-spacing: 0;
+        //   display: block;
+        //   transition: box-shadow $timing-transitions;
+        //   font-size: $f-sm;
+        //   line-height: $f-sm;
+        //   box-shadow: 0px 2px 6px rgba(0,0,0,0);
 
-          .icon {
-            height: 20px;
-            width: 20px;
-            display: inline-block;
-            background-color: $c-dark-gray;
-            border-radius: 2px;
-            margin-right: 4px;
+        //   .icon {
+        //     height: 20px;
+        //     width: 20px;
+        //     display: inline-block;
+        //     background-color: $c-dark-gray;
+        //     border-radius: 2px;
+        //     margin-right: 4px;
+        //   }
+        //   &:hover {
+        //     box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        //   }
+          paper-icon-button {
+            background-color: #EFF2F3;
+            width: 100%;
+            text-align: left;
           }
-          &:hover {
-            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+          paper-icon-button::shadow span {
+            vertical-align: middle;
           }
         }
       }
@@ -76,7 +84,7 @@
     margin-right: 1.5%;
     height: 346px;
 
-    &:last-child {
+    &:nth-of-type(3n) {
       margin-right: 0;
     }
   }

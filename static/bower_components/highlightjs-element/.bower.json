@@ -15,6 +15,5 @@
   },
   "_source": "git://github.com/PolymerLabs/highlightjs-element.git",
   "_target": "~0.4.1",
-  "_originalSource": "PolymerLabs/highlightjs-element",
-  "_direct": true
+  "_originalSource": "PolymerLabs/highlightjs-element"
 }

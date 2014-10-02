@@ -14,6 +14,6 @@
     "commit": "f65692de16aa2044bbf301c0e7af9d99ab6fb44e"
   },
   "_source": "git://github.com/PolymerLabs/marked-element.git",
-  "_target": "^0.4.0",
+  "_target": "~0.4.1",
   "_originalSource": "PolymerLabs/marked-element"
 }
