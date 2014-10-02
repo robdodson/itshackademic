@@ -136,14 +136,9 @@
 
     </main>
 
-    <footer>
-      <ul>
-        <li><a href="https://plus.google.com/+PolymerProject"><img src="images/gplus.svg"></a></li>
-        <li><a href="http://twitter.com/polymer"><img src="images/twitter.svg"></a></li>
-        <li><a href="http://github.com/polymer/polymer"><img src="images/github.svg"></a></li>
-        <li><a href="http://polymer-project.org/"><img src="images/html.svg"></a></li>
-      </ul>
-    </footer>
+    t.onResponse = function(e, detail, sender) {
+      this.filtered = detail.orderedCodelabs;
+      this.orderedCodelabs = detail.orderedCodelabs;
 
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/jquery.stellar.js"></script>

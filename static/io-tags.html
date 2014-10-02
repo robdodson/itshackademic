@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<polymer-element name="io-app-icon" attributes="app">
+    <template>
+        <style>
+            img {
+                vertical-align: middle;
+                box-shadow: 2px 2px 5px gray;
+            }
+        </style>
+        <img src="/static/img/app-icons/{{app}}-icon.png">
+    </template>
+    <script>
+        Polymer('io-app-icon', {
+            app: "chrome"
+        });
+    </script>
+</polymer-element>
+
+<polymer-element name="io-kiosk">
+<template>
+    <style>
+      div {
+        display: none;
+      }
+    </style>
+    <core-ajax url="/metadata/" auto
+               response="{{response}}" handleAs="json"></core-ajax>
+    <div id="cont">
+      <content id="content"></content>
+    </div>
+</template>
+<script>
+    Polymer('io-kiosk', {
+        responseChanged: function() {
+          if (this.response) {
+            if (this.response.credentials) {
+              this.$.cont.style.display = "block";
+            }
+          }
+        }
+    });
+</script>
+</polymer-element>
+
+<polymer-element name="io-code-path" attributes="path,noclone,starterpath">
+<template>
+    <core-ajax url="/metadata/" auto
+               response="{{response}}" handleAs="json"></core-ajax>
+</template>
+<script>
+    Polymer('io-code-path', {
+        noclone: false,
+        starterpath: "/begin/",
+        path: "git clone https://github.com/googlesamples/io2014-codelabs.git",
+        responseChanged: function() {
+          if (this.response) {
+            var lab = "";
+            for(key in this.response.codelabs) {
+              if (window.location.pathname.indexOf(key) > 0) {
+                lab = key;
+                break;
+              }
+            }
+            if (this.response.credentials) {
+              this.path = "";
+              this.path += "~/io2014-codelabs/" + key + this.starterpath;
+            } else {
+              if (this.noclone) {
+                this.path = "";
+              } else {
+                this.path += " && cd "
+              }
+              this.path += "io2014-codelabs/" + key + this.starterpath;
+            }
+          }
+        }
+    });
+</script>
+</polymer-element>
+
+<polymer-element name="io-location-string" attributes="noclone,starterpath">
+<template>
+    <style>
+        :host {
+            display: inline;
+        }
+        code {
+          font-family: 'Source Code Pro',Helvetica,Arial!important;
+          overflow-x: auto;
+        }
+    </style>
+    <io-code-path path="{{path}}" starterpath="{{starterpath}}" noclone="{{noclone}}"></io-code-path>
+    <code id="code_location">{{path}}<content id="content"></content></code>
+</template>
+<script>
+    Polymer('io-location-string', {
+      noclone: false,
+    });
+</script>
+</polymer-element>
+
+<polymer-element name="io-location-bash" attributes="starterpath">
+<template>
+    <style>
+        :host {
+            display: block;
+            background-color: #fafafa;
+            padding: 16px;
+            border-radius: 3px;
+            
+            overflow-x: auto;
+            font-style: normal;
+        }
+        code {
+          font-family: 'Source Code Pro',Helvetica,Arial!important;
+        }
+    </style>
+    <io-code-path path="{{path}}"  starterpath="{{starterpath}}" noclone="true"></io-code-path>
+    <code id="code_location"><content></content>{{path}}</code>
+</template>
+<script>
+    Polymer('io-location-bash', {
+    });
+</script>
+</polymer-element>
+
+<polymer-element name="io-location-in" attributes="starterpath">
+<template>
+    <style>
+        :host {
+            display: block;
+            background-color: #fafafa;
+            padding: 16px;
+            border-radius: 3px;
+            font-family: 'Source Code Pro',Helvetica,Arial!important;
+            overflow-x: auto;
+            font-style: normal;
+        }
+        code {
+          font-family: 'Source Code Pro',Helvetica,Arial!important;
+          overflow-x: auto;
+        }
+    </style>
+    <io-code-path path="{{path}}" starterpath="{{starterpath}}" noclone="true"></io-code-path>
+    <code id="code_location"><content id="content"></content></code>
+</template>
+<script>
+    var codePathString = "[CODE_PATH]";
+    Polymer('io-location-in', {
+      path: "",
+      pathChanged: function() {
+        if (this.path) {
+          var nodes = this.$.content.getDistributedNodes();
+          var path = this.path;
+          [].forEach.call(nodes, function(node) {
+            console.log(node.textContent);
+            if (node.textContent.indexOf(codePathString) > -1) {
+              node.textContent = node.textContent.replace(codePathString, path);
+            }
+          });
+        }
+      }
+    });
+</script>
+</polymer-element>

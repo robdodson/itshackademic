@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,500|Source+Code+Pro:400,700');
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+}
+body {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+  font-weight: 300;
+  margin: 0;
+  background-color: #eff2f3;
+  /*background-image: url("/static/images/bg1.png");*/
+  background-size: 30px 17.25px;
+  background-position: center;
+}
+
+body.io-kiosk /deep/ .extended {
+  display: none;
+}
+
+body.io-extended /deep/ .kiosk {
+  display: none;
+}
+
+h2, h3 {
+  font-weight: 300;
+}
+core-header-panel {
+  width: 100%;
+}
+.core-header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #56A0D7;
+  /*transition: height 0.2s;*/
+  height: 63px;
+  color: #fff;
+  background-size: cover;
+
+}
+.core-header h2 {
+  margin: 0 0 0 10px;
+}
+.core-header a {
+  color: currentcolor;
+  text-decoration: none;
+  height: 100%;
+}
+.core-header-logo {
+  height: 100%;
+  padding-right: 10px;
+  background-color: #3A82C3;
+}
+.core-header-logo h2 {
+  margin-left: 4px;
+}
+.core-header-logo img {
+  width: 40px;
+  margin-left: 3px;
+  vertical-align: bottom;
+}
+#maincontent {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
+
+io-codelab {
+  width: 75%;
+}
+
+h2.completed {
+  font-size: 2.5em;
+}
+ol.next {
+  counter-reset:li;
+  list-style: none;
+  margin-top: 40px;
+}
+
+ol.next > li {
+  margin-bottom: 25px;
+  font-size: 1.1em;
+}
+
+
+body /deep/ .android {
+  background: rgb(165, 197, 71);
+}
+
+body /deep/ .cloud {
+  background: rgb(19, 104, 233);
+}
+
+body /deep/ .web {
+  background: rgb(217, 69, 49);
+}
+
+body /deep/ .services {
+  background: rgb(225, 160, 4);
+}
+
+body /deep/ .android-label {
+  color: rgb(165, 197, 71);
+}
+
+body /deep/ .cloud-label, .blue {
+  color: rgb(19, 104, 233);
+}
+
+body /deep/ .web-label, .red {
+  color: rgb(217, 69, 49);
+}
+
+body /deep/ .services-label {
+  color: rgb(225, 160, 4);
+}
+
+/* TODO (shailen): the CSS is duplicated in <splash-content>. Remove */
+.splash-content {
+  display: inline-block;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 5px 5px 3px #aaa;
+  padding: 30px 15px;
+  width: auto;
+  margin: 10px auto;
+}
+
+.splash-content paper-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  color: #fff;
+  background: rgb(13, 168, 97);
+  transition: all 100ms ease-in-out;
+}
+
+.splash-content paper-button::shadow #ripple {
+  color: #fff;
+}
+
+.splash-content div {
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
+.splash-content .welcome {
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.splash-content .license {
+  font-size: .8em;
+  margin-bottom: 0;
+}
+
+.splash-content .button-wrapper {
+  text-align: center;
+}
+
+.splash-content .repo-link {
+  margin-top: 35px;
+  background: #eee;
+  padding: 15px;
+  border-radius: 4px;
+}

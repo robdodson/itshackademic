@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Google I/O 2014 CodeLabs</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/shadowdom-shim.css" shim-shadowdom>
+  <link rel="stylesheet" href="/static/css/landing.css">
+  <script src="/static/bower_components/platform/platform.js"></script>
+  <link rel="import" href="/static/imports.html">
+  <link rel="icon" type="image/png" href="/static/img/favicon.png">
+</head>
+<body unresolved>
+
+<template is="auto-binding" id="t">
+  <core-header-panel mode="waterfall">
+    <div class="core-header">
+      <div class="core-header-logo" layout horizontal center>
+        <a href="/" layout horizontal center>
+          <img src="/static/images/polymer-logo-outline.png">
+          <h2>Polytechnic</h2>
+        </a>
+      </div>
+      <h2>codelabs</h2>
+      <codelist-dropdown
+          codelabs="{{codelabs}}"
+          on-codelab-list="{{onResponse}}">
+      </codelist-dropdown>
+    </div>
+
+    <div id="maincontent">
+      <template repeat="{{codelab,i in filtered}}">
+        <codelab-panel codelab="{{codelabs[codelab]}}"
+          on-filter="{{filterCodelabs}}"></codelab-panel>
+      </template>
+    </div>
+  </core-header-panel>
+</template>
+
+<script>
+(function() {
+  document.addEventListener('polymer-ready', function(e) {
+    var t = document.querySelector('#t');
+
+    t.onResponse = function(e, detail, sender) {
+      this.filtered = detail.orderedCodelabs;
+      this.orderedCodelabs = detail.orderedCodelabs;
+
+      // Log a pageview when the codelab names have been populated.
+      analytics.pageview();
+    };
+  });
+})();
+</script>
+</body>
+</html>

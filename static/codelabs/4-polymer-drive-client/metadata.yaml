@@ -1,0 +1,47 @@
+title: "Polymer: Build a Mobile Drive Client"
+summary: "Get to know Polymer while building a mobile-friendly Google Drive client that's based on Web Components. Upload files from everywhere!"
+description: "Use Polymer to build a mobile-friendly, Web Component-based, Google Drive client. The app supports choosing files by selecting or dragging and dropping. The app then uploads these files and persists them to a Google Drive account."
+prerequisites:
+  - Some programming experience (in any language)
+level: Intermediate
+logo: polymer-logo.png
+categories:
+  - web
+duration: 60 min
+keywords:
+  - Chrome Dev Editor
+  - Google Drive
+  - HTML5
+  - Intermediate
+  - Mobile
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    title: "Introduction"
+    blurb: "Learn about the app you're going to build."
+  -
+    title: "Getting set up"
+    blurb: "Scaffold a new Polymer application using Chrome Dev Editor."
+  -
+    title: "Creating your first Polymer element"
+    blurb: "Learn how to create new Polymer elements."
+  -
+    title: "Installing the goods"
+    blurb: "Install existing elements using Bower."
+  -
+    title: "Reusing Polymer elements"
+    blurb: "Learn how to use the elements you installed."
+  -
+    title: "Scaffolding the signed-in view"
+    blurb: "Author a view for signed-in users."
+  -
+    title: "Uploading files to Google Drive"
+    blurb: "Learn how to upload selected files to a Drive account and wire up events."
+  -
+    title: "Add support for Google sign-in"
+    blurb: "Learn how to add support for authenticating with a Google account."
+  -
+    title: "That's all folks!"
+    blurb: "You've just built a Google Drive client with Polymer!"

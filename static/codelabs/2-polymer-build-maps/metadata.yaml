@@ -1,0 +1,49 @@
+title: "Polymer: Build a Google Maps App Using Web Components & No Code!"
+summary: "Create a fully working Google Maps
+application using Polymer's core elements, without writing any JavaScript."
+
+description: "Using Polymer, you'll create a fully working Google Maps
+app, complete with responsive design,
+driving directions, and transit mode. Along the way, you'll learn about Polymer's
+data-binding features and core element set."
+
+prerequisites:
+  - Basic understanding of HTML, CSS, and web development
+  - Knowledge of an MVC framework (helpful, but not required)
+
+level: Beginner
+logo: p-logo-square.png
+categories:
+  - web
+duration: 20 min
+keywords:
+  - Beginner
+  - Chrome Dev Editor
+  - Data binding
+  - Google Maps
+  - HTML5
+  - Node
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    title: "Getting set up"
+    blurb: "Scaffold a new Polymer application using the Chrome Dev Editor."
+  -
+    title: "Using <google-map>"
+    blurb: "Learn to use the <google-map> element and install it using Bower."
+  -
+    title: "Adding driving directions"
+    blurb: "Learn how to use <google-map-directions> to add driving
+    directions to the map."
+  -
+    title: "Using data binding"
+    blurb: "Learn how to use Polymer's data-binding features to let users
+    input addresses."
+  -
+    title: "Changing the form of travel"
+    blurb: "Learn how to use <core-selector> to select a travel mode."
+  -
+    title: "That's all folks"
+    blurb: "More resources..."

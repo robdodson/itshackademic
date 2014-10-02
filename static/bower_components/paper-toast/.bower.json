@@ -1,0 +1,20 @@
+{
+  "name": "paper-toast",
+  "private": true,
+  "dependencies": {
+    "core-media-query": "Polymer/core-media-query#master",
+    "core-overlay": "Polymer/core-overlay#master",
+    "font-roboto2": "Polymer/font-roboto2#master",
+    "paper-button": "Polymer/paper-button#master"
+  },
+  "homepage": "https://github.com/Polymer/paper-toast",
+  "_release": "0908adea48",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0908adea48bc5ad057a67a33919844a37adc33d9"
+  },
+  "_source": "git://github.com/Polymer/paper-toast.git",
+  "_target": "master",
+  "_originalSource": "Polymer/paper-toast"
+}

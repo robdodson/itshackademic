@@ -7,30 +7,47 @@ threadsafe: yes
 handlers:
 - url: /
   mime_type: text/html
+  static_files: static/splash.html
+  upload: static/splash.html
+
+- url: /codelabs/?
+  mime_type: text/html
   static_files: static/index.html
   upload: static/index.html
 
-- url: /(.*\.css)
-  mime_type: text/css
-  static_files: static/\1
-  upload: static/(.*\.css)
-
-- url: /(.*\.html)
+- url: /static/codelabs/1-polymer-first-app/
   mime_type: text/html
-  static_files: static/\1
-  upload: static/(.*\.html)
+  static_files: static/codelabs/1-polymer-first-app/index.html
+  upload: static/codelabs/1-polymer-first-app/index.html
 
-- url: /(.*\.js)
-  mime_type: text/javascript
-  static_files: static/\1
-  upload: static/(.*\.js)
+- url: /static/codelabs/2-polymer-build-maps/
+  mime_type: text/html
+  static_files: static/codelabs/2-polymer-build-maps/index.html
+  upload: static/codelabs/2-polymer-build-maps/index.html
 
-- url: /(.*\.txt)
-  mime_type: text/plain
-  static_files: static/\1
-  upload: static/(.*\.txt)
+- url: /static/codelabs/3-polymer-build-mobile/
+  mime_type: text/html
+  static_files: static/codelabs/3-polymer-build-mobile/index.html
+  upload: static/codelabs/3-polymer-build-mobile/index.html
 
-# image files
-- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
-  static_files: static/\1
-  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png|svg))
+- url: /static/codelabs/4-polymer-drive-client/
+  mime_type: text/html
+  static_files: static/codelabs/4-polymer-drive-client/index.html
+  upload: static/codelabs/4-polymer-drive-client/index.html
+
+- url: /static/codelabs/5-polymer-map-visualization/
+  mime_type: text/html
+  static_files: static/codelabs/5-polymer-map-visualization/index.html
+  upload: static/codelabs/5-polymer-map-visualization/index.html
+
+- url: /completed/?
+  mime_type: text/html
+  static_files: static/completed.html
+  upload: static/completed.html
+
+- url: /metadata/
+  script: app.app
+
+- url: /static
+  application_readable: true
+  static_dir: static

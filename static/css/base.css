@@ -1,0 +1,98 @@
+.content {
+  margin-top: 65px;
+}
+
+.row {
+  margin-bottom: 8px;
+}
+
+.col-md-8, .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #666;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+h2, h3 {
+  margin-top: 18px;
+}
+
+dl {
+  margin-top: 0;
+}
+
+dd > ul {
+  margin-bottom: 0;
+}
+
+.spacious {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-tabs > li {
+  margin-bottom: 0;
+}
+
+.logo {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.table-text {
+  display:inline-block;
+  vertical-align:middle;
+}
+
+button.start {
+  background: green;
+}
+
+button.start a {
+  color: white;
+}
+
+.table-bordered > thead > tr > td {
+  border-bottom-width: 1px;
+}
+
+.admonition {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.admonition.note {
+  color: #19659b;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.admonition.danger {
+  background-color: #fcf2f2;
+  color: #755;
+  border-color: #dFb5b4;
+}
+
+.admonition.important {
+  color: #a87631;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
+}
+
+.admonition-title {
+  font-size: 120%;
+  font-weight: bold;
+}

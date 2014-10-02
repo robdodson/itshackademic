@@ -1,0 +1,1049 @@
+<link rel="import" href="bower_components/core-selector/core-selector.html">
+
+<link rel="import" href="bower_components/core-icons/core-icons.html">
+<link rel="import" href="bower_components/core-icons/iconsets/image-icons.html">
+
+<link rel="import" href="bower_components/core-ajax/core-ajax.html">
+<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+<link rel="import" href="bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
+
+<link rel="import" href="bower_components/flatiron-director/flatiron-director.html">
+<link rel="import" href="bower_components/highlightjs-element/highlightjs-element.html">
+<link rel="import" href="bower_components/marked-element/marked-element.html">
+<link rel="import" href="io-tags.html">
+
+<style>
+a,
+body /deep/ a {
+  color: rgb(79, 125, 201);
+}
+</style>
+
+<script>
+var analytics = {
+
+  init: function() {
+    // Google Analytics.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // Set domain to none for localhost.
+    ga('create', 'UA-49880327-8', {
+      'cookieDomain': 'none'
+    });
+  },
+
+  pageview: function(step) {
+    var path = null;
+
+    if (step) {
+      path = [window.location.pathname];
+      path.push('#');
+      path.push(step);
+      path = path.join('');
+
+    } else {
+      path = window.location.pathname;
+    }
+
+    ga('send', 'pageview', {'page': path, 'title': document.title});
+  },
+
+  complete: function(codelab) {
+    ga('send', 'event', 'codelab', 'complete', codelab, 1);
+  }
+};
+
+analytics.init();
+</script>
+
+<polymer-element name="splash-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      /* TODO (shailen): the CSS is duplicated in app.css. Remove */
+
+      paper-button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        color: #fff;
+        background: rgb(13, 168, 97);
+        transition: all 100ms ease-in-out;
+      }
+
+      paper-button::shadow #ripple {
+        color: #fff;
+      }
+
+      div {
+        margin-bottom: 6px;
+        padding: 5px;
+      }
+
+      .welcome {
+        font-weight: bold;
+        margin-top: 10px;
+
+      }
+
+      .license {
+        font-size: .8em;
+        margin-bottom: 0;
+      }
+
+      .button-wrapper {
+        text-align: center;
+      }
+
+      .red {
+        color: red;
+      }
+    </style>
+    <div>
+    <h2>Welcome to the I/O Codelabs!</h2>
+    <div class="welcome">You'll write code using the latest APIs and technologies,
+      or learn about existing Google tech that's new to you.</div>
+
+    <div>A couple of rules that you must agree to:</div>
+
+    <form on-submit="{{goToCodelabList}}">
+      <template if="{{showErrorMessage}}" >
+      <div class="red">You must check both boxes.</div>
+      </template>
+      <div>
+        <label>
+          <input type="checkbox" checked="{{checkedNoPersonalCredentials}}">
+          Don't use your own credentials on this machine.
+	</label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" checked="{{checkedNoPersonalPhone}}">
+          Don't plug your personal Android device into this machine. (Really. Your device might get wiped.)
+	</label>
+      </div>
+    </form>
+
+    <div>If you need help, raise your hand. A friendly TA will come to assist.</div>
+
+    <div class="button-wrapper">
+      <paper-button label="Show me the codelabs!" on-tap="{{goToCodelabList}}"></paper-button>
+    </div>
+
+    <div class="license"><a href="/licenses/">Licenses</a></div>
+  </div>
+  </template>
+  <script>
+    Polymer('splash-element', {
+      created: function() {
+        this.checkedNoPersonalCredentials = false;
+        this.checkedNoPersonalPhone = false;
+        this.showErrorMessage = false;
+
+      },
+
+      goToCodelabList: function(e, detail, sender) {
+        e.preventDefault();
+        if (!this.checkedNoPersonalCredentials ||
+            !this.checkedNoPersonalPhone) {
+          this.showErrorMessage = true;
+          return;
+        }
+        this.showErrorMessage = false;
+        window.location = '/codelabs/';
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="toc-element" attributes="headings">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      ul {
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+    </style>
+    <ul>
+      <template repeat="{{h in headings}}">
+        <li><a href="#{{h.id}}" on-click="{{onClick}}">{{h.textContent}}</a></li>
+      </template>
+    </ul>
+  </template>
+  <script>
+    Polymer('toc-element', {
+      created: function() {
+        this.headings = [];
+      },
+      onClick: function(e, detail, sender) {
+        e.preventDefault();
+        this.fire('deep-link', {link: sender});
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="codelab-panel" attributes="codelab"
+    on-tap="{{togglePanel}}" on-mouseover="{{onMouseOver}}" on-mouseout="{{onMouseOut}}">
+  <template>
+    <style>
+      :host {
+        display: block;
+        /*max-height: 200px;*/
+        /*transition: all 1s ease-in-out !important;*/
+      }
+      :host([open]) {
+        /*max-height: 1000px;*/
+      }
+      header {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+      }
+
+      header .primary {
+        -webkit-flex: 1 1;
+        flex: 1 1;
+      }
+
+      header .primary h2 {
+        -webkit-flex: 1 1;
+        flex: 1 1;
+        font-size: 1.1em;
+        display: inline-block;
+      }
+
+      header .primary label {
+        font-weight: 400;
+        margin-left: 15px;
+        display: inline-block;
+        font-size: .8em;
+        font-style: italic;
+        color: #FF8A65;
+      }
+      .category, .keyword {
+        font-weight: 400;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .category {
+        display: none;
+      }
+      .category:hover {
+        opacity: 0.5;
+      }
+      .keywords {
+        margin-left: 0px;
+      }
+      .keywords label {
+        margin: 0;
+        padding-right: 6px;
+        color: #607D8B;
+      }
+      .keywords label:hover {
+        color: #4285F4;
+      }
+      .paper-shadow-bottom {
+        pointer-events: none;
+      }
+      paper-button {
+        margin-top: 15px;
+        color: #fff;
+        background: rgb(13, 168, 97);
+        transition: all 100ms ease-in-out;
+      }
+      paper-button::shadow #ripple {
+        color: #fff;
+      }
+      .summary {
+        font-size: 1em;
+        margin-top: 2px;
+        color: #777;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+      }
+      .summary span:first-child {
+        -webkit-flex: 1;
+        flex: 1;
+      }
+      #codelabdetails {
+        margin-top: 1em;
+        font-size: .95em;
+      }
+      #codelabdetails > * {
+        margin-top: 15px;
+      }
+      core-icon {
+        fill: currentcolor;
+      }
+      .smaller {
+        font-size: 14px;
+      }
+      .prerequisite {
+        margin-left: 10px;
+      }
+      @media (min-width: 600px) {
+        .category {
+          display: initial;
+        }
+      }
+    </style>
+    <div>
+      <header>
+        <div class="primary">
+          <h2>{{codelab.title}}</h2>
+          <template if="{{codelab.level == 'Beginner'}}">
+            <label>{{codelab.level}}</label>
+          </template>
+
+        </div>
+        <template repeat="{{cat in codelab.categories}}">
+        <label class="category smaller {{cat}}-label" on-tap="{{filterOnCategory}}">{{cat}}</label>
+        </template>
+      </header>
+      <div class="summary">
+        <span>{{codelab.summary}}</span>
+        <core-icon icon="image:timelapse"></core-icon>
+        <span class="smaller">{{codelab.duration}}</span>
+      </div>
+
+      <div class="keywords">
+        <template repeat="{{keyword in codelab.keywords}}">
+        <label class="keyword smaller" on-tap="{{filterOnKeyword}}">{{keyword}}</label>
+         </template>
+      </div>
+    </div>
+    <template if="{{open}}">
+      <div id="codelabdetails">
+        <div>{{codelab.description}}</div>
+        <div>
+          <b>Prerequisites</b><br>
+          <template repeat="{{prerequisite in codelab.prerequisites}}">
+            <div class="prerequisite">{{prerequisite}}</div>
+          </template>
+        </div>
+        <paper-button label="Start" on-tap="{{goToCodelab}}"></paper-button>
+      </div>
+    </template>
+    <paper-shadow id="shadow" target="{{}}" z="{{z}}" animated></paper-shadow>
+  </template>
+  <script>
+    Polymer('codelab-panel', {
+      z: 0,
+      publish: {
+        open: {value: false, reflect: true}
+      },
+      created: function() {
+        this.codelab = {};
+      },
+      goToCodelab: function(e, detail, sender) {
+        e.stopPropagation();
+        window.location = '/static/codelabs/' + this. codelab.slug + '/';
+      },
+      togglePanel: function(e, detail, sender) {
+        this.open = !this.open;
+      },
+      openChanged: function() {
+        this.$.shadow.z = 2;
+        this.onMouseOut();
+      },
+      onMouseOver: function(e, detail, sender) {
+        if (!this.open) {
+          this.$.shadow.z  = 1;
+        }
+      },
+      onMouseOut: function(e, detail, sender) {
+        if (!this.open) {
+          this.$.shadow.z = 0;
+        }
+      },
+      filterOnCategory: function(e, detail, sender) {
+        e.stopPropagation();
+        this.fire('filter', {cat: sender.textContent});
+      },
+
+      filterOnKeyword: function(e, detail, sender) {
+        e.stopPropagation();
+        this.fire('filter', {keyword: sender.textContent});
+      }
+    });
+  </script>
+</polymer-element>
+
+
+<polymer-element name="user-credentials" attributes="user_creds">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background: #fff;
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      h3 {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 4px;
+      }
+      p {
+        margin: 0px;
+        padding: 0px;
+      }
+      dl {
+        display: inline-block;
+        margin: 15px 5px 5px 5px;
+        border: 1px double #ccc;
+        padding: 0.5em;
+        border-radius: 5px;
+        background: #fff;
+      }
+      dt {
+        float: left;
+        clear: left;
+        width: 100px;
+        text-align: right;
+        font-weight: bold;
+        color: green;
+      }
+      dt:after {
+        content: ":";
+      }
+      dd {
+        margin: 0 0 0 110px;
+        padding: 0 0 0.5em 0;
+      }
+    </style>
+    <h3>Project information</h3>
+    <template if="{{user_creds}}">
+      <p>
+        This codelab requires this project level information.<br>
+        Refence this section when a codelab tells you to.
+      </p>
+      <dl class="user-credentials-list">
+        <template repeat="{{key in user_creds_keys}}">
+          <dt>{{ key }}</dt>
+          <dd>{{ user_creds[key] }}</dd>
+        </template>
+    </template>
+    <template if="{{!user_creds}}">
+    <p>
+      Note: this codelab references project details. <br>
+      Since you are not at I/O, you need to set up credentials in the Google
+      Developer Console. <br>
+      Use the project details obtained from there.
+    </p>
+    </template>
+  </template>
+  <script>
+    Polymer('user-credentials', {
+      ready: function() {
+        this.user_creds_keys = (typeof this.user_creds == 'object') ?
+        Object.keys(this.user_creds): [];
+      }
+    });
+  </script>
+</polymer-element>
+
+
+<polymer-element name="io-codelab" attributes="codelab">
+  <template>
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">
+    <style>
+      :host {
+        display: block;
+        position: relative;
+      }
+      pre {
+        background-color: #fafafa;
+        padding: 16px;
+        border-radius: 3px;
+      }
+      pre, code {
+        font-family: 'Source Code Pro', Helvetica, Arial !important;
+        overflow-x: auto;
+      }
+      pre.side-by-side {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 55%;
+        margin-bottom: 30px;
+      }
+      ul.side-by-side {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+      }
+      @media screen and (max-width: 1100px) {
+        pre.side-by-side,
+        ul.side-by-side {
+          display: block;
+          width: 100%;
+        }
+      }
+      .side-by-side li {
+        margin-bottom: 20px;
+      }
+      hr {
+        margin: 30px 0;
+        height: 3px;
+        background: #eaeaea;
+        border: none;
+      }
+      core-selector {
+        display: block;
+      }
+
+      core-selector #wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        /*visibility: hidden;*/
+        /*opacity: 0;*/
+        /*transform: translate3d(10px, 0, 0);*/
+        /*transition: all 300ms ease-in-out;*/
+      }
+      core-selector #wrapper.core-selected {
+        display: block;
+        /*visibility: visible;*/
+        /*opacity: 1;*/
+        /*transform: translate3d(0, 0, 0);*/
+      }
+
+      marked-element {
+        display: block;
+        padding: 1em 2em;
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 1px 1px 3px #ccc;
+        margin-bottom: 3em;
+        min-height: 500px;
+        position: relative;
+        overflow: hidden;
+      }
+      marked-element::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        top: 0;
+        left: 0;
+        border-top: 2px solid rgb(79, 125, 201);
+      }
+      marked-element::before {
+        content: attr(data-step) '';
+        position: absolute;
+        right: -36px;
+        top: -9px;
+        background: #fafafa;
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+        width: 75px;
+        text-align: center;
+        padding: 15px 10px;
+        box-shadow: 0 0 5px #ccc inset;
+        line-height: 0;
+        padding-top: 25px;
+        color: #ccc;
+      }
+
+      ol.steps {
+        border: 1px solid #ddd;
+        background: #fefefe;
+        border-radius: 4px;
+        padding: 20px;
+        list-style: decimal-leading-zero;
+        list-style-position: inside;
+      }
+
+      ol.steps > li {
+        margin-bottom: 6px;
+      }
+
+      div.user-credentials-box {
+        border: 1px solid #ddd;
+        background: #fefefe;
+        border-radius: 4px;
+        padding: 20px;
+      }
+
+      .core-selected {
+        visibility: visible !important;
+        z-index: auto !important;
+      }
+      paper-button[raisedButton] {
+        background: #4285f4;
+        color: #fff;
+        /*fill: #4285f4;*/
+      }
+      paper-button[raisedButton]:hover {
+        background: #3367d6;
+      }
+      paper-button[raisedButton]::shadow #ripple {
+        color: #fff;
+      }
+      paper-button[raisedButton]::shadow #focusBg {
+        background: #3367d6;
+      }
+
+      paper-fab {
+        position: fixed;
+        bottom: 2em;
+        transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+                    background 400ms ease-in-out !important;
+      }
+
+      aside.callout {
+        background-color: rgb(244, 248, 250);
+        margin: 20px 0;
+        padding: 15px;
+        border-left: 3px solid rgb(79, 125, 201);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      aside.callout b {
+        color: rgb(79, 125, 201);
+      }
+
+      figure {
+        text-align: center;
+      }
+      figure img {
+        max-width: 100%;
+        border: 1px solid #eee;
+      }
+      figcaption {
+        font-style: italic;
+      }
+
+      img.icon {
+        height: 30px;
+        width: auto;
+        vertical-align: middle;
+      }
+
+      .stepbystep {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-align-items: flex-start;
+        -moz-align-items: flex-start;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+        margin-top: 2em;
+      }
+      .stepbystep > * {
+        -webkit-flex: 1;
+        flex: 1;
+      }
+      .stepbystep > ul {
+        padding: 0;
+        list-style: none;
+        line-height: 2;
+        margin: 0 15px 0 30px;
+      }
+      .stepbystep > ul li {
+        margin-bottom: 2em;
+      }
+      .stepbystep > ul li:before {
+        content:"\2192 ";
+        display: inline-block;
+        text-indent: -30px;
+        position: relative;
+      }
+      #pages header {
+        margin: 2em 0 0 0;
+      }
+      #pages header h1, #pages header h3 {
+        font-weight: 300;
+        margin: 0;
+      }
+      #pages header h2 {
+        font-weight: normal;
+        color: #444;
+      }
+      #pages header h3 {
+        font-size: 1em;
+        color: #888;
+      }
+      #pages header h3.codelab-title {
+        font-size: 1.4em;
+        color: #aaa;
+      }
+      #pages header h1.step-title:before {
+        content: attr(data-step) '.';
+        margin-right: 10px;
+      }
+
+      #nextbutton {
+        right: 2em;
+      }
+      #prevbutton {
+        left: 2em;
+        /*background: rgb(155, 63, 49);*/
+        background: #999;
+      }
+      paper-fab:not([disabled]):hover {
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      paper-fab[completed] {
+        background: rgb(13, 168, 97);
+      }
+      paper-progress {
+        width: 100%;
+        position: relative;
+        top: 4px;
+        z-index: -1;
+      }
+      /*paper-progress::shadow #activeProgress {
+        background-color: #e91e63;
+      }*/
+      .get-started {
+        margin-bottom: 30px;
+      }
+
+      user-credentials {
+        margin: 20px auto 0 auto;
+      }
+    </style>
+    <core-ajax url="/metadata/" auto
+               response="{{response}}" handleAs="json"></core-ajax>
+
+    <flatiron-director route="{{selectedStep + 1}}" autoHash></flatiron-director>
+
+    <core-selector id="pages" selected="{{selectedStep}}" target="{{$.wrapper}}"
+                   itemsSelector="marked-element" on-marked-js-highlight="{{highlight}}">
+
+      <template repeat="{{step,i in steps}}">
+        <div id="wrapper" class="{{ {'core-selected': selectedStep == i} | tokenList }}">
+          <core-ajax auto url="/static/codelabs/{{codelab}}/{{step.slug}}.md" response="{{step.response}}"
+                     on-core-response="{{onStepResponse}}"></core-ajax>
+
+          <header>
+            <template hidden?="{{}}">
+              <h3 class="codelab-title">{{currentCodelab.title}}</h3>
+            </template>
+            <template if="{{i == 0}}">
+              <h1>{{currentCodelab.title}}</h1>
+              <p>{{currentCodelab.description}}</p>
+
+              <!-- <template if="{{currentCodelab.slug != 'polymer-build-maps'}}">
+                <div class="extended">
+                  <h2>Get the source</h2>
+                  <p>
+                    &rarr; In your home directory, run the following
+                    to get all I/O 2014 codelabs:
+                    <pre>git clone https://github.com/googlesamples/io2014-codelabs.git</pre>
+                  </p>
+                  <aside class="callout">
+                    The source for this codelab is in
+                    <code>~/io2014-codelabs/{{currentCodelab.slug}}/</code>.
+                  </aside>
+                </div>
+                <div class="kiosk">
+                  <aside class="callout">
+                    The source for this codelab is in
+                    <code>~/io2014-codelabs/{{currentCodelab.slug}}/</code>.
+                  </aside>
+                </div>
+              </template> -->
+
+              <h2>Steps</h2>
+              <label>The codelab is split into the following steps:</label>
+              <ol class="steps">
+                <template repeat="{{step in currentCodelab.steps}}">
+                  <li>{{step.title}}</li>
+                </template>
+              </ol>
+              <div class="get-started">Let's get started! Scroll down to see your first step.</div>
+            </template>
+            <h1 data-step="{{i + 1}}" class="step-title">{{step.title}}</h1>
+            <h3>{{step.blurb}}</h3>
+
+          </header>
+
+          <!-- TODO: not ideal. We only need one of these, but this allows
+                     the progress bar to be relative to the marked-element
+                     and causes the padding to be correct for multiline step
+                     descriptions. -->
+          <paper-progress value="{{(selectedStep + 1) / steps.length}}" min="0" max="1"></paper-progress>
+
+          <marked-element data-step="{{i + 1}}" text="{{step.response}}" on-deep-link="{{jumpToLink}}"></marked-element>
+        </div>
+
+      </template>
+
+    </core-selector>
+
+    <paper-fab id="prevbutton" class="mini" icon="icons:arrow-back" disabled?="{{selectedStep == 0}}" on-tap="{{prevStep}}"></paper-fab>
+    <paper-fab id="nextbutton" icon="icons:arrow-forward"
+        on-tap="{{nextStep}}" completed?="{{selectedStep == steps.length - 1}}"></paper-fab>
+
+  </template>
+  <script>
+  (function() {
+    function setSelectedStep_() {
+      // Load step number from URL, otherwise start at 0 (e.g. step 1).
+      this.selectedStep = location.hash ? parseInt(location.hash.split('#')[1]) - 1 : 0;
+    }
+
+    Polymer('io-codelab', {
+      selectedStep: 0,
+      ready: function() {
+        this.steps = [];
+
+        setSelectedStep_.bind(this)();
+
+        document.addEventListener('keydown', function(e) {
+          switch(e.keyCode) {
+            case 37: // LEFT
+              this.prevStep();
+              break;
+            case 39: // RIGHT
+              this.nextStep();
+              break;
+          }
+        }.bind(this));
+
+        window.addEventListener('popstate', setSelectedStep_.bind(this));
+      },
+      codelabChanged: function() {
+        this.responseChanged();
+      },
+      responseChanged: function() {
+        if (this.response) {
+          // Get the slug for the current codelab.
+          var match = window.location.pathname.match(/\/static\/codelabs\/([a-z0-9-]+)\//)
+          if (match) {
+            this.currentCodelab = this.response.codelabs[match[1]];
+          }
+          this.steps = this.response.codelabs[this.codelab].steps;
+          this.tracking();
+          this.user_creds = this.response.credentials;
+
+          // Add a class to body based on whether we are at the I/O Kiosk, or
+          // at I/O Extended.
+          if (this.user_creds) {
+            document.body.classList.add('io-kiosk');
+          } else {
+            document.body.classList.add('io-extended');
+          }
+        }
+      },
+      setSelectedStep_: function() {
+        this.selectedStep = location.hash ? parseInt(location.hash.split('#')[1]) - 1 : 0;
+      },
+      onStepResponse: function(e, detail, sender) {
+        this.async(function() {
+          var markedEl = sender.parentElement.querySelector('marked-element');
+
+          // Regexp for credentials variables like $IO_PASSWORD.
+          var variableRegexp = /\$IO_([A-Z0-9_]+)/gi;
+          markedEl.text = markedEl.text.replace(variableRegexp,
+            function(match, p1) {
+              // At I/O, display the credentials data we've generated.
+
+              if (this.user_creds) {
+                return this.user_creds[p1];
+              } else {
+                // At Extended, link to the Developer's Console where the user
+                // can get credentials.
+                var str = "&lt;";
+                str += p1;
+                str += " from <a href='https://console.developers.google.com/project' target='_blank'>";
+                str += "Google Developers Console</a>";
+                str += "&gt;";
+                return str;
+              }
+            }.bind(this));
+
+          var tocEl = markedEl.querySelector('toc-element');
+          if (tocEl) {
+            tocEl.headings = Array.prototype.slice.call(
+                markedEl.querySelectorAll('h3'));
+          }
+          // Make all external links open in new tab.
+          var links = markedEl.querySelectorAll('a')
+          Array.prototype.forEach.call(links, function(a) {
+            if (a.href.match(/^http/)) {
+              a.target = '_blank';
+            }
+          });
+          // Make codeblocks display side by side
+          var code = markedEl.querySelectorAll('.lang-side-by-side');
+          code.array().forEach(function(instance) {
+            var pre = instance.parentElement;
+            pre.classList.add('side-by-side');
+          });
+        });
+      },
+      highlight: function(e, detail, sender) {
+        if (detail.code.indexOf(':::') == 0) {
+          var lines = detail.code.split('\n');
+          var lang = lines.shift();
+          lang = lang.substr(3).trim();
+          detail.code = hljs.highlight(lang, lines.join('\n')).value;
+          return;
+        }
+        detail.code = hljs.highlightAuto(detail.code).value;
+      },
+      prevStep: function(e, detail, sender) {
+        if (!sender) {
+          sender = this.$.prevbutton;
+        }
+
+        if (!sender.disabled) {
+          this.selectedStep = (this.selectedStep - 1) % this.steps.length;
+          this.$.pages.scrollIntoView(true);
+          this.tracking();
+        }
+      },
+      nextStep: function(e, detail, sender) {
+        if (!sender) {
+          sender = this.$.nextbutton;
+        }
+
+        if (!sender.attributes['completed']) {
+          this.selectedStep = (this.selectedStep + 1) % this.steps.length;
+          this.$.pages.scrollIntoView(true);
+          this.tracking();
+        } else {
+          window.location = '/completed/';
+        }
+      },
+      jumpToLink: function(e, detail, sender) {
+        sender.querySelector(detail.link.getAttribute('href')).scrollIntoView();
+      },
+      tracking: function() {
+        var currentStep = this.selectedStep + 1;
+        analytics.pageview(currentStep);
+        if (currentStep == this.steps.length) {
+          analytics.complete(this.codelab);
+        }
+      }
+    });
+  })();
+  </script>
+</polymer-element>
+
+
+<polymer-element name="codelist-dropdown" attributes="codelabs">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      paper-menu-button::shadow #overlay {
+        margin-top: 30px;
+        margin-left: 10px;
+        /*width: 300px;*/
+        padding: 5px 15px 20px 5px;
+      }
+      /*paper-menu-button::shadow core-menu {
+        overflow: hidden;
+        white-space: nowrap;
+      }*/
+      paper-menu-button::shadow core-icon {
+        fill: currentcolor;
+      }
+      paper-menu-button > * {
+        color: initial;
+        padding: 2px 5px;
+      }
+      paper-menu-button > *:hover {
+        background: #eee;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: black !important;
+      }
+      paper-menu-button .nav-category {
+        color: #999;
+        padding-top: 7px;
+        padding-left: 7px;
+      }
+      .codelab-title {
+        margin-left: 17px;
+      }
+    </style>
+    <core-ajax url="/metadata/" auto
+                 response="{{response}}" handleAs="json"></core-ajax>
+
+    <paper-menu-button icon="arrow-drop-down">
+      <template repeat="{{category,i in categories}}">
+      <div class="nav-category {{category}}-label">{{category | ucFirst}}</div>
+        <template repeat="{{codelab in cbc[category]}}">
+            <a href="/static/codelabs/{{codelab.slug}}/">
+              <div class="codelab-title">{{codelab.title}}</div></a>
+        </template>
+      </template>
+    </paper-menu-button>
+  </template>
+  <script>
+    Polymer('codelist-dropdown', {
+      codelabs: {},
+      responseChanged: function() {
+        this.ucFirst = function(str) {
+          return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+        // Use this list, and not this.cbc.keys. The former retains order, the
+        // latter does not.
+        this.categories = this.response.categories;
+        this.cbc = this.response.codelabs_by_category;
+        this.cbc.keys = Object.keys(this.cbc);
+        this.codelabs = this.response.codelabs;
+        this.codelabs.keys = Object.keys(this.codelabs);
+        this.fire('codelab-list', {codelabs: this.codelabs,
+                                   orderedCodelabs: this.getOrderedCodelabs()});
+      },
+      getOrderedCodelabs: function() {
+        var codelabSlugs = this.codelabs.keys.slice(0);
+
+        codelabSlugs.sort(function(a, b) {
+          if (a > b) {
+            return 1;
+            } else if (a < b) {
+            return -1;
+            } else {
+            return 0;
+          }
+        }.bind(this));
+        return codelabSlugs;
+      }
+    });
+  </script>
+</polymer-element>

@@ -1,0 +1,47 @@
+title: "Polymer: Data Visualization Using Google Maps and WebGL"
+summary: "Create and customize a geographic data visualization using 
+Polymer, the Google Maps JavaScript API v3, and custom WebGL web components."
+
+description: "Use the Google Maps JavaScript API v3 while learning about
+Polymer's data-binding features and the power
+of declaratively describing a visualization."
+
+prerequisites:
+  - Basic understanding of HTML, CSS, and web development
+  - Some JavaScript development experience
+  - No WebGL experience needed unless you wish to dig deeper
+
+level: Intermediate
+logo: p-logo-square.png
+categories:
+  - web
+duration: 45 min
+keywords:
+  - Chrome Dev Editor
+  - Data Binding
+  - Google Maps
+  - HTML5
+  - Intermediate
+  - Polymer
+  - Visualization
+  - Web Components
+  - WebGL
+
+steps:
+  -
+    title: "Getting set up"
+    blurb: "Start a new Polymer application using the Chrome Dev Editor"
+  -
+    title: "Using <google-map>"
+    blurb: "Learn to use the <google-map> element and install it using Bower"
+  -
+    title: "Styling your map"
+    blurb: "Make your map a better data visualization canvas by adding styling"
+  -
+    title: "Adding <canvas-layer>"
+    blurb: "Add the <canvas-layer> element to display data over your map"
+  -
+    title: "Displaying lots of data"
+    blurb: "Load a large dataset and display all of it at once"
+  - title: "Finished!"
+    blurb: "You've taken the first steps in massive geo visualization"
