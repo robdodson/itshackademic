@@ -7,13 +7,13 @@ threadsafe: yes
 handlers:
 - url: /
   mime_type: text/html
-  static_files: static/splash.html
-  upload: static/splash.html
+  static_files: static/index.html
+  upload: static/index.html
 
 - url: /codelabs/?
   mime_type: text/html
-  static_files: static/index.html
-  upload: static/index.html
+  static_files: static/codelabs.html
+  upload: static/codelabs.html
 
 - url: /static/codelabs/1-polymer-first-app/
   mime_type: text/html
