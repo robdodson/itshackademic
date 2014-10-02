@@ -92,7 +92,9 @@ At the end of the element definition is a `<script>` tag:
 
 ```side-by-side
   <script>
-  Polymer({});
+  Polymer({
+    // properties and methods for the element go here
+  });
   </script>
 </polymer-element>
 ```
@@ -102,23 +104,32 @@ At the end of the element definition is a `<script>` tag:
 </ul>
 
 <aside class="callout">
-  <b>Learn More:</b>
+  <b>Note:</b>
 
-  <p>When you create an instance of <code>&lt;post-card&gt;</code>, the contents from its shadow DOM <code>&lt;template&gt;</code> are inserted as the element's <em>shadow root</em>. These elements are rendered in the browser, but are not included in the element's <code>children</code> collection.</p>
-  <p>By default, any children added by the user don't render. For example:</p>
-  <pre>&lt;post-card&gt;&lt;h3&gt;Hello!&lt;/h3&gt;&lt;/post-card&gt;</pre>
-
-  <p>Creates a <code>&lt;post-card&gt;</code> with a single <code>&lt;h3&gt;</code> element as a child.
-  To render the <code>&lt;h3&gt;</code> inside your <code>&lt;post-card&gt;</code>, you need to add an
-  <em>insertion point</em>, which tells the browser where to render children in
-  the shadow DOM tree.</p>
+  <p>
+    It is a common best practice to keep your styles and scripts in external files, so you might be looking at this example and wondering why it uses `<style>` and `<script>` tags intead.
+  </p>
+  <p>
+    Because the Shadow DOM scopes CSS to the element instance, it can be convenient to see it in the same file as the rest of the markup. Likewise,
+    the JavaScript in this example is only for the element's prototype. It is by no means required that you use `<style>` and `<script>` tags, and if you prefer using external files you may do so. The approach taken in this tutorial is merely as a convenience.
+  </p>
 </aside>
 
 <hr>
 
 #### Create the card structure.
 
-Find the `CARD CONTENTS GO HERE` comment and replace it with the `<div>` and
+When you create an instance of <code>&lt;post-card&gt;</code>, the contents from its shadow DOM <code>&lt;template&gt;</code> are inserted as the element's <em>shadow root</em>. These elements are rendered in the browser, but are not included in the element's <code>children</code> collection.
+
+By default, any children added by the user don't render. For example:
+<pre>&lt;post-card&gt;&lt;h3&gt;Hello!&lt;/h3&gt;&lt;/post-card&gt;</pre>
+
+Creates a <code>&lt;post-card&gt;</code> with a single <code>&lt;h3&gt;</code> element as a child.
+To render the <code>&lt;h3&gt;</code> inside your <code>&lt;post-card&gt;</code>, you need to add an
+<em>insertion point</em>, which tells the browser where to render children in
+the shadow DOM tree.
+
+&rarr; Find the `CARD CONTENTS GO HERE` comment and replace it with the `<div>` and
 `<content>` tags shown below.
 
 ```side-by-side
@@ -131,8 +142,7 @@ Find the `CARD CONTENTS GO HERE` comment and replace it with the `<div>` and
 ```
 
 <ul class="side-by-side">
-  <li>The <code>layout horizontal center</code> attributes are Polymer shorthand to
-create a flexbox layout. </li>
+  <li>`layout horizontal center` creates a flexbox layout with children arranged horizontally, and centered vertically.</li>
   <li>The three <code>&lt;content&gt;</code> elements create <em>insertion points</em>. <br />
 (The shadow DOM spec calls this process of selecting nodes
 <em>distribution</em>).</li>
@@ -167,7 +177,7 @@ following CSS inside the `<style>` tag after the existing rules:
 .card-header {
   margin-bottom: 10px;
 }
-/* Add the following styles: */
+/* Add your styles here: */
 .card-header ::content h2 {
   margin: 0;
   font-size: 1.8rem;
@@ -240,7 +250,7 @@ following CSS inside the `<style>` tag after the existing rules:
 
 ### Run the app
 
-Hit the <img src="img/runbutton.png" class="icon"> button! Your application should now look like this:
+Make sure you have `index.html` open, then hit the <img src="img/runbutton.png" class="icon"> button! Your application should now look like this:
 
 <div layout vertical center>
   <img class="sample" src="img/s3-app.png">
@@ -248,10 +258,10 @@ Hit the <img src="img/runbutton.png" class="icon"> button! Your application shou
 
 The card still needs a favorite button, but it's starting to take shape. 
 
-If something isn't working, check your work against the files in the `step-2` folder:
+If something isn't working, check your work against the files in the `step-3` folder:
 
--   [`post-card.html`](https://github.com/Polymer/polymer-tutorial/blob/master/step-2/post-card.html)
--   [`index.html`](https://github.com/Polymer/polymer-tutorial/blob/master/step-2/index.html)
+-   [`post-card.html`](#)
+-   [`index.html`](#)
 
 <aside class="callout">
   <b>Explore:</b>

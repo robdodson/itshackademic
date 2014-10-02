@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <!--
 Copyright 2013 The Polymer Authors. All rights reserved.
 Use of this source code is governed by a BSD-style
@@ -7,19 +7,22 @@ license that can be found in the LICENSE file.
 <html>
 <head>
   <title>paper-shadow</title>
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
   <script src="../platform/platform.js"></script>
   <link href="paper-shadow.html" rel="import">
+  <link href="paper-shadow.css" rel="import">
+
   <style>
     body {
-      font-family: Roboto2, 'Helvetica Neue', Helvetica, Arial;
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
       transform: translateZ(0);
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
       padding: 16px;
-      background: #fafafa;
       user-select: none;
       -webkit-user-select: none;
     }
@@ -61,8 +64,6 @@ license that can be found in the LICENSE file.
 </head>
 <body unresolved>
 
-  <paper-shadow></paper-shadow>
-
   <section>
     <div>
       <div class="card">
@@ -76,18 +77,13 @@ license that can be found in the LICENSE file.
   <section>
     <!-- Example of using paper-shadow to add a shadow to an element -->
     <div>
-      <div id="z1" class="card">
-        <paper-shadow id="s1" z="1"></paper-shadow>
+      <div class="card">
+        <paper-shadow z="1"></paper-shadow>
       </div>
     </div>
     <aside>
       z-depth = 1
     </aside>
-    <script>
-      document.addEventListener('polymer-ready', function() {
-        document.getElementById('s1').target = document.getElementById('z1');
-      });
-    </script>
   </section>
 
   <section>
@@ -99,7 +95,7 @@ license that can be found in the LICENSE file.
             display: block;
           }
         </style>
-        <paper-shadow target="{{}}" z="{{z}}"></paper-shadow>
+        <paper-shadow z="{{z}}"></paper-shadow>
       </template>
       <script>
         Polymer('x-card', {
@@ -176,7 +172,7 @@ license that can be found in the LICENSE file.
           border-radius: 24px;
         }
       </style>
-      <paper-shadow target="{{}}" z="{{z}}" animated></paper-shadow>
+      <paper-shadow z="{{z}}" animated></paper-shadow>
     </template>
     <script>
       Polymer('x-shadow', {

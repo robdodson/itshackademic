@@ -1,6 +1,6 @@
 <toc-element></toc-element>
 
-### What you'll build
+### The Goal
 
 In this tutorial, you'll build a small Polymer application -- a very basic client for a social networking service. The end result will look like this:
 
@@ -32,50 +32,64 @@ This codelab uses **Chrome Dev Editor**, a Chrome app IDE.
 </aside>
 <!-- End of Chrome Dev Editor callout block -->
 
-Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer".
+<div class="stepbystep">
+  <ul>
+    <li>
+      <a href="#">Download the project source</a> and save it to your computer.
+    </li>
+    <li>
+      Unzip the project file, there should be one `PolymerApp` directory.
+    </li>
+  </ul>
+</div>
 
 <div class="stepbystep">
   <ul>
-    <li>Click <img src="img/tripledot.png" class="icon"> to start a new project.</li>
+    <li>
+      In Chrome Dev Editor, click <img src="img/hamburger.png" class="icon"> and select `Open Folder...`
+    </li>
   </ul>
   <div>
-    <img src="img/s1-newproject.png" style="height:150px;">
+    <img src="img/s1-open-folder.png" alt="open folder" style="height:250px;">
   </div>
 </div>
 
 <div class="stepbystep">
   <ul>
-    <li>Enter <b>"PolymerApp"</b> as the <b>Project name</b>.</li>
-    <li>In the <b>Project type</b> dropdown, select "JavaScript web app using
-       Polymer".</li>
-    <li>Click the <b>Create</b> button.</li>
+    <li>
+      Select the `PolymerApp` directory to load it into the editor.
+    </li>
   </ul>
   <div>
-    <img src="img/s1-newproject-type.png" style="height:250px;">
+    <img src="img/s1-open-folder2.png" alt="open folder" style="height:190px;">
   </div>
 </div>
 
-Chrome Dev Editor creates a basic scaffold for your Polymer app. In the
-background, it also uses [Bower](http://bower.io/) to download and install a
-list of dependencies (including `polymer.js`) into the `bower_components/`
-folder. You'll learn more about using Bower in the next step.
+
+You should see the following structure in your editor's sidebar.
 
     PolymerApp/
-      bower_components/ <!-- installed dependencies from Bower -->
-      bower.json  <!-- Bower metadata file. Used for managing dependencies -->
-      index.html  <!-- your app -->
-      main.js
-      styles.css
+      api/          <!-- a fake API for our app to consume -->
+      components/   <!-- installed dependencies from Bower -->
+      finished/     <!-- the finished version of our project, for reference -->
+      images/
+      post-service/ <!-- a component used in the tutorial -->
+      starter/      <!-- the starting point for your project! -->
+      step-1/       <!-- checkpoint steps, for reference -->
+      step-2/
+      step-3/
+      .bowerrc      <!-- bower configuration file -->
+      .gitignore
+      bower.json    <!-- bower metadata file. Used for managing dependencies -->
 
 ### Preview the app
 
-At any point, hit the <img src="img/runbutton.png" class="icon"> button in the
-top toolbar to run the app. Chrome Dev Editor fires up a web server and
-navigates to the `index.html` page. This is great way to preview changes as you
-make them.
+&rarr;  Open `starter/index.html` and hit the <img src="img/runbutton.png" class="icon"> button in the top toolbar to run the app.
+
+Chrome Dev Editor fires up a web server and navigates to the `index.html` page. This is great way to preview changes as you make them.
 
 <figure>
-  <img src="img/s1-helloworld.png" style="height:300px">
+  <img src="img/s1-first-run.png">
   <figcaption>Preview of index.html</figcaption>
 </figure>
 
@@ -83,9 +97,9 @@ make them.
 
 In this step, you learned how to:
 
-- Create a new Polymer application
+- Load a project into Chrome Dev Editor
 - Run Chrome Dev Editor's web server to preview the app
 
 ### Next up
 
-At this point the app doesn't do much. Let's add a map!
+At this point the app doesn't do much. Let's add some code!

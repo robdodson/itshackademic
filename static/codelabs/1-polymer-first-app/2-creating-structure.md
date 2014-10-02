@@ -19,13 +19,15 @@ Go to the `starter` directory and open the `index.html` file. The starting file 
 
   <title>unquote</title>
 
-  <meta name="viewport" 
-    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
+  <meta name="viewport"
+  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  
+  <link rel="stylesheet" href="app.css">
+  
   <script src="../components/platform/platform.js">
   </script>
-
-  <link rel="import" 
+  
+  <link rel="import"
     href="../components/font-roboto/roboto.html">
   ...
 ```
@@ -45,11 +47,13 @@ rendering of the web page. If you experience this problem, comment out the
 import for `font-roboto`.</p>
 </aside>
 
-Skipping over the styles for now, at the end of the file you'll find something new:
+At the end of the file you'll find something new:
 
 ```side-by-side
 <body unresolved>
+  <h1>Hello Polytechnics!</h1>
 
+  <script src="app.js"></script>
 </body>
 ```
 
@@ -78,8 +82,7 @@ OK, time to write some code!
 <link rel="import"
   href="../components/core-toolbar/core-toolbar.html">
 <link rel="import"
-  href="../components/paper-tabs/paper-tabs.html"></strong>
-<style>
+  href="../components/paper-tabs/paper-tabs.html">
 ```
 
 <ul class="side-by-side">
@@ -90,7 +93,16 @@ OK, time to write some code!
 
 ### Add a toolbar
 
-&rarr; To add a toolbar, add the following code inside the `<body>` tag.
+<div class="stepbystep">
+  <ul>
+    <li>
+      Remove the `<h1>` that says `Hello Polytechnics!`
+    </li>
+    <li>
+      Add the following code inside the `<body>` tag.
+    </li>
+  </ul>
+</div>
 
 ```side-by-side
 <core-header-panel>
@@ -114,6 +126,54 @@ OK, time to write some code!
       as a container for tabs, menu buttons, and other controls.</li>
 </ul>
 
+If you try to hit the <img src="img/runbutton.png"
+class="icon"> button now to preview the app the page will be blank. That's because `<core-header-panel>` always needs to have a height set on it explicitly. An easy way to go about this is to use [layout attributes](//polymer-project.org/docs/polymer/layout-attrs.html).
+
+<div class="stepbystep">
+  <ul>
+    <li>
+      Add `fullbleed`, `layout`, and `vertical` attributes to the `<body>`
+    </li>
+    <li>
+      Add a `flex` attribute to the `<core-header-panel>`.
+    </li>
+  </ul>
+</div>
+
+Your code should look like this:
+
+```side-by-side
+<body unresolved fullbleed layout vertical>
+  <core-header-panel flex>
+  
+    <core-toolbar>
+    </core-toolbar>
+  
+    <!-- main page content will go here --> 
+  
+  </core-header-panel>
+
+  <script src="app.js"></script>
+</body>
+```
+
+<ul class="side-by-side">
+  <li>The <code>fullbleed</code> attribute will cause the <code>&lt;body></code> to completely fill the viewport, removing all margin and padding around the edges.</li>
+  <li>
+    When a container includes the <code>layout</code> attribute, it can become a flex container. You can specify <code>horizontal</code> or <code>vertical</code> to change the orientation
+  </li>
+  <li>
+  Children of an element using the <code>layout</code> attribute can use <code>flex</code> attributes to control their own sizing. The <code>flex</code> attribute tells the child to take up as much space as it possibly can.
+  </li>
+</ul>
+
+Hit <img src="img/runbutton.png" class="icon"> again, or refresh the page, and you should see a grey toolbar on the screen. Nice!
+
+<figure>
+  <img src="img/s2-header-panel.png">
+  <figcaption>Our first `<core-header-panel>`</figcaption>
+</figure>
+
 <hr>
 
 #### Add the tabs
@@ -122,16 +182,16 @@ The application will use tabs for navigating between two different views,
 a list of all messages and a list of favorites. The 
 <code><a href="//polymer-project.org/docs/elements/paper-elements.html#paper-tabs">&lt;paper-tabs&gt;</a></code>
 element works much like a `<select>` element, but it's styled as a set of
-tabs.
+tabs. We'll use layout attributes again to position our tabs inside of the `<core-toolbar>`.
 
-&rarr; To add tabs, add the following code inside the `<core-toolbar>` tag.
+&rarr; Add the following `<paper-tabs>` code
 
 ```side-by-side
 <core-toolbar>
 
   <!-- Add the following code -->
-  <paper-tabs id="tabs" selected="all" self-end>
-    <paper-tab name="all">All</paper-tab>
+  <paper-tabs selected="messages" flex>
+    <paper-tab name="messages">Messages</paper-tab>
     <paper-tab name="favorites">Favorites</paper-tab>
   </paper-tabs>
 
@@ -144,77 +204,72 @@ tabs.
     value or its index value.
   </li>
   <li>
-    <code>selected="all"</code> chooses the first tab as the initially selected tab.
-  </li>
-  <li>In this case, the children are <code>&lt;paper-tab></code> elements, which provide
-     styling and the "ink ripple" animation when you touch a tab.
+    <code>selected="messages"</code> chooses the first tab as the initially selected tab.
   </li>
   <li>
-    <code>self-end</code> is a
-    <a href="//polymer-project.org/docs/polymer/layout-attrs.html">layout attribute</a>.
+    In this case, the children are <code>&lt;paper-tab></code> elements, which provide styling and the "ink ripple" animation when you touch a tab.
+  </li>
+  <li>
+    `<core-toolbar>` positions its children using flexbox so we can use a `flex` attribute to tell the `<paper-tabs>` to take up as much space as they can.
   </li>
 </ul>
+
+If you refresh the page, you'll notice the tabs are sitting in the middle of the toolbar. To "pin" our tabs to the bottom of the toolbar, we can give them a <code>fit</code> class.
+
+&rarr; Add a `fit` class to the `<paper-tabs>` element
+
+```side-by-side
+<paper-tabs class="fit" selected="messages" flex>
+  <paper-tab name="messages">Messages</paper-tab>
+  <paper-tab name="favorites">Favorites</paper-tab>
+</paper-tabs>
+```
+
+<ul class="side-by-side">
+  <li>Aside from `fit`, the `<core-toolbar>` has a number of built-in classes for rearranging its children. See <a href="http://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar">the `<core-toolbar>` docs for reference</a>.</li>
+</ul>
+
+Hit <img src="img/runbutton.png" class="icon"> again, or refresh the page, and your tabs should now be sitting on the bottom of the toolbar.
+
+<figure>
+  <img src="img/s2-paper-tabs.png">
+  <figcaption>`<paper-tabs>`, looking good!</figcaption>
+</figure>
 
 <hr>
 
 #### Add styles for the new elements
 
-&rarr; Add the following CSS rules inside the `<style>` element.
+<div class="stepbystep">
+  <ul>
+    <li>
+      Open `app.css` and find the line that says `/* Add your styles here! */`.
+    </li>
+    <li>
+      Add the following CSS rules
+    </li>
+  </ul>
+</div>
 
-```side-by-side
-html,body {
-  height: 100%;
-  margin: 0;
-  background-color: #E5E5E5;
-  font-family: 'RobotoDraft', sans-serif;
-}
-
-/* Add the following styles: */
-core-header-panel {
-  height: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; 
-}
+```
+/* Add your styles here! */
 core-toolbar {
   background: #03a9f4;
   color: white;
 }
-#tabs {
-  width: 100%;
-  margin: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+paper-tabs {
   text-transform: uppercase;
 }
 ```
 
-<ul class="side-by-side">
-  <li>The <code>&lt;core-header-panel&gt;</code> is a generic element that can be used as either a 
-      full-page layout or for a card with a toolbar. To use it as a full-page, scrollable container,
-      set its height explicitly. </li>
-  <li>Here, the height is set to 100%. This works because the existing style rules ensure that its 
-      parent elements,
-      <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code>, take up 100% of the viewport height.</li>
-  <li>The <code>overflow</code> and <code>-webkit-overflow-scrolling</code> properties ensure that
-      scrolling works smoothly on touch devices, especially iOS.</li>
-      <li>The <code>#tabs</code> selector selects the <code>&lt;paper-tabs&gt;</code> element. The toolbar adds a default margin on its children, to space controls appropriately. The tabs don't need this extra spacing.</li>
-  <li>The <code>user-select</code> properties prevent the user from accidentally selecting the tab text.</li>
-</ul>
-
-<hr>
-
-&rarr; Add a `<script>` tag near the end of the file to handle the tab switching event.
+&rarr; Open `app.js` and add the following code to handle the tab switching event.
 
 ```side-by-side
-<script>
-  var tabs = document.querySelector('paper-tabs');
+var tabs = document.querySelector('paper-tabs');
 
-  tabs.addEventListener('core-select', function() {
-    console.log("Selected: " + tabs.selected);
-  });
-</script>
+tabs.addEventListener('core-select', function() {
+  console.log("Selected: " + tabs.selected);
+});
 ```
 
 <ul class="side-by-side">
@@ -247,9 +302,9 @@ for the newly-selected tab. The `<paper-tabs>` element inherits this behavior fr
 both single and multiple selections.</p>
 </aside>
 
-If something isn't working, check your work against the `index.html` file in the `step-1` folder:
+If something isn't working, check your work against the `index.html` file in the `step-2` folder:
 
--   [`index.html`](https://github.com/Polymer/polymer-tutorial/blob/master/step-1/index.html)
+-   [`index.html`](#)
 
 ### Summary
 

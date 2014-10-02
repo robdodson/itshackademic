@@ -1,0 +1,71 @@
+[{
+  "start": 1414281600,
+  "defaultEventUrl": "/events/5385657703727104/",
+  "end": 1414317600,
+  "name": "2014 DevFest Beijing",
+  "tags": ["gdg", "devfest", "polymer", "polymerpolytechnic", "androidwear", "android", "web", "hourofcode"],
+  "latlng": {
+    "lat": 39.980885000000001,
+    "lng": 116.351676
+  },
+  "gplusEventUrl": "https://plus.google.com/events/ci5o1uh4q4hm1ob0dftsfj4jsro",
+  "location": "\u4e2d\u56fd\u5317\u4eac\u5e02\u5317\u4eac\u6d77\u6dc0\u533a\u6821\u56ed\u5357\u8def\u5317\u822a\u65b0\u4e3b\u697c\u4f1a\u8bae\u4e2d\u5fc3",
+  "participantsCount": null,
+  "description": "Website : http://devfest.gdgbeijing.org/ "
+}, {
+  "start": 1414445400,
+  "defaultEventUrl": "/events/4581769827319808-5757334940811264/",
+  "end": 1414456200,
+  "name": "GDG New York OCT Meetup: Polymer Polytechnic",
+  "tags": ["gdg", "polymerpolytechnic", "polymer", "web"],
+  "latlng": {
+    "lat": 40.741284999999998,
+    "lng": -74.003175999999996
+  },
+  "gplusEventUrl": "https://plus.google.com/u/0/b/102033742326416578905/events/cekun2h8ilg7cl82er5h65ddd0g",
+  "location": "Google New York, 8th Avenue, Chelsea, New York, NY, United States",
+  "participantsCount": null,
+  "description": "Polymer, Paper &amp; Web Components: Tech Talk + Code Lab\n\nSee our Meetup for more details:\nhttp://www.meetup.com/NYC-GDG/events/194718162/"
+}, {
+  "start": 1416006000,
+  "defaultEventUrl": "/events/5513902721859584/",
+  "end": 1416006000,
+  "name": "DevFest - post-Devoxx about Polymer",
+  "tags": ["gdg", "devfest", "polymer", "html5", "polymerpolytechnic"],
+  "latlng": {
+    "lat": 50.850339599999998,
+    "lng": 4.3517103000000361
+  },
+  "gplusEventUrl": "",
+  "location": "Brussels, Belgium",
+  "participantsCount": null,
+  "description": "Learn in the morning, practise in the afternoon - all about Polymer"
+}, {
+  "start": 1416009600,
+  "defaultEventUrl": "/events/5507633926635520-5668600916475904/",
+  "end": 1416038400,
+  "name": "GDG Halsema DevFest 2014",
+  "tags": ["gdg", "polymerpolytechnic", "devfest"],
+  "latlng": {
+    "lat": 17.087222000000001,
+    "lng": 120.97555599999998
+  },
+  "gplusEventUrl": "https://plus.google.com/u/0/b/111624169093759630469/events/cc0545ohtgm6t94qmb1j0g8t8rc",
+  "location": "Bontoc, Cordillera Administrative Region, Philippines",
+  "participantsCount": null,
+  "description": ""
+}, {
+  "start": 1416578400,
+  "defaultEventUrl": "/events/6710931972161536/",
+  "end": 1416765600,
+  "name": "DevFest Berlin 2014",
+  "tags": ["devfest", "android", "androidtv", "androidwear", "go", "html5", "web", "angularjs", "germany", "api", "computeengine", "gdg", "polymerpolytechnic", "polymer"],
+  "latlng": {
+    "lat": 52.512439999999998,
+    "lng": 13.431129000000055
+  },
+  "gplusEventUrl": "https://plus.google.com/events/c1u8933vkjrog9uklt58o7frj24",
+  "location": "Immobilien Scout GmbH, Andreasstra\u00dfe, Berlin, Deutschland",
+  "participantsCount": null,
+  "description": "More details will follow, but we can say roughly the schedule:\nfriday: workshops/ codeschool\nsaturday: conference \nsunday: hackathon\ufeff\n\nThere will be a Ticketing System, which is the real registration, will come in the next days."
+}]

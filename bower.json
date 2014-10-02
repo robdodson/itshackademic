@@ -1,5 +1,5 @@
 {
-  "name": "polymer-polytechnic",
+  "name": "its-hackademic",
   "version": "0.0.0",
   "homepage": "https://github.com/robdodson/polymer-polytechnic",
   "authors": [
@@ -14,5 +14,13 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "core-elements": "Polymer/core-elements#^0.4.1",
+    "paper-elements": "Polymer/paper-elements#^0.4.1",
+    "flatiron-director": "PolymerLabs/flatiron-director#^0.4.0",
+    "highlightjs-element": "PolymerLabs/highlightjs-element#^0.4.1",
+    "marked-element": "PolymerLabs/marked-element#^0.4.1",
+    "event-map": "robdodson/event-map#^1.0.1"
+  }
 }
