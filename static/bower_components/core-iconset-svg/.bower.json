@@ -6,12 +6,12 @@
     "core-iconset": "Polymer/core-iconset#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/core-iconset-svg",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "6b5256df977e92840a699cbe0b2a6c209abf4e57"
+    "tag": "0.4.2",
+    "commit": "01b966bf42fdca348c48807c099ee63821fe4b17"
   },
   "_source": "git://github.com/Polymer/core-iconset-svg.git",
   "_target": "^0.4.0",

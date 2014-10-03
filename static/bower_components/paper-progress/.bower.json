@@ -6,12 +6,12 @@
     "paper-button": "Polymer/paper-button#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-progress",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "d8319669fa72cfd2eb51dab0c82b0ddffe72240c"
+    "tag": "0.4.2",
+    "commit": "a6d5a5d9cd7a197d3d9d41c66b493b2db9b9cbdb"
   },
   "_source": "git://github.com/Polymer/paper-progress.git",
   "_target": "^0.4.0",

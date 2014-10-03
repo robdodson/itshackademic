@@ -8,12 +8,12 @@
     "paper-shadow": "Polymer/paper-shadow#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-dialog",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "65e6d11e21010d9b5821fb789d5cf4314594fafd"
+    "tag": "0.4.2",
+    "commit": "af9ba395883c995e5c92743844314e48cfec3f66"
   },
   "_source": "git://github.com/Polymer/paper-dialog.git",
   "_target": "^0.4.0",

@@ -27,14 +27,14 @@
     "sampler-scaffold": "Polymer/sampler-scaffold#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-elements",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "11e574c7ccc6636e4af323dc247f83356a492f81"
+    "tag": "0.4.2",
+    "commit": "929fb7330d15a9c68d156377a0eedd3fab1483f9"
   },
   "_source": "git://github.com/Polymer/paper-elements.git",
-  "_target": "~0.4.1",
+  "_target": "^0.4.1",
   "_originalSource": "Polymer/paper-elements"
 }

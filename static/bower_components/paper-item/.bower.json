@@ -7,12 +7,12 @@
     "paper-ripple": "Polymer/paper-ripple#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-item",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "206a067e34fc42c7b6bb8c8638852fdc161a77f7"
+    "tag": "0.4.2",
+    "commit": "1be1e2ae8f80684a996b7eea9bbdbd118900921f"
   },
   "_source": "git://github.com/Polymer/paper-item.git",
   "_target": "^0.4.0",

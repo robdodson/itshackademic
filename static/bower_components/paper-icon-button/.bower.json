@@ -7,12 +7,12 @@
     "paper-button": "Polymer/paper-button#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-icon-button",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "8c53bb8fb97c948f2b21371a07bc574b6ef53651"
+    "tag": "0.4.2",
+    "commit": "f49cafe235893e3348482cee17064ea432194ed2"
   },
   "_source": "git://github.com/Polymer/paper-icon-button.git",
   "_target": "^0.4.0",

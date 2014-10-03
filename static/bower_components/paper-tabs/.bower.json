@@ -10,12 +10,12 @@
     "paper-ripple": "Polymer/paper-ripple#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-tabs",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "c4ab5a81bd0c9bf96f9d24eb45b53a31910f210f"
+    "tag": "0.4.2",
+    "commit": "e76eaaac29ced4e43ce61b24708b347b68990018"
   },
   "_source": "git://github.com/Polymer/paper-tabs.git",
   "_target": "^0.4.0",

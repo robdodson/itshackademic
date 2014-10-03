@@ -9,12 +9,12 @@
     "core-style": "Polymer/core-style#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-input",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "cff71ca4476a2c1375de298ef8bb4adad152b1bf"
+    "tag": "0.4.2",
+    "commit": "2cbb91bdded0b912e62ccddeef11f4747beda87c"
   },
   "_source": "git://github.com/Polymer/paper-input.git",
   "_target": "^0.4.0",

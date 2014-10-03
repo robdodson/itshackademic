@@ -16,12 +16,12 @@
     "paper-shadow": "Polymer/paper-shadow#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-menu-button",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "799db930b471dbb56d25eb46f3848948f7f7bd8c"
+    "tag": "0.4.2",
+    "commit": "553d6e1254c66e6230d140b48e9da0728f71a924"
   },
   "_source": "git://github.com/Polymer/paper-menu-button.git",
   "_target": "^0.4.0",

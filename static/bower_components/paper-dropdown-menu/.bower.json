@@ -11,12 +11,12 @@
     "paper-shadow": "Polymer/paper-shadow#^0.4.0"
   },
   "homepage": "https://github.com/Polymer/paper-dropdown-menu",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "7b56f436a1bdae5b94006bf0442fa35e5867ba20"
+    "tag": "0.4.2",
+    "commit": "cbb5ddd4c676fdfaecf958351ed0833984950f45"
   },
   "_source": "git://github.com/Polymer/paper-dropdown-menu.git",
   "_target": "^0.4.0",

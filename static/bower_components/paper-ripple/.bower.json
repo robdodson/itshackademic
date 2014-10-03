@@ -10,12 +10,12 @@
     "polymer-test-tools": "Polymer/polymer-test-tools"
   },
   "homepage": "https://github.com/Polymer/paper-ripple",
-  "version": "0.4.1",
-  "_release": "0.4.1",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.1",
-    "commit": "1a6458e7495c8f640651a5c42019f51eeb458e29"
+    "tag": "0.4.2",
+    "commit": "abadeb0f317a8b53470022c3189144ee1f9a389e"
   },
   "_source": "git://github.com/Polymer/paper-ripple.git",
   "_target": "^0.4.0",

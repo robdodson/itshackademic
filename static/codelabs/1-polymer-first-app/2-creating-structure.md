@@ -184,7 +184,7 @@ tabs. We'll use layout attributes again to position our tabs inside of the <code
 <core-toolbar layout vertical>
 
   <!-- Add the following code -->
-  <paper-tabs id="tabs" selected="messages" flex>
+  <paper-tabs selected="messages" flex>
     <paper-tab name="messages">Messages</paper-tab>
     <paper-tab name="favorites">Favorites</paper-tab>
   </paper-tabs>
@@ -211,7 +211,7 @@ If you refresh the page, you'll notice the tabs are sitting in the middle of the
 &rarr; Add a `fit` class to the `<paper-tabs>` element
 
 ```side-by-side
-<paper-tabs id="tabs" class="fit" selected="messages" flex>
+<paper-tabs class="fit" selected="messages" flex>
   <paper-tab name="messages">Messages</paper-tab>
   <paper-tab name="favorites">Favorites</paper-tab>
 </paper-tabs>
@@ -229,6 +229,28 @@ Hit <img src="img/runbutton.png" class="icon"> again, or refresh the page, and y
 </figure>
 
 <hr>
+
+#### Add styles for the new elements
+
+&rarr; Open `app.css` and add the following CSS rules.
+
+```side-by-side
+core-toolbar {
+  background: #03a9f4;
+  color: white;
+}
+paper-tabs {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+```
+
+<ul class="side-by-side">
+  <li>The <code>user-select</code> properties prevent the user from accidentally selecting the tab text.</li>
+</ul>
 
 &rarr; Add a `<script>` tag near the end of the file to handle the tab switching event.
 
