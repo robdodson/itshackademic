@@ -22,7 +22,6 @@ element:
 
 <!-- Add the following code, above the content tag: -->
 <core-icon-button
-  id="favicon"
   icon="favorite"
   on-tap="{{favoriteTapped}}">
 </core-icon-button>
@@ -32,6 +31,7 @@ element:
 ```
 
 <ul class="side-by-side">
+  <li>At the top of the `post-card.html` file there should already be an HTML import for the `core-icon-button.html` definition.</li>
   <li>As the name implies, <code>&lt;core-icon-button&gt;</code> creates a button with an
   embedded icon. Polymer includes several sets of
   scalable icons.</li>
@@ -110,15 +110,14 @@ core-icon-button {
 
 &rarr; Save `post-card.html`.
    
-At this point, you can reload the page and your favorite buttons should 
+At this point, you can reload `index.html` and your favorite buttons should 
 work, but there are still a few steps left to finish the app.
 
-### Edit index.html
+### Edit app.js
 
-&rarr; Open `index.html` and update the tab event handler to switch views in 
+&rarr; Open `app.js` and update the tab event handler to switch views in 
 `<post-list>` when the user switches tabs:
 
-    <script>
     var tabs = document.querySelector('paper-tabs');
 
     /* Add the following code: */
@@ -127,9 +126,8 @@ work, but there are still a few steps left to finish the app.
     tabs.addEventListener('core-select', function() {
       list.show = tabs.selected;
     });
-    </script>
 
-&rarr; Save `index.html`.
+&rarr; Save `app.js`.
 
 ### Edit post-list.html
 
@@ -137,7 +135,7 @@ work, but there are still a few steps left to finish the app.
 
 &rarr; Update the template that creates the `<post-card>` elements to wire up the favorites:
 
-```step-by-step
+```side-by-side
 <template repeat="{{post in posts}}">
   <!-- Add the following code: -->
   <post-card
@@ -199,13 +197,13 @@ Polymer({
 
 ### Run the app
 
-Hit the <img src="img/runbutton.png" class="icon"> button! That's it &mdash; you're done!
+Make sure you have `index.html` open, then hit the <img src="img/runbutton.png" class="icon"> button! That's it &mdash; you're done!
 
-With a bit of luck, your application looks like this:
+With a bit of luck, your application looks like this. Try favoriting the second card and clicking on the `Favorites` tab.
 
 <figure layout vertical center>
   <a href="//polymer-project.org/apps/polymer-tutorial/finished/" class="unquote-link">
-    <img src="img/s1-app.png" alt="Finished tutorial">
+    <img src="img/s5-app.png" alt="Finished tutorial">
   </a>
   <figcaption>
     Click screenshot for demo
@@ -214,9 +212,9 @@ With a bit of luck, your application looks like this:
 
 If your project doesn't look quite right, check your work against the files in the `finished` directory:
 
--   [`post-card.html`](https://github.com/Polymer/polymer-tutorial/blob/master/finished/post-card.html)
--   [`post-list.html`](https://github.com/Polymer/polymer-tutorial/blob/master/finished/post-list.html)
--   [`index.html`](https://github.com/Polymer/polymer-tutorial/blob/master/finished/index.html)
+-   [`post-card.html`](#)
+-   [`post-list.html`](#)
+-   [`index.html`](#)
 
 ### Summary
 

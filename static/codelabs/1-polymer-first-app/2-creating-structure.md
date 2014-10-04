@@ -19,13 +19,15 @@ Go to the `starter` directory and open the `index.html` file. The starting file 
 
   <title>unquote</title>
 
-  <meta name="viewport" 
-    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-
+  <meta name="viewport"
+  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  
+  <link rel="stylesheet" href="app.css">
+  
   <script src="../components/platform/platform.js">
   </script>
-
-  <link rel="import" 
+  
+  <link rel="import"
     href="../components/font-roboto/roboto.html">
   ...
 ```
@@ -45,11 +47,13 @@ rendering of the web page. If you experience this problem, comment out the
 import for `font-roboto`.</p>
 </aside>
 
-Skipping over the styles for now, at the end of the file you'll find something new:
+At the end of the file you'll find something new:
 
 ```side-by-side
 <body unresolved>
+  <h1>Hello Polytechnics!</h1>
 
+  <script src="app.js"></script>
 </body>
 ```
 
@@ -89,7 +93,16 @@ OK, time to write some code!
 
 ### Add a toolbar
 
-&rarr; To add a toolbar, add the following code inside the `<body>` tag.
+<div class="stepbystep">
+  <ul>
+    <li>
+      Remove the `<h1>` that says `Hello Polytechnics!`
+    </li>
+    <li>
+      Add the following code inside the `<body>` tag.
+    </li>
+  </ul>
+</div>
 
 ```side-by-side
 <core-header-panel>
@@ -114,7 +127,7 @@ OK, time to write some code!
 </ul>
 
 If you try to hit the <img src="img/runbutton.png"
-class="icon"> button now to preview the app the page will be blank. That's because `<core-header-panel>` always needs to have a height set on it explicitly. An easy way to go about this is to use [layout attributes](/docs/polymer/layout-attrs.html).
+class="icon"> button now to preview the app the page will be blank. That's because `<core-header-panel>` always needs to have a height set on it explicitly. An easy way to go about this is to use [layout attributes](//polymer-project.org/docs/polymer/layout-attrs.html).
 
 <div class="stepbystep">
   <ul>
@@ -132,13 +145,15 @@ Your code should look like this:
 ```side-by-side
 <body unresolved fullbleed layout vertical>
   <core-header-panel flex>
-
+  
     <core-toolbar>
     </core-toolbar>
-
+  
     <!-- main page content will go here --> 
-
+  
   </core-header-panel>
+
+  <script src="app.js"></script>
 </body>
 ```
 
@@ -167,21 +182,12 @@ The application will use tabs for navigating between two different views,
 a list of all messages and a list of favorites. The 
 <code><a href="//polymer-project.org/docs/elements/paper-elements.html#paper-tabs">&lt;paper-tabs&gt;</a></code>
 element works much like a `<select>` element, but it's styled as a set of
-tabs. We'll use layout attributes again to position our tabs inside of the <code>core-toolbar</code>.
+tabs. We'll use layout attributes again to position our tabs inside of the `<core-toolbar>`.
 
-<div class="stepbystep">
-  <ul>
-    <li>
-      Add `layout`, and `vertical` attributes to the `<core-toolbar>`
-    </li>
-    <li>
-      Add the following `<paper-tabs>` code
-    </li>
-  </ul>
-</div>
+&rarr; Add the following `<paper-tabs>` code
 
 ```side-by-side
-<core-toolbar layout vertical>
+<core-toolbar>
 
   <!-- Add the following code -->
   <paper-tabs selected="messages" flex>
@@ -200,10 +206,12 @@ tabs. We'll use layout attributes again to position our tabs inside of the <code
   <li>
     <code>selected="messages"</code> chooses the first tab as the initially selected tab.
   </li>
-  <li>In this case, the children are <code>&lt;paper-tab></code> elements, which provide
-     styling and the "ink ripple" animation when you touch a tab.
+  <li>
+    In this case, the children are <code>&lt;paper-tab></code> elements, which provide styling and the "ink ripple" animation when you touch a tab.
   </li>
-  <li>Again we use a `flex` attribute to tell the `<paper-tabs>` to take up as much vertical space as they can</li>
+  <li>
+    `<core-toolbar>` positions its children using flexbox so we can use a `flex` attribute to tell the `<paper-tabs>` to take up as much space as they can.
+  </li>
 </ul>
 
 If you refresh the page, you'll notice the tabs are sitting in the middle of the toolbar. To "pin" our tabs to the bottom of the toolbar, we can give them a <code>fit</code> class.
@@ -232,36 +240,36 @@ Hit <img src="img/runbutton.png" class="icon"> again, or refresh the page, and y
 
 #### Add styles for the new elements
 
-&rarr; Open `app.css` and add the following CSS rules.
+<div class="stepbystep">
+  <ul>
+    <li>
+      Open `app.css` and find the line that says `/* Add your styles here! */`.
+    </li>
+    <li>
+      Add the following CSS rules
+    </li>
+  </ul>
+</div>
 
-```side-by-side
+```
+/* Add your styles here! */
 core-toolbar {
   background: #03a9f4;
   color: white;
 }
 paper-tabs {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   text-transform: uppercase;
 }
 ```
 
-<ul class="side-by-side">
-  <li>The <code>user-select</code> properties prevent the user from accidentally selecting the tab text.</li>
-</ul>
-
-&rarr; Add a `<script>` tag near the end of the file to handle the tab switching event.
+&rarr; Open `app.js` and add the following code to handle the tab switching event.
 
 ```side-by-side
-<script>
-  var tabs = document.querySelector('paper-tabs');
+var tabs = document.querySelector('paper-tabs');
 
-  tabs.addEventListener('core-select', function() {
-    console.log("Selected: " + tabs.selected);
-  });
-</script>
+tabs.addEventListener('core-select', function() {
+  console.log("Selected: " + tabs.selected);
+});
 ```
 
 <ul class="side-by-side">
@@ -294,9 +302,9 @@ for the newly-selected tab. The `<paper-tabs>` element inherits this behavior fr
 both single and multiple selections.</p>
 </aside>
 
-If something isn't working, check your work against the `index.html` file in the `step-1` folder:
+If something isn't working, check your work against the `index.html` file in the `step-2` folder:
 
--   [`index.html`](https://github.com/Polymer/polymer-tutorial/blob/master/step-1/index.html)
+-   [`index.html`](#)
 
 ### Summary
 

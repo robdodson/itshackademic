@@ -22,7 +22,7 @@
   height: auto;
   margin: 24px 0 12px;
   position: relative;
-  z-index: 2;
+  z-index: 9;
 }
 
 .date {
@@ -30,6 +30,8 @@
   display: block;
   width: 400px;
   height: auto;
+  position: relative;
+  z-index: 9;
 }
 
 @media (min-width: $lg-media) {

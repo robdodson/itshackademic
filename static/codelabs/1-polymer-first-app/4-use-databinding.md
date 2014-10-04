@@ -61,7 +61,7 @@ A <a href="//polymer-project.org/docs/polymer/polymer.html#published-properties"
 &rarr; Add a `<post-service>` element inside the element's `<template>`:
 
 ```side-by-side
-<!-- Add the following code: -->
+<!-- add markup here -->
 <post-service id="service" posts="{{posts}}">
 </post-service>
 ```
@@ -129,28 +129,28 @@ with a `<post-list>`:
 
     <div class="container" layout vertical center>
       <!-- Replace the post-card with a post-list, like so: -->
-      <post-list show="all"></post-list>
+      <post-list show="messages"></post-list>
     </div>
 
 
 ### Run the app
 
-Hit the <img src="img/runbutton.png" class="icon"> button! Your application should now look like this:
+Make sure you have `index.html` open, then hit the <img src="img/runbutton.png" class="icon"> button! Your application should now look like this:
 
 <div layout vertical center>
   <img class="sample" src="img/s4-app.png">
 </div>
 
-If you have any problems, check your work against the files in the `step-3` folder:
+If you have any problems, check your work against the files in the `step-4` folder:
 
--   [`post-list.html`](https://github.com/Polymer/polymer-tutorial/blob/master/step-3/post-list.html)
--   [`index.html`](https://github.com/Polymer/polymer-tutorial/blob/master/step-3/index.html)
+-   [`post-list.html`](#)
+-   [`index.html`](#)
 
 <aside class="callout">
   <b>Explore:</b>
 
   <p>Open up `post-service.html` to see how the component works. Internally, it uses the <code>
-<a href="/docs/elements/core-elements.html#core-ajax">&lt;core-ajax&gt;</a></code> element to make HTTP requests.</p>
+<a href="//polymer-projet.org/docs/elements/core-elements.html#core-ajax">&lt;core-ajax&gt;</a></code> element to make HTTP requests.</p>
 </aside>
 
 ### Summary
