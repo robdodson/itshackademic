@@ -16,11 +16,17 @@
     "tests"
   ],
   "dependencies": {
-    "core-elements": "Polymer/core-elements#^0.4.1",
-    "paper-elements": "Polymer/paper-elements#^0.4.1",
+    "core-elements": "Polymer/core-elements#^0.4.2",
+    "paper-elements": "Polymer/paper-elements#^0.4.2",
     "flatiron-director": "PolymerLabs/flatiron-director#^0.4.0",
-    "highlightjs-element": "PolymerLabs/highlightjs-element#^0.4.1",
-    "marked-element": "PolymerLabs/marked-element#^0.4.1",
+    "highlightjs-element": "PolymerLabs/highlightjs-element#^0.4.2",
+    "marked-element": "PolymerLabs/marked-element#3bd94ab",
     "event-map": "robdodson/event-map#^1.0.1"
+  },
+  "resolutions": {
+    "platform": "^0.4.0",
+    "core-component-page": "^0.4.0",
+    "polymer": "^0.4.0",
+    "marked-element": "3bd94ab"
   }
 }
