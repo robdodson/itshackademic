@@ -35,7 +35,7 @@ This codelab uses **Chrome Dev Editor**, a Chrome app IDE.
 <div class="stepbystep">
   <ul>
     <li>
-      <a href="#">Download the project source</a> and save it to your computer.
+      <a href="zips/PolymerApp.zip">Download the project source</a> and save it to your computer.
     </li>
     <li>
       Unzip the project file, there should be one `PolymerApp` directory.
