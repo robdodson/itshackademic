@@ -17,14 +17,14 @@ This codelab uses **Chrome Dev Editor**, a Chrome app IDE.
 </aside>
 <!-- End of Chrome Dev Editor callout block -->
 
-Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer".
+Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer paper elements".
 
 <div class="stepbystep">
   <ul>
-    <li>Click <img src="img/tripledot.png" class="icon"> to start a new project.</li>
+    <li>Click <img src="img/hamburger.png" class="icon"> to start a new project.</li>
   </ul>
   <div>
-    <img src="img/s1-newproject.png" style="height:150px;">
+    <img src="img/s1-newproject.png" style="height:250px;">
   </div>
 </div>
 
@@ -33,8 +33,8 @@ Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer".
     <!-- TODO (asolovay): Do they put quotes around the project name? If not, we
       should set off PolymerMapsCodelab in bold but with no quotes. -->
     <li>Enter <b>"PolymerMapsCodelab"</b> as the <b>Project name</b>.</li>
-    <li>In the <b>Project type</b> dropdown, select "JavaScript web app using
-       Polymer".</li>
+    <li>In the <b>Project type</b> dropdown, select "JavaScript web app (using
+       Polymer paper elements)".</li>
     <li>Click the <b>Create</b> button.</li>
   </ul>
   <div>
@@ -62,7 +62,7 @@ navigates to the `index.html` page. This is great way to preview changes as you
 make them.
 
 <figure>
-  <img src="img/s1-helloworld.png" style="height:300px">
+  <img src="img/s1-helloworld.png">
   <figcaption>Preview of index.html</figcaption>
 </figure>
 

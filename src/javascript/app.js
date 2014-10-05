@@ -6,7 +6,7 @@ if (retina) {
 }
 
 // load stellar
-$(document).stellar();
+// $(document).stellar();
 
 // faq toggling, allows many to be open at once
 $('#faq label').click(function() {

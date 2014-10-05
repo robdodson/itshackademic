@@ -1,6 +1,9 @@
 :host {
   display: block;
   position: relative;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.2);
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
 }
 google-map {
   display: block;
@@ -15,6 +18,7 @@ google-map {
 button {
   display: inline-block;
   position: relative;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
   font-size: 24px;
   text-transform: uppercase;
   color: white;
@@ -80,12 +84,17 @@ button.core-selected:after {
 }
 .event-date-numeric {
   font-size: 42px;
+  line-height: 1;
 }
 .event-date-container {
   margin-left: 3px;
 }
 .event-date-day {
   color: #41a4f4;
+  line-height: 1.3;
+}
+.event-date-month {
+  line-height: 1;
 }
 .event-name {
   margin-bottom: 7px;

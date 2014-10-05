@@ -1,6 +1,6 @@
 {
   "name": "event-map",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "keywords": [
     "seed",
     "polymer",
@@ -31,13 +31,13 @@
     "test",
     "tests"
   ],
-  "_release": "1.0.1",
+  "_release": "1.0.3",
   "_resolution": {
     "type": "version",
-    "tag": "v1.0.1",
-    "commit": "2bbc9e155a3fda7e8d77ba353674c0b6197b5046"
+    "tag": "v1.0.3",
+    "commit": "fb17202f5dffb121ffd11184724ca24b746a6774"
   },
   "_source": "git://github.com/robdodson/event-map.git",
-  "_target": "^1.0.1",
+  "_target": "^1.0.3",
   "_originalSource": "robdodson/event-map"
 }

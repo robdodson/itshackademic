@@ -387,6 +387,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "static/index.html",
+			"settings":
+			{
+				"buffer_size": 12778,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -588,26 +596,40 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/robdodson/Developer/its-hackademic"
+		"/Users/robdodson/Developer/its-hackademic",
+		"/Users/robdodson/Developer/its-hackademic/src",
+		"/Users/robdodson/Developer/its-hackademic/src/javascript"
 	],
 	"file_history":
 	[
-		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/1-getting-setup.md",
-		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/1-getting-setup.md",
+		"/Users/robdodson/Developer/its-hackademic/src/javascript/app.js",
+		"/Users/robdodson/Developer/its-hackademic/Gruntfile.js",
+		"/Users/robdodson/Developer/its-hackademic/static/index.html",
+		"/Users/robdodson/Developer/its-hackademic/bower.json",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/index.html",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs.html",
+		"/Users/robdodson/Developer/its-hackademic/static/imports.html",
+		"/Users/robdodson/Developer/its-hackademic/static/io-tags.html",
+		"/Users/robdodson/Developer/its-hackademic/static/elements.html",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/5-finishing-touches.md",
-		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/img/s1-app.png",
+		"/Users/robdodson/Developer/its-hackademic/.git/rebase-merge/git-rebase-todo",
+		"/Users/robdodson/Developer/its-hackademic/.git/COMMIT_EDITMSG",
+		"/tmp/subl stdin XIp9bd.txt",
+		"/Users/robdodson/Developer/its-hackademic/.git/MERGE_MSG",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/4-use-databinding.md",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/3-creating-element.md",
-		"/Users/robdodson/Developer/its-hackademic/app.yaml",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/2-creating-structure.md",
-		"/Users/robdodson/Developer/its-hackademic/bower.json",
-		"/Users/robdodson/Developer/its-hackademic/static/imports.html",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/metadata.yaml",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/1-getting-setup.md",
+		"/Users/robdodson/Developer/its-hackademic/.gitignore",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/1-getting-setup.md",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/img/s1-app.png",
+		"/Users/robdodson/Developer/its-hackademic/app.yaml",
 		"/Users/robdodson/Developer/its-hackademic/src/scss/_hero.scss",
 		"/Users/robdodson/Developer/its-hackademic/.sass-cache/f68514e53944c9b6161bd0bbfe72cfd5088b68e3/_hero.scssc",
 		"/Users/robdodson/Developer/its-hackademic/.sass-cache/294c1844252a4a0b10b3fce983469fd7da95be9d/_hero.scssc",
 		"/Users/robdodson/Developer/its-hackademic/static/bower_components/highlightjs-element/highlightjs-element.html",
 		"/Users/robdodson/Developer/its-hackademic/static/images/hackingbegins.svg",
-		"/Users/robdodson/Developer/its-hackademic/static/index.html",
 		"/Users/robdodson/Developer/its-hackademic/static/bower_components/event-map/event-map.html",
 		"/Users/robdodson/Developer/event-map/event-map/demo.html",
 		"/Users/robdodson/Developer/event-map/event-map/event-map.html",
@@ -635,7 +657,6 @@
 		"/Users/robdodson/Developer/polymer-tutorial/starter/post-card.html",
 		"/Users/robdodson/Developer/its-hackademic/src/scss/_resources.scss",
 		"/tmp/subl stdin ORepbI.txt",
-		"/Users/robdodson/Developer/its-hackademic/Gruntfile.js",
 		"/Users/robdodson/Developer/its-hackademic/package.json",
 		"/Users/robdodson/Developer/its-hackademic/metadata.py",
 		"/Users/robdodson/Developer/its-hackademic/static/bower_components/paper-ripple/paper-ripple.html",
@@ -708,22 +729,11 @@
 		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-drive-client/1-introduction.md",
 		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-map-visualization/1-getting-set-up.md",
 		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/2-installing-maps.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/3-adding-directions.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/5-changing-directiontype.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/6-next-steps.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/bower_components/marked/bin/marked",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/bower_components/web-animations-js/test/testcases/manual-test-add-player-onend.html",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/bower_components/core-overlay/core-overlay.html",
-		"/Users/robdodson/.zshrc",
-		"/tmp/subl stdin yxEepm.txt",
-		"/Users/robdodson/Developer/decks/devbytes/core-toolbar/toolbar-demo/index.html",
-		"/Users/robdodson/Developer/decks/devbytes/core-toolbar/outline.md",
-		"/Users/robdodson/Developer/decks/devbytes/core-toolbar/toolbar-demo/bower_components/polymer/layout.html",
-		"/Users/robdodson/Developer/decks/devbytes/core-toolbar/toolbar-demo/bower.json"
+		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/3-adding-directions.md"
 	],
 	"find":
 	{
-		"height": 33.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -790,6 +800,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"event-map",
+			"imports",
+			"marked",
+			"vulcanized",
+			"4.1",
+			"^",
+			"pick",
 			"tripledot",
 			"id=\"favicon\"",
 			"all",
@@ -910,14 +927,7 @@
 			"-mobile",
 			"-maps",
 			"this.steps",
-			"vulcanized",
-			"maps",
-			"s",
-			"/css",
-			"bottom",
-			"self",
-			"core-toolbar",
-			"DevBytes"
+			"vulcanized"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -941,8 +951,40 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "static/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11891,
+								11891
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7585.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -992,6 +1034,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"im",
+				"static/imports.html"
+			],
+			[
+				"imports",
+				"static/imports.html"
+			],
 			[
 				"ind",
 				"static/index.html"
@@ -1050,10 +1100,6 @@
 			],
 			[
 				"impo",
-				"static/imports.html"
-			],
-			[
-				"imports",
 				"static/imports.html"
 			],
 			[
@@ -1499,10 +1545,6 @@
 			[
 				"x-bar",
 				"app/elements/x-bar.html"
-			],
-			[
-				"node_",
-				"docs/polymer/node_bind.md"
 			]
 		],
 		"width": 0.0
@@ -1512,6 +1554,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"its",
+				"~/Developer/its-hackademic/its-hackademic.sublime-project"
+			],
 			[
 				"drive",
 				"~/Developer/drive-app/drive-app.sublime-project"

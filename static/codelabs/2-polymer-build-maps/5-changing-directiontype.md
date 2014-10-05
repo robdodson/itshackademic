@@ -36,7 +36,7 @@ to select a `<core-item>` travel mode for the directions.
       ...
         <core-selector selected="0" layout horizontal>
           <core-item icon="maps:directions-car" label="DRIVING"></core-item>
-          <core-item icon="maps:directionswalk" label="WALKING"></core-item>
+          <core-item icon="maps:directions-walk" label="WALKING"></core-item>
           <core-item icon="maps:directions-bike" label="BICYCLING"></core-item>
           <core-item icon="maps:directions-transit"
               label="TRANSIT"></core-item>
@@ -46,7 +46,7 @@ to select a `<core-item>` travel mode for the directions.
 **Notes**
 
 - `layout` and `horizontal` are part of
-[Polymer's CSS layout system](https://github.com/Polymer/polymer/blob/master/layout.html).
+[Polymer's CSS layout system](https://www.polymer-project.org/docs/polymer/layout-attrs.html).
 They provide flexbox support.
 - `selected="0"` selects the first item, but you can specify a different default
 if necessary.
@@ -107,9 +107,9 @@ the item that was selected.
 
 &rarr; Hit the <img src="img/runbutton.png" class="icon"> button.
 
-&rarr; Enter **SF** for the start address.
+&rarr; Enter **San Francisco, CA** for the start address.
 
-&rarr; Enter **Oakland** for an end address.
+&rarr; Enter **Oakland, CA** for an end address.
 
 &rarr; Click the different modes of travel.
 

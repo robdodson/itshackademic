@@ -22,7 +22,9 @@ To employ `<google-map-directions>`:
 **"San Francisco"** and the `endAddress` to **"Mountain View"**.
 
     <body>
-      <google-map latitude="37.779" longitude="-122.3892"></google-map>
+      <google-map latitude="37.779" longitude="-122.3892" disableDefaultUI>
+        ...
+      </google-map>
       <google-map-directions startAddress="San Francisco"
                              endAddress="Mountain View">
       </google-map-directions>
@@ -34,17 +36,25 @@ To employ `<google-map-directions>`:
 
 Both elements expose a `.map` property that allow users to access/set an underlying `Map` object (used by the Google Maps JavaScript API). To get these two elements talking, set them to use the same `Map` object.
 
-&rarr; In `index.html`, set the directions element to use the same `Map` object:
+&rarr; In `main.js`, set the directions element to use the same `Map` object:
 
-    <script>
       var gMap = document.querySelector('google-map');
       gMap.addEventListener('api-load', function(e) {
         document.querySelector('google-map-directions').map = this.map;
       });
-    </script>
 
 **Note**: Waiting until the map element fires its `api-load` event ensures that
 the map has been loaded.
+
+&rarr; In `index.html`, make sure `main.js` is included as the last script on the page:
+
+    <body unresolved>
+      ...
+      <google-map-directions startAddress="San Francisco"
+                             endAddress="Mountain View">
+      </google-map-directions>
+      <script src="main.js"></script>
+    </body>
 
 <aside class="callout">
   <b>Wait...you said no code!</b>

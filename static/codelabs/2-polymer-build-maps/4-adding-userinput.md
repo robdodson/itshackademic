@@ -1,6 +1,6 @@
 <toc-element></toc-element>
 
-Polymer supports [two-way data binding]((http://www.polymer-
+Polymer supports [two-way data binding](http://www.polymer-
 project.org/docs/polymer/databinding.html). A useful way to use data binding is
 to wire elements together using their attributes. This allows you to
 declaratively share data between components and is often more convenient than

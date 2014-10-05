@@ -31,8 +31,8 @@ Editor's **Bower Update** feature. **Bower Update** checks the dependencies in
 
     "dependencies": {
       "polymer": "Polymer/polymer#master",
-      "core-elements": "Polymer/core-elements#master",
-      "google-map": "PolymerLabs/google-map"
+      "paper-elements": "Polymer/paper-elements#master",
+      "google-map": "GoogleWebComponents/google-map#master"
     }
 
 <div class="stepbystep">
@@ -45,7 +45,7 @@ Editor's **Bower Update** feature. **Bower Update** checks the dependencies in
   </div>
 </div>
 
-The download may take few seconds. You can verify that `<google-map>` (and any
+The download may take a few seconds. You can verify that `<google-map>` (and any
 dependencies) were installed by checking that `bower_components/google-map/` was
 created and populated.
 
@@ -68,6 +68,11 @@ properly load them.
       <script src="bower_components/platform/platform.js"></script>
       <link rel="import" href="bower_components/google-map/google-map.html">
     </head>
+
+<aside class="callout">
+  <b>Note:</b>
+  <p>The project scaffold will already contain a number of HTML Imports in the `<head>`. You may remove these if they get in your way, they're just there to give the scaffold something to display and are not required for this tutorial.</p>
+</aside>
 
 &rarr; Remove the contents of `<body>` and declare a `<google-map>` element:
 
