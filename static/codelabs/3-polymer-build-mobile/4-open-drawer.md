@@ -36,14 +36,14 @@ It uses special `on-event` syntax to trigger this binding behavior.
 Learn more about [declarative event mapping](http://www.polymer-project.org/docs/polymer/polymer.html#declarative-event-mapping).</p>
 </aside>
 
-&rarr; Add a `toggleDrawer` method to the root element's prototype.
+&rarr; Add a `toggleDrawer` method to the `codelab-app` element's prototype.
 Use Polymer's `this.$.myIdName` shorthand notation to get access to the
 `core-drawer-panel` element. Use its `togglePanel` method to delegate opening
 of the drawer. To learn more about the API for `core-drawer-panel`,
-visit its [Github page](http://polymer.github.io/core-drawer-panel/).
+visit its [Github page](https://www.polymer-project.org/docs/elements/core-elements.html#core-drawer-panel).
 
     <script>
-      Polymer('codelab-app', {
+      Polymer({
         toggleDrawer: function() {
           this.$.drawerPanel.togglePanel();
         }

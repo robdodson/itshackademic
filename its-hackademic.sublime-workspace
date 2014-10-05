@@ -388,10 +388,10 @@
 	"buffers":
 	[
 		{
-			"file": "static/index.html",
+			"file": "static/codelabs/2-polymer-build-maps/2-installing-maps.md",
 			"settings":
 			{
-				"buffer_size": 12778,
+				"buffer_size": 4802,
 				"line_ending": "Unix"
 			}
 		}
@@ -597,14 +597,21 @@
 	"expanded_folders":
 	[
 		"/Users/robdodson/Developer/its-hackademic",
-		"/Users/robdodson/Developer/its-hackademic/src",
-		"/Users/robdodson/Developer/its-hackademic/src/javascript"
+		"/Users/robdodson/Developer/its-hackademic/static",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps"
 	],
 	"file_history":
 	[
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/2-installing-maps.md",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/3-adding-directions.md",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/5-changing-directiontype.md",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/4-adding-userinput.md",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/1-getting-setup.md",
+		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/1-getting-setup.md",
+		"/Users/robdodson/Developer/its-hackademic/static/index.html",
 		"/Users/robdodson/Developer/its-hackademic/src/javascript/app.js",
 		"/Users/robdodson/Developer/its-hackademic/Gruntfile.js",
-		"/Users/robdodson/Developer/its-hackademic/static/index.html",
 		"/Users/robdodson/Developer/its-hackademic/bower.json",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/index.html",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs.html",
@@ -620,9 +627,7 @@
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/3-creating-element.md",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/2-creating-structure.md",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/metadata.yaml",
-		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/1-getting-setup.md",
 		"/Users/robdodson/Developer/its-hackademic/.gitignore",
-		"/Users/robdodson/Developer/its-hackademic/static/codelabs/2-polymer-build-maps/1-getting-setup.md",
 		"/Users/robdodson/Developer/its-hackademic/static/codelabs/1-polymer-first-app/img/s1-app.png",
 		"/Users/robdodson/Developer/its-hackademic/app.yaml",
 		"/Users/robdodson/Developer/its-hackademic/src/scss/_hero.scss",
@@ -725,11 +730,7 @@
 		"/Users/robdodson/Developer/polymer-polytechnic/static/bower_components/core-meta/core-meta.html",
 		"/Users/robdodson/Developer/polymer-polytechnic/static/bower_components/core-media-query/core-media-query.html",
 		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/common.js",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-mobile/1-getting-setup.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-drive-client/1-introduction.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-map-visualization/1-getting-set-up.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/2-installing-maps.md",
-		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-maps/3-adding-directions.md"
+		"/Users/robdodson/Developer/polymer-polytechnic/static/codelabs/polymer-build-mobile/1-getting-setup.md"
 	],
 	"find":
 	{
@@ -800,6 +801,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"core-elements",
+			"tripledot",
 			"event-map",
 			"imports",
 			"marked",
@@ -925,9 +928,7 @@
 			"build-client",
 			"build-",
 			"-mobile",
-			"-maps",
-			"this.steps",
-			"vulcanized"
+			"-maps"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -956,30 +957,43 @@
 			[
 				{
 					"buffer": 0,
-					"file": "static/index.html",
+					"file": "static/codelabs/2-polymer-build-maps/2-installing-maps.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12778,
+						"buffer_size": 4802,
 						"regions":
 						{
+							"TagLint":
+							{
+								"flags": 2356,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										52,
+										62
+									]
+								],
+								"scope": "variable.parameter"
+							}
 						},
 						"selection":
 						[
 							[
-								11891,
-								11891
+								2926,
+								2639
 							]
 						],
 						"settings":
 						{
 							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 7585.0,
+						"translation.y": 1983.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

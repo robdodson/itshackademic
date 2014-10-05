@@ -23,7 +23,7 @@ To use `core-drawer-panel`:
 remove the **Hello Polymer!** string and declare `<core-drawer-panel>` instead. The drawer panel consists of two parts: `drawer` and `main`. The drawer is a sidebar that is open in desktop applications but closed if the screen size is smaller than `responsiveWidth`. Set `responsiveWidth` to `600px`.
 
     <template>
-      ...
+      <link rel="stylesheet" href="styles.css">
       <core-drawer-panel responsiveWidth="600px">
 
         <core-header-panel drawer>
@@ -40,7 +40,7 @@ remove the **Hello Polymer!** string and declare `<core-drawer-panel>` instead. 
 &rarr; Add toolbars to both the drawer and the main section.
 
     <template>
-    ...
+      <link rel="stylesheet" href="styles.css">
       <core-drawer-panel responsiveWidth="600px">
 
         <core-header-panel drawer>

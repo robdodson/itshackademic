@@ -33,8 +33,7 @@ Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer paper el
     <!-- TODO (asolovay): Do they put quotes around the project name? If not, we
       should set off PolymerMapsCodelab in bold but with no quotes. -->
     <li>Enter <b>"PolymerMapsCodelab"</b> as the <b>Project name</b>.</li>
-    <li>In the <b>Project type</b> dropdown, select "JavaScript web app (using
-       Polymer paper elements)".</li>
+    <li>In the <b>Project type</b> dropdown, select <b>JavaScript web app (using Polymer paper elements)</b>.</li>
     <li>Click the <b>Create</b> button.</li>
   </ul>
   <div>

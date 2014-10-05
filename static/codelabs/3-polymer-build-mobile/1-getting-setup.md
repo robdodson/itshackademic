@@ -22,21 +22,21 @@ Fire up Chrome Dev Editor and create a JavaScript app that uses Polymer.
 <div class="stepbystep">
   <ul>
     <li>In Chrome Dev Editor,
-        click <img src="img/tripledot.png" class="icon"> to start a new project.</li>
+        click <img src="img/hamburger.png" class="icon"> to start a new project.</li>
   </ul>
   <div>
-    <img src="img/s1-newproject.png" style="height:100px;">
+    <img src="img/s1-newproject.png"  style="height:250px;">
   </div>
 </div>
 
 <div class="stepbystep">
   <ul>
     <li>Enter <b>PolymerMobileCodelab</b> as the <b>Project name</b>.</li>
-    <li>In the <b>Project type</b> dropdown, select <b>JavaScript Web app using Polymer</b>.</li>
+    <li>In the <b>Project type</b> dropdown, select <b>JavaScript web app (using Polymer paper elements)</b>.</li>
     <li>Click the <b>Create</b> button.</li>
   </ul>
   <div>
-    <img src="img/s1-newproject-type.png" style="height:225px;">
+    <img src="img/s1-newproject-type.png" style="height:250px;">
   </div>
 </div>
 
@@ -51,6 +51,7 @@ After installation, your directory structure should look like this:
       bower_components/ <!-- installed dependencies from Bower -->
       bower.json        <!-- metadata for managing dependencies -->
       index.html        <!-- your app -->
+      main.js
       styles.css
 
 ### Preview the app
@@ -61,7 +62,7 @@ Chrome Dev Editor fires up a web server and navigates to the `index.html` page.
 This is a great way to preview changes as you make them.
 
 <figure>
-  <img src="img/s1-helloworld.png" style="height:300px">
+  <img src="img/s1-helloworld.png">
   <figcaption>Preview of index.html</figcaption>
 </figure>
 

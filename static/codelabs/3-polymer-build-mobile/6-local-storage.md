@@ -10,13 +10,14 @@ To save tasks in local storage:
 2. Save the task list every time `data` is changed.
 
 
-&rarr; Install a `core-localstorage` dependency and add a `core-localstorage` element to the root element in `codelab-app.html`. Give it the ID **storage**, and bind its value to the `data` variable.
+&rarr; In `codelab-app.html`, install a `core-localstorage` dependency and add a `core-localstorage` element to the end of the `<template>`, after the `<core-drawer-panel>`. Give it the ID **storage**, and bind its value to the `data` variable.
 
     ...
     <link rel="import" href="bower_components/core-localstorage/core-localstorage.html">
     ...
     <template>
       ...
+      </core-drawer-panel>
       <core-localstorage id="storage" name="codelab-app-storage" value="{{data}}"></core-localstorage>
     </template>
 
@@ -25,7 +26,7 @@ To save tasks in local storage:
 &rarr; Add a `dataChanged` callback to the element's prototype. In the callback, retrieve the storage element by ID and use its `save` method to save the data to local storage.
 
     <script>
-      Polymer('codelab-app', {
+      Polymer({
         ...
         dataChanged: function() {
           this.$.storage.save();
@@ -44,15 +45,18 @@ Therefore, any time a user adds a new note, it gets automatically saved in local
 </aside>
 
 &rarr; Add an `on-change` listener to `<paper-checkbox>` and bind it to the `dataChanged` callback.
-Now, when user checks the checkbox, the `dataChanged` callback is triggered and the new value of the note's status  
-is saved in the local storage.
+Now, when user checks the checkbox, the `dataChanged` callback is triggered and the new value of the note's status is saved in the local storage.
 
     <paper-checkbox checked="{{done}}" on-change="{{dataChanged}}"></paper-checkbox>
 
 
-&rarr; Preview the app with the <img src="img/runbutton.png" class="icon"> button.
-Add, check, and uncheck notes, and then reload the page. The state should persist
-between reloads of the page.
+&rarr; Open `index.html` and preview the app with the <img src="img/runbutton.png" class="icon"> button.
+Add, check, and uncheck notes, and then reload the page. The state should persist between reloads of the page.
+
+<figure>
+  <img src="img/s6-preview.png">
+  <figcaption>Note are now saved with `<core-localstorage>`</figcaption>
+</figure>
 
 ### Summary
 

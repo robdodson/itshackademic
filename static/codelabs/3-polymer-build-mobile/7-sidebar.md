@@ -5,7 +5,7 @@ Let's take a look at some controls we can use in our app.
 ### Install dependencies
 
 &rarr; First, let's install the dependencies we're going to use in this step,
-all in one go.
+all in one go. Add the following imports to `codelab-app.html`:
 
     ...
     <link rel="import" href="bower_components/core-item/core-item.html">
@@ -13,6 +13,7 @@ all in one go.
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-slider/paper-slider.html">
     <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
     ...
 
 ### Toggle the opacity of selected notes with paper-toggle-button
@@ -61,20 +62,18 @@ for each note in a container where the value of `data-fade-selected` is true.
 ### Add a delete button
 
 &rarr; Add another `core-item` with a `paper-icon-button` inside.
-Set the button's `icon` attribute to `delete`,
-and bind its `on-click` event to a callback named `delete`.
-
+Set the button's `icon` attribute to `delete`, and bind its `on-click` event to a callback named `delete`.
+    
     <core-item>
       <label flex>Delete selected</label>
       <paper-icon-button icon="delete" on-click="{{delete}}"></paper-icon-button>
     </core-item>
 
 &rarr; Add a `delete` callback to the root element's prototype.
-This function filters the `data` array
-and leaves only notes that are not "done" yet.
+This function filters the `data` array and leaves only notes that are not "done" yet.
 
     <script>
-      Polymer('codelab-app', {
+      Polymer({
         ...
         delete: function(e) {
           this.data = this.data.filter(function(item) {
@@ -86,6 +85,11 @@ and leaves only notes that are not "done" yet.
 
 &rarr; Preview the app with the <img src="img/runbutton.png" class="icon"> button.
 Select a few notes, and then delete them using the button.
+
+<figure>
+  <img src="img/s9-delete.png">
+  <figcaption>Click the trash can to delete checked cards</figcaption>
+</figure>
 
 
 ### Add a slider that changes the font size
@@ -107,7 +111,7 @@ callback that selects all the `.card` elements and changes their style to the ap
 This callback triggers automatically every time the `fontSize` value changes.
 
     <script>
-       Polymer('codelab-app', {
+       Polymer({
         ...
         fontSize: 14,
         ...
@@ -121,25 +125,27 @@ This callback triggers automatically every time the `fontSize` value changes.
     </script>
 
 &rarr; Preview the app with the <img src="img/runbutton.png" class="icon"> button.
-Change the font size using the slider,
-and observe the changes in the card display.
+Change the font size using the slider, and observe the changes in the card display.
 
+<figure>
+  <img src="img/s9-fontsize.png">
+</figure>
 
 ### Add a reset button
 
 &rarr; Add one last `core-item` with a `paper-button` inside.
-Set the button's `label` attribute to `reset`,
-and its `raisedButton` attribute to `true`.
+Add a `raised` attribute to the button and set its text content to "reset".
 Bind the button's `on-click` listener to a callback named `reset`.
 
     <core-item>
-      <paper-button raisedButton class="colored" label="reset"
-                    on-click="{{reset}}"></paper-button>
+      <paper-button raised class="colored" on-click="{{reset}}">
+        reset
+      </paper-button>
     </core-item>
 
 &rarr; Edit `styles.css` to add rules for the new button.
 
-    paper-button[raisedButton].colored {
+    paper-button[raised].colored {
       width: 100%;
       background: #4285f4;
       color: #fff;
@@ -150,7 +156,7 @@ Bind the button's `on-click` listener to a callback named `reset`.
 `fontSize` and `fadeSelected` to their original values.
 
     <script>
-       Polymer('codelab-app', {
+       Polymer({
         ...
         reset: function() {
           this.fontSize = 14;
@@ -174,7 +180,7 @@ and `duration` attribute to 800 milliseconds.
 &rarr; Trigger the toast element any time the settings are reset, in the `reset` callback:
 
     <script>
-       Polymer('codelab-app', {
+       Polymer({
         ...
         reset: function() {
           ...
@@ -183,12 +189,11 @@ and `duration` attribute to 800 milliseconds.
       });
     </script>
 
-&rarr; Preview the app with the <img src="img/runbutton.png" class="icon"> button.
-When you hit the reset button, the settings should go back to their original values, and a notification should be displayed
-at the bottom of the page.
+&rarr; Open `index.html` and preview the app with the <img src="img/runbutton.png" class="icon"> button.
+When you hit the reset button, the settings should go back to their original values, and a notification should be displayed at the bottom of the page.
 
 <figure>
-  <img src="img/s9-reset.png" height="300px;">
+  <img src="img/s9-reset.png" height="350px;">
   <figcaption>Notification pops up!</figcaption>
 </figure>
 

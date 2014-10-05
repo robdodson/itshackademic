@@ -11,12 +11,13 @@ To add this feature:
 2. Add a Paper input field to define the note's body.
 3. Add a list data structure to keep track of added notes in the root element.
 
-
-&rarr; Install a `paper-fab` dependency and add a `paper-fab` button to the toolbar
-in the `main` section. Bind the `on-click` event of the button to a `showNewNoteInput` callback.
-
+&rarr; In `codelab-app.html`, add an HTML Import for `paper-fab`
+    
     ...
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+
+&rarr; Add a `paper-fab` button to the toolbar in the `main` section. Bind the `on-click` event of the button to a `showNewNoteInput` callback.
+
     ...
     <core-header-panel main>
       <core-toolbar>
@@ -35,10 +36,12 @@ in the `main` section. Bind the `on-click` event of the button to a `showNewNote
       z-index: 10;
     }
 
-&rarr; Add a `.content` div to the `main` section.
+&rarr; Add a `.content` div to the `main` section after the `<core-toolbar>`.
 
     <core-header-panel main>
-      ...
+      <core-toolbar>
+        ...
+      </core-toolbar>
       <div class="content"></div>
     </core-header-panel>
 
@@ -57,7 +60,7 @@ Give the input element the ID **newNoteInput**. Use the `label` attribute to def
 &rarr; In the `ready` callback, hide the input. Define the `showNewNoteInput` callback that unhides the input.
 
     <script>
-      Polymer('codelab-app', {
+      Polymer({
         ...
         ready: function() {
           this.$.newNoteInput.style.display = 'none';
@@ -88,7 +91,7 @@ Give the input element the ID **newNoteInput**. Use the `label` attribute to def
 Each note is an Object and has two properties: `body` and `done`.
 
     <script>
-      Polymer('codelab-app', {
+      Polymer({
         data: [],
         ...
       });
@@ -99,7 +102,7 @@ Use the `newNote` binding to retrieve the note body from the input.
 At the end, clear and hide the input field.
 
     <script>
-      Polymer('codelab-app', {
+      Polymer({
         data: [],
         ...
         add: function() {
@@ -115,6 +118,13 @@ At the end, clear and hide the input field.
       });
     </script>
 
+&rarr; Open `index.html` and hit the <img src="img/runbutton.png" class="icon"> to preview the app. Clicking on the `paper-fab` should cause the `paper-input` to appear.
+
+<figure>
+  <img src="img/s5-preview.png">
+  <figcaption>Our app is starting to take shape</figcaption>
+</figure>
+
 You can inspect the value of the `data` array using the Console in the Developer Tools:
 
     document.querySelector('codelab-app').data;
@@ -124,7 +134,7 @@ You can inspect the value of the `data` array using the Console in the Developer
 Once a few notes are added to the `data` array, we can display them in the `main`
 section of our app, using a repeated template.
 
-&rarr; Install a `paper-checkbox` dependency
+&rarr; In `codelab-app.html`, install a `paper-checkbox` dependency
 
     ...
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
@@ -159,7 +169,7 @@ and the content of the `.card` div.
       position: relative;
     }
 
-&rarr; Preview the app with the <img src="img/runbutton.png" class="icon"> button. Because the template with the list of notes is bound to the `data` property of the element, when you add a new note it gets listed automatically.
+&rarr; Open `index.html` and preview the app with the <img src="img/runbutton.png" class="icon"> button. Because the template with the list of notes is bound to the `data` property of the element, when you add a new note it gets listed automatically.
 
 <figure>
   <img src="img/s5-listtasks.png">

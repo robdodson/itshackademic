@@ -64,7 +64,7 @@ To create the app's root element, you need to:
 
 <div class="stepbystep">
   <ul>
-    <li>Right-click **PolymerMobileCodelab > Add File...**
+    <li>Right-click **PolymerMobileCodelab > New File...**
         in Chrome Dev Editor's sidebar and create a new file
         called `codelab-app.html`.</li>
   </ul>
@@ -84,7 +84,7 @@ To create the app's root element, you need to:
       Hello Polymer!
     </template>
     <script>
-      Polymer('codelab-app', {
+      Polymer({
       });
     </script>
     </polymer-element>
@@ -109,12 +109,19 @@ This CSS file is referenced inside the template of our `codelab-app` element. Th
 </aside>
 
 
-&rarr; In `index.html`, add an [HTML Import](http://www.polymer-project.org/platform/html-imports.html) in the `<head>` that loads `codelab-app.html`.
+&rarr; In `index.html`, remove the contents of `<head>` and add an [HTML Import](http://www.polymer-project.org/platform/html-imports.html) that loads `codelab-app.html`. The `<head>` should now look like this:
 
 **Important**: Make sure the HTML Import comes after `platform.js`.
 
     <head>
-      ...
+      <title>PolymerMobileCodelab</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <script src="bower_components/platform/platform.js"></script>
+
       <link rel="import" href="codelab-app.html">
     </head>
 

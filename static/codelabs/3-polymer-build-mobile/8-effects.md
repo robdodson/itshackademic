@@ -43,29 +43,22 @@ Add the `recenteringTouch` class to make it react to user actions.
 
     <div flex class="card>
       ...
-      <paper-ripple class="fit recenteringTouch"></paper-ripple>
+      <paper-ripple class="recenteringTouch" fit></paper-ripple>
     </div>
 
-&rarr; Add this style rule to `styles.css`.
+<aside class="callout">
+  <b>Note:</b>
 
-    .fit {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+<p>The `fit` attribute is one of Polymer's [layout attributes](https://www.polymer-project.org/docs/polymer/layout-attrs.html#general-purpose-attributes). It sets `position: absolute` and sets `top:0;right:0;bottom:0;left:0;`</p>
+</aside>
 
-&rarr; Preview the app with the <img src="img/runbutton.png" class="icon"> button.
+&rarr; Open `index.html` and preview the app with the <img src="img/runbutton.png" class="icon"> button.
 Click anywhere on the card: a subtle ripple effect should be visible on each click.
 
 ### Use waterfall mode
 
-Some elements can get different styling depending on their attributes. For example, in
-`core-header-panel` the `waterfall` mode changes the behavior of the toolbar:
-it is flat at the beginning, but adds a shadow when the content gets scrolled under the toolbar.
-To check all possible modes visit the
-[core-header-panel github page](http://polymer.github.io/core-header-panel/components/core-header-panel/demo.html).
+Some elements can get different styling depending on their attributes. For example, in `core-header-panel` the `waterfall` mode changes the behavior of the toolbar: it is flat at the beginning, but adds a shadow when the content gets scrolled under the toolbar.
+To check all possible modes visit the [core-header-panel github page](http://polymer.github.io/core-header-panel/components/core-header-panel/demo.html).
 
 
 &rarr; Add `mode="waterfall"` to the `<core-header-panel>` in the drawer and main section.
