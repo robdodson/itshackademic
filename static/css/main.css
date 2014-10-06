@@ -103,7 +103,7 @@ header {
         height: 24px;
         line-height: 24px;
         color: white;
-        padding: 12px 20px;
+        padding: 9px 20px;
         text-decoration: none;
         -webkit-transition: background-color 200ms;
                 transition: background-color 200ms; }
@@ -115,7 +115,7 @@ header {
         display: block;
         width: 126px;
         margin: 0 auto;
-        padding: 12px 12px;
+        padding: 9px 12px;
         background-color: white; }
         header ul li.polymer-logo a:active {
           background-color: white; }
@@ -229,8 +229,6 @@ event-map {
 
 .resources {
   color: white; }
-  .resources h1 {
-    margin-bottom: 12px; }
   .resources .subtitle {
     margin-top: 0;
     margin-bottom: 24px; }

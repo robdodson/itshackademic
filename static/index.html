@@ -76,7 +76,7 @@
         <div class="container">
           <div class="col-full">
             <h1>Organizer Resources</h1>
-            <p class="subtitle">More to come. See something missing? Organizers can <a href="#">let us know</a>.</p>
+            <!-- <p class="subtitle">More to come. See something missing? Organizers can <a href="#">let us know</a>.</p> -->
             <div class="row">
               <div class="resource">
                 <h1>Tech Talk</h1>
@@ -84,7 +84,8 @@
                   <p>Host a talk to show off what makes Polymer 'hackademic'.</p>
                   <ul>
                     <li>
-                      <a href="https://docs.google.com/presentation/d/1qGAaAZFaHW2W4fKfpW2KEdHEUbW5Snfi6X4fse_2HRI">
+                      <a data-outbound="speaker-deck"
+                         href="https://docs.google.com/presentation/d/1qGAaAZFaHW2W4fKfpW2KEdHEUbW5Snfi6X4fse_2HRI">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Speaker Deck
@@ -92,7 +93,8 @@
                       </a>
                     </li>
                     <li>
-                      <a href="http://youtu.be/Mq_1MYQbMsg">
+                      <a data-outbound="training-video"
+                         href="http://youtu.be/Mq_1MYQbMsg">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Training Video
@@ -100,7 +102,8 @@
                       </a>
                     </li>
                     <li>
-                      <a href="http://www.polymer-project.org/docs/start/creatingelements.html">
+                      <a data-outbound="polymer-basics"
+                         href="http://www.polymer-project.org/docs/start/creatingelements.html">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Polymer Basics
@@ -124,7 +127,8 @@
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/PolymerLabs/polymer-patterns">
+                      <a data-outbound="polymer-patterns"
+                         href="https://github.com/PolymerLabs/polymer-patterns">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Polymer Patterns
@@ -132,7 +136,8 @@
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.polymer-project.org/docs/polymer/debugging.html">
+                      <a data-outbound="debugging-tips"
+                         href="https://www.polymer-project.org/docs/polymer/debugging.html">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Debugging Tips
@@ -148,7 +153,8 @@
                   <p>Create your own lesson plan &amp; use Polymer to get straight A's.</p>
                   <ul>
                     <li>
-                      <a href="https://docs.google.com/document/d/1vLlo2_c6t9_ubp8UEddmthFfgsPimH6y16kURKWl1p0/edit#heading=h.2hvb7o3am2rf">
+                      <a data-outbound="event-guide"
+                         href="https://docs.google.com/document/d/1vLlo2_c6t9_ubp8UEddmthFfgsPimH6y16kURKWl1p0/edit#heading=h.2hvb7o3am2rf">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Event Guide
@@ -164,18 +170,29 @@
                   <p>Emblazen your event or gear with Polymer visuals.</p>
                   <ul>
                     <li>
-                      <a href="#">
+                      <a data-outbound="polytechnic-sticker"
+                         href="https://drive.google.com/folderview?id=0B55wxScz_BJtVm40Q1ptYnpJbFk&usp=drive_web">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
-                          Polytechnic Logos
+                          Polytechnic Sticker
                         </paper-button>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a data-outbound="polytechnic-shirt"
+                         href="https://drive.google.com/folderview?id=0B55wxScz_BJtLXFsZ2laeGppZ1k&usp=drive_web">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
-                          Polymer Logos
+                          Polytechnic Shirt
+                        </paper-button>
+                      </a>
+                    </li>
+                    <li>
+                      <a data-outbound="polymer-logo"
+                         href="https://drive.google.com/folderview?id=0B55wxScz_BJtdlJqSlRXc2hDSDg&usp=drive_web">
+                        <paper-button>
+                          <core-icon icon="check-box-blank"></core-icon>
+                          Polymer Logo
                         </paper-button>
                       </a>
                     </li>
@@ -188,7 +205,8 @@
                   <p>The Polymer team will run Q&amp;A sessions to prep speakers.</p>
                   <ul>
                     <li>
-                      <a href="#">
+                      <a data-outbound="qa-hangout"
+                         href="#">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
                           Q&amp;A Hangout (soon)
@@ -212,18 +230,20 @@
                   <p>Connect with organizers and Polymer devs over Google+</p>
                   <ul>
                     <li>
-                      <a href="#">
+                      <a data-outbound="organizers-gplus"
+                         href="#">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
-                          Event Organizers
+                          G+ Group (soon)
                         </paper-button>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a data-outbound="organizers-mailing-list"
+                         href="#">
                         <paper-button>
                           <core-icon icon="check-box-blank"></core-icon>
-                          Polymer devs
+                          Polymer devs (soon)
                         </paper-button>
                       </a>
                     </li>
@@ -332,17 +352,25 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+      
       ga('create', 'UA-39334307-9', 'auto');
       ga('send', 'pageview');
 
-      function trackOutboundLink(url) {
-        ga('send', 'event', 'register', 'click', url, {'hitCallback':
-          function () {
-            document.location = url;
-          }
-        });
-      }
+      // Track outbound links
+      document.querySelectorAll('a[data-outbound]').array()
+        .forEach(function(anchor) {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            var url = anchor.href;
+            var label = anchor.getAttribute('data-outbound');
+            label = label || '';
+            ga('send', 'event', 'outbound', 'click', label, {'hitCallback':
+              function () {
+                document.location = url;
+              }
+            });
+          });
+      });
     </script>
   </body>
 </html>
