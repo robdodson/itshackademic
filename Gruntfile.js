@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  grunt.registerTask('serve', [ 'connect:server', 'watch' ]);
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     concat: {
@@ -61,22 +61,19 @@ module.exports = function(grunt) {
         }
       }
     },
-    connect: {
-      server: {
-        options: {
-          livereload: true,
-          base: 'static/',
-          port: 9000
-        }
+    appengine: {
+      frontend: {
+        root: '.'
       }
+    },
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      server: ['appengine:run:frontend', 'watch']
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.registerTask('default', ['concurrent']);
 
 };
