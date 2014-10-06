@@ -6,6 +6,10 @@
 2. `grunt`
 3. `http://localhost:9000/`
 
+## Vulcanizing
+
+If you're making changes to `static/imports.html` or `static/index.imports.html` make sure to run `static/vulcanize.sh` when you're finished for changes to show up.
+
 ## Source Locations
 |Output    |Source
 |:---------|:-----------------------
