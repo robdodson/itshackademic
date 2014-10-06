@@ -302,13 +302,13 @@ event-map {
     background-color: white;
     padding: 20px 20px 20px 60px;
     cursor: pointer;
-    line-height: 1; }
+    line-height: 1.4; }
     .faq ul li label:active {
       background-color: #eff2f3; }
     .faq ul li label::before {
       content: url(../images/icon-plus.svg);
       position: absolute;
-      top: 20px;
+      top: 25px;
       left: 20px;
       height: 16px;
       width: 16px;

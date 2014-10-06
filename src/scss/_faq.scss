@@ -14,14 +14,14 @@
         background-color: $c-white;
         padding: $faq-pad $faq-pad $faq-pad ($faq-pad + 40px);
         cursor: pointer;
-        line-height: 1;
+        line-height: 1.4;
         &:active {
           background-color: $c-light-gray;
         }
         &::before {
           content: url(../images/icon-plus.svg);
           position: absolute;
-          top: $faq-pad;
+          top: $faq-pad + 5;
           left: $faq-pad;
           height: $faq-icon-di;
           width: $faq-icon-di;
