@@ -1,6 +1,6 @@
 {
   "name": "event-map",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "keywords": [
     "seed",
     "polymer",
@@ -11,7 +11,8 @@
     "polymer": "Polymer/polymer#^0.4.1",
     "google-map": "GoogleWebComponents/google-map#~0.3.1",
     "core-ajax": "Polymer/core-ajax#~0.4.2",
-    "core-selector": "Polymer/core-selector#~0.4.2"
+    "core-selector": "Polymer/core-selector#~0.4.2",
+    "moment": "~2.8.3"
   },
   "devDependencies": {
     "polymer-test-tools": "Polymer/polymer-test-tools#^0.4.1"
@@ -31,13 +32,13 @@
     "test",
     "tests"
   ],
-  "_release": "1.0.3",
+  "_release": "1.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.0.3",
-    "commit": "fb17202f5dffb121ffd11184724ca24b746a6774"
+    "tag": "v1.1.1",
+    "commit": "4dae8dd7280140e2b641fa061905fb822bdcb66a"
   },
   "_source": "git://github.com/robdodson/event-map.git",
-  "_target": "^1.0.3",
+  "_target": "^1.1.1",
   "_originalSource": "robdodson/event-map"
 }

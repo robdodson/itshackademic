@@ -21,7 +21,7 @@
     "flatiron-director": "PolymerLabs/flatiron-director#^0.4.0",
     "highlightjs-element": "PolymerLabs/highlightjs-element#^0.4.2",
     "marked-element": "PolymerLabs/marked-element#3bd94ab",
-    "event-map": "robdodson/event-map#^1.0.3"
+    "event-map": "robdodson/event-map#^1.1.1"
   },
   "resolutions": {
     "platform": "^0.4.0",

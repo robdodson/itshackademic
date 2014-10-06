@@ -2,18 +2,19 @@
 <link rel="import" href="../google-map/google-map.html">
 <link rel="import" href="../core-ajax/core-ajax.html">
 <link rel="import" href="../core-selector/core-selector.html">
+<link rel="import" href="moment-import.html">
 
 <!--
-Element providing solution to no problem in particular.
+An event map for GDG events around the world
 
 ##### Example
 
-    <event-map></event-map>
+    <event-map feed="events/event-markers.public?&start=1413331200&end=1418601600&tag=polymerpolytechnic"></event-map>
 
 @element event-map
-@blurb Element providing solution to no problem in particular.
+@blurb An event map for GDG events around the world
 @status alpha
-@homepage http://polymerlabs.github.io/event-map
+@homepage http://robdodson.github.io/event-map
 -->
 <polymer-element name="event-map" attributes="icon feed devsite">
 
@@ -125,34 +126,13 @@ Element providing solution to no problem in particular.
         // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
       },
 
-      toShortDate: function(time) {
-        var date = new Date(time * 1000);
-        var year = date.getFullYear();
-        var month = (date.getMonth() + 1).toString().replace(/^(\d)$/, '0$1');
-        var day = date.getDate();
-        return [year, month, day].join('-');
-      },
-
-      /**
-       * This filter calls `toLocaleDateString` multiple times to break the
-       * date into multiple parts. If you're only using en-US you could call
-       * toLocaleDateString once and parse the date using String methods, but
-       * changing the locale will reorder the string, making this difficult.
-       *
-       * ex:
-       *
-       * de-DE: "Donnerstag, 20. Dezember 2012"
-       * en-US: "Thursday, December 20, 2012
-       *
-       * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#Example:_Using_options
-       */
       toLongDate: function(time) {
-        var date = new Date(time * 1000);
+        var date = moment.utc(time * 1000);
         return {
-          day: date.toLocaleDateString('en-US', {weekday: 'long'}),
-          numericDate: date.toLocaleDateString('en-US', {day: 'numeric'}),
-          month: date.toLocaleDateString('en-US', {month: 'long'}),
-          year: date.toLocaleDateString('en-US', {year: 'numeric'})
+          day: date.format('dddd'),
+          numericDate: date.format('DD'),
+          month: date.format('MMMM'),
+          year: date.format('YYYY')
         };
       }
 
