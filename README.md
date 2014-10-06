@@ -4,7 +4,7 @@
 
 1. `cd PATH/TO/PROJECT`
 2. `grunt`
-3. `http://localhost:9000/`
+3. `http://localhost:8080/`
 
 ## Vulcanizing
 
