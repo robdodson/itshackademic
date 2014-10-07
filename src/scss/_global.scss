@@ -20,7 +20,7 @@ section {
   margin: 48px 0;
 
   &.padded {
-    padding: $section-inner-pad 0;
+    padding: 5px 0;
   }
 
   &.dynamic {
@@ -96,4 +96,13 @@ h1, h2, h3 {
 
 h1 {
   font-size: $f-lg;
+}
+
+@media (min-width: $md-media) {
+  section {
+
+    &.padded {
+      padding: $section-inner-pad 0;
+    }
+  }
 }

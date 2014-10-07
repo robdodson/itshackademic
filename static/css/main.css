@@ -17,7 +17,7 @@ a {
 section {
   margin: 48px 0; }
   section.padded {
-    padding: 48px 0; }
+    padding: 5px 0; }
   section.dynamic {
     position: relative;
     background-color: #445963;
@@ -78,6 +78,9 @@ h1, h2, h3 {
 h1 {
   font-size: 48px; }
 
+@media (min-width: 768px) {
+  section.padded {
+    padding: 48px 0; } }
 header {
   text-align: center;
   margin-bottom: 48px; }
@@ -174,7 +177,7 @@ header {
 .date {
   margin: 0 auto 24px;
   display: block;
-  width: 400px;
+  width: 355px;
   height: auto;
   position: relative;
   z-index: 9; }
@@ -206,27 +209,27 @@ header {
   .polymer .polymer-icon {
     width: 16%;
     height: auto;
-    float: left; }
+    display: inline-block;
+    vertical-align: middle; }
     .polymer .polymer-icon img {
       width: 100%;
       height: auto;
       display: block; }
   .polymer .polymer-right {
-    float: right;
-    width: 80%; }
-  .polymer p {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2%; }
 
 event-map {
-  width: 820px;
-  height: 500px;
+  width: 100%;
+  height: 300px;
   overflow: scroll; }
 
+@media (min-width: 1480px) {
+  event-map {
+    width: 820px;
+    height: 500px; } }
 .resources {
   color: white; }
   .resources .subtitle {

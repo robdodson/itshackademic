@@ -8,7 +8,9 @@
   .polymer-icon {
     width: 16%;
     height: auto;
-    float: left;
+    // float: left;
+    display: inline-block;
+    vertical-align: middle;
     img {
       width: 100%;
       height: auto;
@@ -16,13 +18,16 @@
     }
   }
   .polymer-right {
-    float: right;
+    // float: right;
     width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2%;
   }
   p {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    // margin: 0;
+    // position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
   }
 }
