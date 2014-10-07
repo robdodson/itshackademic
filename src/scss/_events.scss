@@ -4,9 +4,8 @@ event-map {
   overflow: scroll;
 }
 
-@media (min-width: $lg-media) {
+@media (min-width: $md-media) {
   event-map {
-    width: 820px;
     height: 500px;
   }
 }

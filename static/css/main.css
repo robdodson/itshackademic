@@ -226,9 +226,8 @@ event-map {
   height: 300px;
   overflow: scroll; }
 
-@media (min-width: 1480px) {
+@media (min-width: 768px) {
   event-map {
-    width: 820px;
     height: 500px; } }
 .resources {
   color: white; }
