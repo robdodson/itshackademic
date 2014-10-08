@@ -29,7 +29,7 @@ adding a reference to the "google-signin" element:
 
     "dependencies": {
       "polymer": "Polymer/polymer#master",
-      "polymer-ui-toggle-button": "PolymerLabs/polymer-ui-toggle-button#master",
+      "paper-elements": "Polymer/paper-elements#master",
       "core-splitter": "Polymer/core-splitter#master",
       "core-scaffold": "Polymer/core-scaffold#master",
       "cors-upload-sample": "googledrive/cors-upload-sample#master",
@@ -42,7 +42,7 @@ adding a reference to the "google-signin" element:
     <li>Run **Bower Update** from the dropdown.</li>
   </ul>
   <div>
-    <img src="img/image_18.png" style="height:200px;">
+    <img src="img/image_18.png" style="height:250px;">
   </div>
 </div>
 
@@ -74,8 +74,8 @@ valid client ID. To get this, you must get your own developer API key from the
 [Google Developer Console](https://console.developers.google.com/project).
 Be sure to enable the Google Drive API and add
 [http://127.0.0.1:51792/](http://127.0.0.1:51792/)
-to the list of authorized clients.
-
+to the list of authorized clients. In the **API's & auth > Consent screen** menu, be sure to give your application a `Product Name` and `Email Address`.
+<br><br>
 &rarr; Add attributes to the `google-signin` tag:
 
   <code><pre>
@@ -114,7 +114,7 @@ the `drive-app` element:
     },
 
     signedOut: function (e) {
-      this.$.loggedin.style.display = 'hidden';
+      this.$.loggedin.style.display = 'none';
     }
 
 ### Run the app
@@ -122,7 +122,7 @@ the `drive-app` element:
 You now have an application that looks like this:
 
 <figure>
-  <img src="img/image_36.png"/>
+  <img src="img/image_31.png"/>
   <figcaption>The app's current UI</figcaption>
 </figure>
 

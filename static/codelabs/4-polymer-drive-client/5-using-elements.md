@@ -14,7 +14,7 @@ at the top of the file to load the elements.
 
     <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
     <link rel="import" href="bower_components/core-splitter/core-splitter.html">
-    <link rel="import" href="bower_components/polymer-ui-toggle-button/polymer-ui-toggle-button.html">
+    <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
 
 **Important**: These imports must be **after** the import of `polymer.html`.
 
@@ -29,12 +29,6 @@ This code declares `<core-scaffold>` with some markup
 so that the app gets a **toolbar**, a **menu**,
 and an area for the app's **content**.
 
-    <style>
-      core-scaffold {
-        font-family: 'Roboto', Arial;
-      }
-    </style>
-
     <core-scaffold>
       <core-header-panel navigation flex mode="seamed">
         <core-toolbar>
@@ -47,6 +41,12 @@ and an area for the app's **content**.
       <div>Content goes here...</div>
     </core-scaffold>
 
+&rarr; Add the following code to `drive-app.css`
+
+    core-scaffold {
+      font-family: 'Roboto', Arial;
+    }
+
 **Run the app**
 
 &rarr; When you select `index.html` and click the <img src="img/runbutton.png" class="icon"> button you should now see the following:
@@ -58,7 +58,7 @@ and an area for the app's **content**.
 
 As you can see, using `<core-scaffold>` is completely declarative!
 When you click the hamburger menu icon
-<img src="img/image_22.png"/>, it expands as follows:
+<img src="img/image_22.png" style="width: 45px;" />, it expands as follows:
 
 <figure>
   <img src="img/image_23.png"/>
@@ -67,8 +67,7 @@ When you click the hamburger menu icon
 
 ### Style the toolbar
 
-To give this sidebar a little flare, within the `<style>` tag you just added,
-add the following CSS:
+To give this sidebar a little flare, add the following CSS to `drive-app.css`:
 
     core-toolbar {
       background-color: #526E9C; 

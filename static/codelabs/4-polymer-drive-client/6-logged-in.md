@@ -48,8 +48,7 @@ When you select `index.html` and click <img src="img/runbutton.png" class="icon"
 Unfortunately, the app doesn't provide much space to drag and drop files
 just yet. 
 
-&rarr; Add the following code inside the `<style>` tag
-to improve how the drag and drop area looks:
+&rarr; Add the following code to `drive-app.css` to improve how the drag and drop area looks:
 
     #dropzone {
       -moz-border-radius: 5px;
@@ -118,7 +117,7 @@ flex to fit their layout.
 
 You can use a few elements to achieve this UI.
 Namely, you'll use some layout helpers that come with `polymer.html`,
-and you'll use `<core-toolbar>` and `<polymer-ui-toggle-button>`.
+and you'll use `<core-toolbar>` and `<paper-toggle-button>`.
 You'll also add a label to the toolbar to
 display the current upload status so the user knows what’s going on.
 
@@ -127,11 +126,9 @@ display the current upload status so the user knows what’s going on.
     <core-toolbar layout horizontal id="dropzone-bar">
       <div>
         <span>Auto-upload</span>
-        <polymer-ui-toggle-button 
-        onCaption="On" 
-        offCaption="Off" 
-        value="{{autoUpload}}">
-        </polymer-ui-toggle-button>
+        <paper-toggle-button 
+        checked="{{autoUpload}}">
+        </paper-toggle-button>
       </div>
 
       <div>
@@ -148,7 +145,7 @@ display the current upload status so the user knows what’s going on.
       </div>
     </core-toolbar>
 
-&rarr; Add some styling for the toolbar, which again goes inside our `<style>` tag:
+&rarr; Add some styling for the toolbar, which again goes inside our `drive-app.css` file:
 
     #dropzone-bar {
       border-bottom:1px solid white;

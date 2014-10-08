@@ -51,7 +51,7 @@ with a splitter dividing the **Queue** and **Uploaded** areas.
     </div>
 
 
-&rarr; Add the following line to the `<style>` tag to
+&rarr; Add the following lines to the `drive-app.css` file to
 improve the look and feel:
 
     .panel { width: 50% };
@@ -81,7 +81,7 @@ Now you add the JavaScript that brings the markup to life.
 which defines some arrays and properties you'll use to work with upload lists:
 
     <script>
-      Polymer(‘drive-app’, {
+      Polymer({
         uploadList: [],    // selected files
         uploadedList: [],  // successfully uploaded files
         autoUpload: false, // automatically upload?
@@ -93,7 +93,7 @@ updating the arrays when files are chosen (note, this replaces the
 last snippet):
 
     <script>
-      Polymer('drive-app', {
+      Polymer({
           uploadList: [],
           uploadedList: [],
           autoUpload: false,
@@ -136,7 +136,7 @@ The dependencies should look like this:
 
     "dependencies": {
       "polymer": "Polymer/polymer#master",
-      "polymer-ui-toggle-button": "PolymerLabs/polymer-ui-toggle-button#master",
+      "paper-elements": "Polymer/paper-elements#master",
       "core-splitter": "Polymer/core-splitter#master",
       "core-scaffold": "Polymer/core-scaffold#master",
       "cors-upload-sample": "googledrive/cors-upload-sample#master"
@@ -148,7 +148,7 @@ The dependencies should look like this:
     <li>Run **Bower Update** from the dropdown.</li>
   </ul>
   <div>
-    <img src="img/image_18.png" style="height:200px;">
+    <img src="img/image_18.png" style="height:250px;">
   </div>
 </div>
 
@@ -164,7 +164,7 @@ The dependencies should look like this:
 Excellent. You can now _reference_ the `upload.js` script that
 comes with this package.
 
-&rarr; Add the following import after
+&rarr; Add the following `script` tag after
 the other HTML imports in `drive-app.html`:
 
     <script src="bower_components/cors-upload-sample/upload.js"></script>

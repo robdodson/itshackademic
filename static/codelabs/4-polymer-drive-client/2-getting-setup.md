@@ -6,22 +6,12 @@ Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer".
 
 <div class="stepbystep">
   <ul>
-    <li>Click the Chrome Dev Editor icon at the bottom of the screen
-      to start up the editor.</li>
-  </ul>
-  <div>
-    <img src="/static/img/app-icons/chrome_dev_editor_screenshot.png">
-  </div>
-</div>
-
-<div class="stepbystep">
-  <ul>
     <li>In Chrome Dev Editor,
-      click <img src="img/tripledot.png" class="icon"> and then
+      click <img src="img/hamburger.png" class="icon"> and then
       <b>New Project</b>.</li>
   </ul>
   <div>
-    <img src="img/s1-newproject.png" style="height:100px;">
+    <img src="img/s1-newproject.png" style="height: 250px;">
   </div>
 </div>
 
@@ -29,11 +19,11 @@ Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer".
   <ul>
     <li>Enter <b>PolymerDriveCodelab</b> as the <b>Project name</b>.</li>
     <li>In the <b>Project type</b> dropdown, select
-      <b>JavaScript Web app using Polymer</b>.</li>
+      <b>JavaScript web app (using Polymer paper elements)</b>.</li>
     <li>Click the <b>Create</b> button.</li>
   </ul>
   <div>
-    <img src="img/s1-newproject-type.png" style="height:225px;">
+    <img src="img/s1-newproject-type.png" style="height:250px;">
   </div>
 </div>
 
@@ -50,7 +40,7 @@ You'll learn more about using `bower.json` in the next step.
 
 After installation, your directory structure should look like this:
 
-    PolymerMapsCodelab/
+    PolymerDriveCodelab/
       bower_components/ <!-- installed dependencies from Bower -->
       bower.json        <!-- metadata for managing dependencies -->
       index.html        <!-- your app -->

@@ -35,13 +35,13 @@ starting off your element:
     <polymer-element name="drive-app">
 
       <template>
-        <style></style>
+        <link rel="stylesheet" href="drive-app.css">
 
         I’m a shiny new element.
 
       </template>
       <script>
-      Polymer('drive-app', {
+      Polymer({
         
       });
       </script>
@@ -52,13 +52,16 @@ This code defines the `<drive-app>` element as
 a tag that your app can use.
 The import lets you use Polymer's sugar while you’re authoring.
 
-Chrome Dev Editor should automatically save your changes to the element after
-you paste the code in.
-
-<figure>
-  <img src="img/image_9.png">
-  <figcaption>Chrome Dev Editor saves changes automatically</figcaption>
-</figure>
+<div class="stepbystep">
+  <ul>
+    <li>
+      <strong>Repeat the previous steps</strong> to also create a `drive-app.css` file. Leave this file blank for now.
+    </li>
+    <li>
+      <strong>Delete</strong> the `main.js` and `styles.css` files, they won't be used in this tutorial.
+    </li>
+  </ul>
+</div>
 
 
 ### Import your element
@@ -71,10 +74,23 @@ To employ the `<drive-app>` element, you need to:
 
 &rarr; Start editing `index.html`.
 
-&rarr; In the `<head`> of `index.html`, **add the following line**,
-making sure it's after the import of `platform.js`:
+&rarr; In the `<head`> of `index.html`, **remove** all existing imports and **add the following line**, making sure it's after the import of `platform.js`:
 
     <link rel="import" href="drive-app.html">
+
+When you're finished, the `<head>` of your document should look like this:
+
+    <head>
+      <title>PolymerDriveCodelab</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+
+      <script src="bower_components/platform/platform.js"></script>
+      
+      <link rel="import" href="drive-app.html">
+    </head>
 
 &rarr; In the `<body>`, **remove** all existing content and
 **declare an instance** of the `<drive-app>` element:

@@ -69,7 +69,7 @@ to download the elements to `bower_components/`.
 
     "dependencies": {
       "polymer": "Polymer/polymer#master",
-      "polymer-ui-toggle-button": "PolymerLabs/polymer-ui-toggle-button#master",
+      "paper-elements": "Polymer/paper-elements#master",
       "core-splitter": "Polymer/core-splitter#master",
       "core-scaffold": "Polymer/core-scaffold#master"
     }
@@ -91,7 +91,6 @@ exist and contain files:
 
 * `bower_components/core-splitter`
 * `bower_components/core-scaffold`
-* `bower_components/polymer-ui-toggle-button`
 
 
 ## Next up
