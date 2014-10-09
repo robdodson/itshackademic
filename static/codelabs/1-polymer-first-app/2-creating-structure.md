@@ -51,7 +51,6 @@ At the end of the file you'll find something new:
 
 ```side-by-side
 <body unresolved>
-  <h1>Hello Polytechnics!</h1>
 
   <script src="app.js"></script>
 </body>
@@ -95,9 +94,6 @@ OK, time to write some code!
 
 <div class="stepbystep">
   <ul>
-    <li>
-      Remove the `<h1>` that says `Hello Polytechnics!`
-    </li>
     <li>
       Add the following code inside the `<body>` tag.
     </li>

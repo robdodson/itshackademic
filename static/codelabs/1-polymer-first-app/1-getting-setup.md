@@ -93,6 +93,8 @@ Chrome Dev Editor fires up a web server and navigates to the `index.html` page. 
   <figcaption>Preview of index.html</figcaption>
 </figure>
 
+You won't see much, just a grey background, but it at least lets us know that our server is running and we're ready to start hacking!
+
 ### Summary
 
 In this step, you learned how to:
