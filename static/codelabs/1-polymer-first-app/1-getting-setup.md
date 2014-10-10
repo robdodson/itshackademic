@@ -71,13 +71,13 @@ You should see the following structure in your editor's sidebar.
     PolymerApp/
       api/          <!-- a fake API for our app to consume -->
       components/   <!-- installed dependencies from Bower -->
-      finished/     <!-- the finished version of our project, for reference -->
       images/
       post-service/ <!-- a component used in the tutorial -->
       starter/      <!-- the starting point for your project! -->
-      step-1/       <!-- checkpoint steps, for reference -->
-      step-2/
+      step-2/       <!-- checkpoint steps, for reference -->
       step-3/
+      step-4/
+      step-5/
       .bowerrc      <!-- bower configuration file -->
       .gitignore
       bower.json    <!-- bower metadata file. Used for managing dependencies -->

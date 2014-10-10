@@ -210,7 +210,7 @@ With a bit of luck, your application looks like this. Try favoriting the second 
   </figcaption>
 </figure>
 
-If your project doesn't look quite right, check your work against the files in the `finished` directory:
+If your project doesn't look quite right, check your work against the files in the `step-5` directory:
 
 -   [`post-card.html`](#)
 -   [`post-list.html`](#)
