@@ -1,5 +1,5 @@
 application: its-hackademic
-version: 2-1-2
+version: 2-2-0
 runtime: python27
 api_version: 1
 threadsafe: yes
