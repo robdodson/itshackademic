@@ -1,6 +1,6 @@
 <toc-element></toc-element>
 
-Polymer provides the `<google-map>` element ([github](https://github.com/PolymerLabs/google-map)) for rendering a Google Map.  To use it, you first need to install it using Bower.
+Polymer provides the `<google-map>` element ([github](https://github.com/GoogleWebComponents/google-map)) for rendering a Google Map.  To use it, you first need to install it using Bower.
 
 <aside class="callout">
   <b>What is Bower?</b>
@@ -16,7 +16,7 @@ Polymer provides the `<google-map>` element ([github](https://github.com/Polymer
 
 ### Install the &lt;google-map> element
 
-Normally, you'd run `bower install PolymerLabs/google-map --save` on the
+Normally, you'd run `bower install GoogleWebComponents/google-map --save` on the
 command line to install `<google-map>`. However, Chrome Dev Editor does
 not have a command line for running Bower commands. Instead, you need to
 manually edit `bower.json` to include `google-map`, then run Chrome Dev
