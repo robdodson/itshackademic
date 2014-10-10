@@ -16,7 +16,7 @@ to your elements. Let's take a look at a few of them.
 it defines the *depth* of the shadow.
 
     <div flex class="card">
-      <p>{{name}}</p>
+      <p>{{body}}</p>
       <paper-shadow z="2"></paper-shadow>
     </div>
 
