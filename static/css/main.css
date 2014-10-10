@@ -258,11 +258,10 @@ event-map {
         padding: 0; }
         .resources .resource .resource-inner ul a {
           color: #6c6c6c; }
-          .resources .resource .resource-inner ul a paper-icon-button {
-            background-color: #EFF2F3;
+          .resources .resource .resource-inner ul a paper-button {
             width: 100%;
             text-align: left; }
-          .resources .resource .resource-inner ul a paper-icon-button::shadow span {
+          .resources .resource .resource-inner ul a paper-button::shadow span {
             vertical-align: middle; }
     .resources .resource:nth-child(even) h1 {
       background-color: #ff5c92; }
