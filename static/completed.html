@@ -29,17 +29,51 @@
       <div class="splash-content">
         <h2>Congratulations, you've completed your codelab!</h2>
         <div class="button-wrapper">
-          <paper-button label="Start another codelab" on-tap="{{goToCodelabList}}"></paper-button>
+          <paper-button raised on-tap="{{goToCodelabList}}" id="button-codelab">
+            <core-icon icon="forward"></core-icon>
+            <span>Start another codelab</span>
+          </paper-button>
+        </div>
+        <div class="cta-social">Spread the word and help componentize the web!</div>
+        <div class="button-wrapper">
+          <paper-button raised id="button-twitter">
+            <img class="icon-twitter" src="/static/images/twitter-blue.svg" alt="tweet">
+            <a href="https://twitter.com/intent/tweet?text=Just+finished+another+%40polymer+code+lab.+Join+the+revolution+and+let%27s+componentize+the+web%21+%23itshackademic%21%0D%0A%0D%0Ahttp%3A%2F%2Fgoo.gl%2F6giRHx&related=polymer">
+              <span>Tweet</span>
+            </a>
+          </paper-button>
+          <span class="spanner-social">Or</span>
+          <paper-button raised id="button-gplus">
+            <core-icon icon="google-plus"></core-icon>
+            <div class="divider"></div>
+            <span>Share</span>
+          </paper-button>
         </div>
       </div>
     </div>
   </core-header-panel>
 </template>
 
+<script async defer src="//apis.google.com/js/platform.js"></script>
+<script async defer src="//platform.twitter.com/widgets.js"></script>
 <script>
 (function() {
   document.addEventListener('polymer-ready', function(e) {
     var t = document.querySelector('#t');
+    t.addEventListener('template-bound', function() {
+      var gplus = document.querySelector('.button-gplus');
+      var options = {
+        contenturl: 'http://itshackademic.com',
+        clientid: '794061795118-pto2ojmgtq79qdkcmfot9m0590t96et3.apps.googleusercontent.com',
+        cookiepolicy: 'http://itshackademic.com',
+        prefilltext: 'Just finished another Polymer code lab. Join the revolution and let\'s componentize the web! #itshackademic!\n\nhttp://goo.gl/KKFTXS',
+        calltoactionlabel: 'LEARN_MORE',
+        calltoactionurl: 'http://goo.gl/KKFTXS'
+      };
+      // Call the render method when appropriate within your app to display
+      // the button.
+      gapi.interactivepost.render('button-gplus', options);
+    });
     t.goToCodelabList = function() {
       window.location = '/codelabs/';
     }
