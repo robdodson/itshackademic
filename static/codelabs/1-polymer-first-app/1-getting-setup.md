@@ -5,7 +5,7 @@
 In this tutorial, you'll build a small Polymer application -- a very basic client for a social networking service. The end result will look like this:
 
 <figure layout vertical center>
-  <a href="//polymer-project.org/apps/polymer-tutorial/finished/" layout horizontal class="unquote-link">
+  <a href="/static/codelabs/1-polymer-first-app/PolymerApp/step-5/index.html" layout horizontal class="unquote-link">
     <img src="img/s1-app.png" alt="Finished tutorial">
   </a>
   <figcaption>
