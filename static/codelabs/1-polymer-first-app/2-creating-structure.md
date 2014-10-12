@@ -7,6 +7,17 @@ In this step, you'll learn about:
 -   Using HTML imports.
 -   Using Polymer elements with standard HTML, CSS and JavaScript.
 
+<div class="yt-embed">
+  <google-youtube
+    videoid="QoarDun5arg"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
+
 ### Import dependencies
 
 Go to the `starter` directory and open the `index.html` file. The starting file looks like this:
@@ -65,6 +76,17 @@ At the end of the file you'll find something new:
 <hr>
 
 OK, time to write some code!
+
+<div class="yt-embed">
+  <google-youtube
+    videoid="-TwIxg39szQ"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
 
 &rarr; Add HTML import links to import the `<core-header-panel>`, `<core-toolbar>`, and `<paper-tabs>` elements:
 
@@ -173,6 +195,17 @@ Hit <img src="img/runbutton.png" class="icon"> again, or refresh the page, and y
 <hr>
 
 #### Add the tabs
+
+<div class="yt-embed">
+  <google-youtube
+    videoid="ffwXhCvThCk"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
 
 The application will use tabs for navigating between two different views,
 a list of all messages and a list of favorites. The 

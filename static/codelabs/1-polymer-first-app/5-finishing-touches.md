@@ -10,6 +10,17 @@ In this section you'll learn about:
 
 ### Edit post-card.html
 
+<div class="yt-embed">
+  <google-youtube
+    videoid="qym7deY53SY"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
+
 &rarr; Open `post-card.html` in your editor and add the
 <code><a href="/docs/elements/core-elements.html#core-icon-button">&lt;core-icon-button></a></code>
 element:
@@ -115,6 +126,17 @@ work, but there are still a few steps left to finish the app.
 
 ### Edit app.js
 
+<div class="yt-embed">
+  <google-youtube
+    videoid="prneaX8RwY0"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
+
 &rarr; Open `app.js` and update the tab event handler to switch views in 
 `<post-list>` when the user switches tabs:
 
@@ -166,6 +188,17 @@ between the Messages and Favorites tabs. The `hidden` attribute is a
 standard HTML5 attribute. The default Polymer style sheet includes a rule to style `hidden` as `display: none` for those browsers that don't support `hidden` natively.
 
 <hr>
+
+<div class="yt-embed">
+  <google-youtube
+    videoid="aBbs3QUgFHs"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
 
 &rarr; Add an event handler for the `favorite-tap` event to `post-list.html`:
 

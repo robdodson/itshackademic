@@ -252,3 +252,9 @@ body /deep/ .services-label {
   text-align: center;
   font-style: italic;
 }
+
+html /deep/ .yt-embed {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}

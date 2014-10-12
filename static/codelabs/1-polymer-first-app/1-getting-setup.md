@@ -1,5 +1,16 @@
 <toc-element></toc-element>
 
+<div class="yt-embed">
+  <google-youtube
+    videoid="uDw50BloI2Q"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
+
 ### The Goal
 
 In this tutorial, you'll build a small Polymer application -- a very basic client for a social networking service. The end result will look like this:

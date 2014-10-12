@@ -30,6 +30,17 @@ In this step, you'll learn about:
 
 ### Create a `<post-card>` element
 
+<div class="yt-embed">
+  <google-youtube
+    videoid="HVDsd-7SDOI"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
+
 Open `post-card.html` in your editor. This file contains the skeleton of a custom element, starting with some imports:
 
 ```side-by-side
@@ -118,6 +129,17 @@ At the end of the element definition is a `<script>` tag:
 <hr>
 
 #### Create the card structure.
+
+<div class="yt-embed">
+  <google-youtube
+    videoid="wZ1dNGRdA5E"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
 
 When you create an instance of <code>&lt;post-card&gt;</code>, the contents from its shadow DOM <code>&lt;template&gt;</code> are inserted as the element's <em>shadow root</em>. These elements are rendered in the browser, but are not included in the element's <code>children</code> collection.
 

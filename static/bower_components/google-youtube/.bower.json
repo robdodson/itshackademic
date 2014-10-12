@@ -1,0 +1,43 @@
+{
+  "name": "google-youtube",
+  "version": "0.0.8",
+  "authors": [
+    "Jeff Posnick <jeffy@google.com>"
+  ],
+  "description": "YouTube video playback web component.",
+  "keywords": [
+    "google",
+    "youtube",
+    "polymer",
+    "web-components",
+    "web-component"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "../"
+  ],
+  "main": "google-youtube.html",
+  "license": "Apache-2.0",
+  "homepage": "https://googlewebcomponents.github.io/google-youtube",
+  "dependencies": {
+    "google-apis": "GoogleWebComponents/google-apis#~0.3.2",
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0"
+  },
+  "devDependencies": {
+    "polymer-test-tools": "Polymer/polymer-test-tools#>=0.4.0 <1.0.0"
+  },
+  "_release": "0.0.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.8",
+    "commit": "d9ea8b0982381e06c7e1018fcb1a29e90ed8a3fc"
+  },
+  "_source": "git://github.com/GoogleWebComponents/google-youtube.git",
+  "_target": "~0.0.8",
+  "_originalSource": "GoogleWebComponents/google-youtube",
+  "_direct": true
+}

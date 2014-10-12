@@ -20,6 +20,17 @@ In this section you'll learn about:
 
 ### Edit the `<post-list>` element
 
+<div class="yt-embed">
+  <google-youtube
+    videoid="kbluOc97TJk"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
+
 &rarr; Open the `post-list.html` file in your editor.
 
 ```side-by-side
@@ -57,6 +68,17 @@ A <a href="//polymer-project.org/docs/polymer/polymer.html#published-properties"
 <hr>
 
 #### Connect the `<post-service>`
+
+<div class="yt-embed">
+  <google-youtube
+    videoid="Eia83Eg1A5c"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
 
 &rarr; Add a `<post-service>` element inside the element's `<template>`:
 
@@ -111,6 +133,17 @@ The [_data binding_](//polymer-project.org/docs/polymer/databinding.html) links 
 <hr>
 
 #### Import the `<post-list>` element into `index.html`.
+
+<div class="yt-embed">
+  <google-youtube
+    videoid="Uwl8GtxLJCQ"
+    width="16"
+    height="9"
+    rel="0"
+    autoplay="0"
+    fluid>
+  </google-youtube>
+</div>
 
 &rarr; Open `index.html` and add an import link for `post-list.html`. You can replace the existing link for `post-card`:
 
