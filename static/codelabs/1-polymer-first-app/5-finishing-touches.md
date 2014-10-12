@@ -162,7 +162,7 @@ work, but there are still a few steps left to finish the app.
 </ul>
 
 The binding expression for `hidden` actually does the work of switching 
-between the All and Favorites tabs. The `hidden` attribute is a 
+between the Messages and Favorites tabs. The `hidden` attribute is a 
 standard HTML5 attribute. The default Polymer style sheet includes a rule to style `hidden` as `display: none` for those browsers that don't support `hidden` natively.
 
 <hr>
