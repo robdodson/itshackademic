@@ -245,9 +245,9 @@ With a bit of luck, your application looks like this. Try favoriting the second 
 
 If your project doesn't look quite right, check your work against the files in the `step-5` directory:
 
--   [`post-card.html`](#)
--   [`post-list.html`](#)
--   [`index.html`](#)
+-   [`post-card.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-5/post-card.html)
+-   [`post-list.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-5/post-list.html)
+-   [`index.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-5/index.html)
 
 ### Summary
 

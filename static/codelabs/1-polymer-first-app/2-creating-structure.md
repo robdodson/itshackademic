@@ -331,9 +331,11 @@ for the newly-selected tab. The `<paper-tabs>` element inherits this behavior fr
 both single and multiple selections.</p>
 </aside>
 
-If something isn't working, check your work against the `index.html` file in the `step-2` folder:
+If something isn't working, check your work against the files in the `step-2` folder:
 
--   [`index.html`](#)
+-   [`index.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-2/index.html)
+-   [`app.css`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-2/app.css)
+-   [`app.js`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-2/app.js)
 
 ### Summary
 

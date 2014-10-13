@@ -282,8 +282,8 @@ The card still needs a favorite button, but it's starting to take shape.
 
 If something isn't working, check your work against the files in the `step-3` folder:
 
--   [`post-card.html`](#)
--   [`index.html`](#)
+-   [`post-card.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-3/post-card.html)
+-   [`index.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-3/index.html)
 
 <aside class="callout">
   <b>Explore:</b>

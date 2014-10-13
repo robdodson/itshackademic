@@ -176,8 +176,8 @@ Make sure you have `index.html` open, then hit the <img src="img/runbutton.png" 
 
 If you have any problems, check your work against the files in the `step-4` folder:
 
--   [`post-list.html`](#)
--   [`index.html`](#)
+-   [`post-list.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-4/post-list.html)
+-   [`index.html`](https://github.com/robdodson/its-hackademic/blob/master/static/codelabs/1-polymer-first-app/PolymerApp/step-4/index.html)
 
 <aside class="callout">
   <b>Explore:</b>
