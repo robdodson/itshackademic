@@ -261,8 +261,9 @@ event-map {
           .resources .resource .resource-inner ul a paper-button {
             width: 100%;
             text-align: left; }
-          .resources .resource .resource-inner ul a paper-button::shadow span {
-            vertical-align: middle; }
+          .resources .resource .resource-inner ul a paper-button .label-button {
+            vertical-align: middle;
+            margin-left: 4px; }
     .resources .resource:nth-child(even) h1 {
       background-color: #ff5c92; }
 

@@ -59,8 +59,9 @@
             width: 100%;
             text-align: left;
           }
-          paper-button::shadow span {
+          paper-button .label-button {
             vertical-align: middle;
+            margin-left: 4px;
           }
         }
       }
