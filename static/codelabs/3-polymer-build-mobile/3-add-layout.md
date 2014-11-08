@@ -10,14 +10,11 @@ To use `core-drawer-panel`:
 1. Use an HTML Import to load the element into `codelab-app.html`.
 2. Declare an instance of the element on the page.
 
-&rarr; In `codelab-app.html`, add imports for `core-drawer-panel`, `core-header-panel`, and `core-toolbar`:
+&rarr; In `codelab-app.html`, add imports for `core-drawer-panel`, `core-header-panel`, and `core-toolbar` to the top of the file:
 
-    <head>
-      ...
-      <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
-      <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
-      <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
-    </head>
+    <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
 
 &rarr; In `codelab-app.html`, inside the `<template>` tag,
 remove the **Hello Polymer!** string and declare `<core-drawer-panel>` instead. The drawer panel consists of two parts: `drawer` and `main`. The drawer is a sidebar that is open in desktop applications but closed if the screen size is smaller than `responsiveWidth`. Set `responsiveWidth` to `600px`.
@@ -63,13 +60,11 @@ To add Polymer icons to the toolbar:
 2. Use the `icon` property of `paper-icon-button` to display icons on the page.
 3. Use the `flex` attribute to align icons to the right.
 
-&rarr; In `codelab-app.html`, add an HTML Import for `core-icons` and `paper-icon-button`:
+&rarr; In `codelab-app.html`, add an HTML Import for `core-icons` and `paper-icon-button` to the top of the file. These can come after the imports you added in the previous steps:
 
-    <head>
-      ...
-      <link rel="import" href="bower_components/core-icons/core-icons.html">
-      <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-    </head>
+    ...
+    <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 
 
 &rarr; Add `paper-icon-button` elements to the toolbar. Set their `icon` property to the appropriate icon name.
