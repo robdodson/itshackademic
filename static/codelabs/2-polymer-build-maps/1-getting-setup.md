@@ -30,8 +30,6 @@ Fire up Chrome Dev Editor and start a "JavaScript Web app using Polymer paper el
 
 <div class="stepbystep">
   <ul>
-    <!-- TODO (asolovay): Do they put quotes around the project name? If not, we
-      should set off PolymerMapsCodelab in bold but with no quotes. -->
     <li>Enter <b>"PolymerMapsCodelab"</b> as the <b>Project name</b>.</li>
     <li>In the <b>Project type</b> dropdown, select <b>JavaScript web app (using Polymer paper elements)</b>.</li>
     <li>Click the <b>Create</b> button.</li>
@@ -52,6 +50,13 @@ folder. You'll learn more about using Bower in the next step.
       index.html  <!-- your app -->
       main.js
       styles.css
+
+<aside class="callout">
+<div>If you receive an error <strong>"Github API Limit Exceeded"</strong> while installing bower dependencies, you can use <a href="zips/PolymerMapsCodelab.zip">this project zip</a> instead.</div>
+<div>Unzip the project, and click on <strong>Open Folder...</strong> in the Chrome Dev Editor menu to import it.</div>
+<div>It includes all the dependencies to complete this codelab so you should not need to run bower with it.</div>
+<div>This is a short term bug in Chrome Dev Editor that will be fixed in the next release.</div>
+</aside>
 
 ### Preview the app
 

@@ -54,6 +54,13 @@ After installation, your directory structure should look like this:
       main.js
       styles.css
 
+<aside class="callout">
+<div>If you receive an error <strong>"Github API Limit Exceeded"</strong> while installing bower dependencies, you can use <a href="zips/PolymerMobileCodelab.zip">this project zip</a> instead.</div>
+<div>Unzip the project, and click on <strong>Open Folder...</strong> in the Chrome Dev Editor menu to import it.</div>
+<div>It includes all the dependencies to complete this codelab so you should not need to run bower with it.</div>
+<div>This is a short term bug in Chrome Dev Editor that will be fixed in the next release.</div>
+</aside>
+
 ### Preview the app
 
 At any point, click the <img src="img/runbutton.png" class="icon"> button

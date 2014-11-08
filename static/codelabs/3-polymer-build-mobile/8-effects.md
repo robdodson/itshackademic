@@ -96,7 +96,7 @@ The [tokenList](http://www.polymer-project.org/docs/polymer/expressions.html#tok
       <core-toolbar class="{{ {tall : !narrow} | tokenList }}">Menu</core-toolbar>
       ...
     <core-header-panel main mode="waterfall">
-        <core-toolbar class="{{ {tall : !narrow} | tokenList }}">My Notes</core-toolbar>
+        <core-toolbar class="{{ {tall : !narrow} | tokenList }}"><span flex>My Notes</span></core-toolbar>
 
 <figure>
   <img src="img/s8-tall.png" height="300px;">
