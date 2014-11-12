@@ -24,11 +24,11 @@ remove the **Hello Polymer!** string and declare `<core-drawer-panel>` instead. 
       <core-drawer-panel responsiveWidth="600px">
 
         <core-header-panel drawer>
-          // The content of the drawer section.
+          <core-toolbar>Menu</core-toolbar>
         </core-header-panel>
 
         <core-header-panel main>
-          // The content of the main section.
+          <core-toolbar>My notes</core-toolbar>
         </core-header-panel>
 
       </core-drawer-panel>

@@ -159,13 +159,16 @@ and the content of the `.card` div.
       </template>
     </div>
 
-&rarr; Add styles for the `.card` div to `styles.css`.
+&rarr; Add styles for the `.item` and `.card` divs to `styles.css`.
+
+    .item {
+      margin: 1em;
+    }
 
     .card {
       width: 300px;
       background-color: #fff;
       padding: 1em;
-      margin: 1em;
       position: relative;
     }
 

@@ -12,13 +12,14 @@ to your elements. Let's take a look at a few of them.
     <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
     ...
 
-&rarr; Add a `<paper-shadow>` element to the card div. Set its `z` attripbute to `2` -
+&rarr; Add a `<paper-shadow>` element around the card div. Set its `z` attripbute to `2` -
 it defines the *depth* of the shadow.
-
-    <div flex class="card">
-      <p>{{body}}</p>
-      <paper-shadow z="2"></paper-shadow>
-    </div>
+    
+    <paper-shadow z="2">
+      <div flex class="card">
+        <p>{{body}}</p>
+      </div>
+    </paper-shadow>
 
 <figure>
   <img src="img/s8-shadow.png">
