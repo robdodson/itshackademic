@@ -94,23 +94,23 @@ last snippet):
 
     <script>
       Polymer({
-          uploadList: [],
-          uploadedList: [],
-          autoUpload: false,
+        uploadList: [],
+        uploadedList: [],
+        autoUpload: false,
 
-          selectFiles: function (files) {
-            this.queue = files;
-            this.$.status.textContent = 'Files selected';
+        selectFiles: function (files) {
+          this.queue = files;
+          this.$.status.textContent = 'Files selected';
 
-            var f;
-            for(var i=0; f = files[i]; i++) {
-              this.uploadList.push(f);
-            }
-
-            if(this.autoUpload) {
-              this.uploadFiles(files);
-            }
+          var f;
+          for(var i=0; f = files[i]; i++) {
+            this.uploadList.push(f);
           }
+
+          if(this.autoUpload) {
+            this.uploadFiles(files);
+          }
+        }
       });
     </script>
 
@@ -195,30 +195,30 @@ the other HTML imports in `drive-app.html`:
 clearing the upload list:
 
     tapSelect: function (e) {
-        this.$.files.click();
+      this.$.files.click();
     },
 
     handleDragOver: function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        e.dataTransfer.dropEffect = 'copy';
+      e.stopPropagation();
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'copy';
     },
 
     handleFilePick: function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        this.selectFiles(e.target.files);
+      e.stopPropagation();
+      e.preventDefault();
+      this.selectFiles(e.target.files);
     },
 
     handleFileSelect: function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        this.selectFiles(e.dataTransfer.files);
+      e.stopPropagation();
+      e.preventDefault();
+      this.selectFiles(e.dataTransfer.files);
     },
 
     clearUploadList: function () {
-        this.uploadedList = [];
-        this.uploadList = [];
+      this.uploadedList = [];
+      this.uploadList = [];
     },
 
 ## Next up

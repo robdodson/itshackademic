@@ -36,12 +36,12 @@ To employ `<google-map-directions>`:
 
 Both elements expose a `.map` property that allow users to access/set an underlying `Map` object (used by the Google Maps JavaScript API). To get these two elements talking, set them to use the same `Map` object.
 
-&rarr; In `main.js`, set the directions element to use the same `Map` object:
+&rarr; Replace the contents of `main.js` with the following code to set the directions element to use the same `Map` object:
 
-      var gMap = document.querySelector('google-map');
-      gMap.addEventListener('api-load', function(e) {
-        document.querySelector('google-map-directions').map = this.map;
-      });
+    var gMap = document.querySelector('google-map');
+    gMap.addEventListener('api-load', function(e) {
+      document.querySelector('google-map-directions').map = this.map;
+    });
 
 **Note**: Waiting until the map element fires its `api-load` event ensures that
 the map has been loaded.

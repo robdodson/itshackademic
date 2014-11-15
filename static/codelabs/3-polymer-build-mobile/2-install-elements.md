@@ -80,13 +80,13 @@ To create the app's root element, you need to:
 
     <polymer-element name="codelab-app">
       <template>
-      <link rel="stylesheet" href="styles.css">
-      Hello Polymer!
-    </template>
-    <script>
-      Polymer({
-      });
-    </script>
+        <link rel="stylesheet" href="styles.css">
+        Hello Polymer!
+      </template>
+      <script>
+        Polymer({
+        });
+      </script>
     </polymer-element>
 
 The Roboto2 font import is not obligatory,
@@ -111,7 +111,7 @@ This CSS file is referenced inside the template of our `codelab-app` element. Th
 
 &rarr; In `index.html`, remove the contents of `<head>` and add an [HTML Import](http://www.polymer-project.org/platform/html-imports.html) that loads `codelab-app.html`. The `<head>` should now look like this:
 
-**Important**: Make sure the HTML Import comes after `platform.js`.
+**Important**: Make sure the HTML Import comes after `webcomponents.js`.
 
     <head>
       <title>PolymerMobileCodelab</title>
@@ -120,7 +120,7 @@ This CSS file is referenced inside the template of our `codelab-app` element. Th
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
 
-      <script src="bower_components/platform/platform.js"></script>
+      <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
       <link rel="import" href="codelab-app.html">
     </head>

@@ -35,7 +35,7 @@ Once again, the Bower dance is needed to fetch the code.
 
     <head>
       ...
-      <script src="bower_components/platform/platform.js"></script>
+      <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
       <link rel="import" href="bower_components/google-map/google-map.html">
       <link rel="import" href="bower_components/point-overlay/point-overlay.html">
     </head>

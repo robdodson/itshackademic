@@ -94,10 +94,10 @@ that depends on the `narrow` variable.
 The [tokenList](http://www.polymer-project.org/docs/polymer/expressions.html#tokenlist) filter allows you to dynamically set/remove class names based on the object passed to the filter.
 
     <core-header-panel drawer mode="waterfall">
-      <core-toolbar class="{{ {tall : !narrow} | tokenList }}">Menu</core-toolbar>
+      <core-toolbar class="{{ {tall : !narrow} | tokenList }}">...</core-toolbar>
       ...
     <core-header-panel main mode="waterfall">
-        <core-toolbar class="{{ {tall : !narrow} | tokenList }}"><span flex>My Notes</span></core-toolbar>
+      <core-toolbar class="{{ {tall : !narrow} | tokenList }}">...</core-toolbar>
 
 <figure>
   <img src="img/s8-tall.png" height="300px;">

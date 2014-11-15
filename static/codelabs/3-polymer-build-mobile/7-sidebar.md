@@ -61,7 +61,7 @@ for each note in a container where the value of `data-fade-selected` is true.
 
 ### Add a delete button
 
-&rarr; Add another `core-item` with a `paper-icon-button` inside.
+&rarr; Add another `core-item` with a `paper-icon-button` inside the drawer.
 Set the button's `icon` attribute to `delete`, and bind its `on-click` event to a callback named `delete`.
     
     <core-item>

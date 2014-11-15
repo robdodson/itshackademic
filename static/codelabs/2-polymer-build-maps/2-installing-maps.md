@@ -60,12 +60,12 @@ To employ `<google-map>`, you need to:
 [HTML Import](http://www.polymer-project.org/platform/html-imports.html) in the
 `<head>` that loads `google-map.html`. 
 
-**Important**: all imports need to come after `platform.js` so the polyfill can
+**Important**: all imports need to come after `webcomponents.js` so the polyfill can
 properly load them.
 
     <head>
       ...
-      <script src="bower_components/platform/platform.js"></script>
+      <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
       <link rel="import" href="bower_components/google-map/google-map.html">
     </head>
 

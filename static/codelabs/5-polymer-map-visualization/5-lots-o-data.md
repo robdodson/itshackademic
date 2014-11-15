@@ -34,7 +34,7 @@ To load the data from file, we'll be using the `<core-ajax>` element.
 
     <head>
       ...
-      <script src="bower_components/platform/platform.js"></script>
+      <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
       <link rel="import" href="bower_components/google-map/google-map.html">
       <link rel="import" href="bower_components/point-overlay/point-overlay.html">
       <link rel="import" href="bower_components/core-ajax/core-ajax.html">

@@ -74,7 +74,7 @@ valid client ID. To get this, you must get your own developer API key from the
 [Google Developer Console](https://console.developers.google.com/project).
 Be sure to enable the Google Drive API and add
 [http://127.0.0.1:51792/](http://127.0.0.1:51792/)
-to the list of authorized clients. In the **API's & auth > Consent screen** menu, be sure to give your application a `Product Name` and `Email Address`.
+to the list of authorized clients (that's the ip and port that Chrome Dev Editor runs the app on. If you're using your own server, make sure the ip and port match on console.developers.google.com). In the **API's & auth > Consent screen** menu, be sure to give your application a `Product Name` and `Email Address`.
 <br><br>
 &rarr; Add attributes to the `google-signin` tag:
 

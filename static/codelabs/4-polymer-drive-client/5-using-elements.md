@@ -22,8 +22,7 @@ You can now use these elements in your app.
 
 ### Lay out a page with `<core-scaffold>`
 
-&rarr; Remove the content of the `<template>` inside of `drive-app.html`,
-and paste in the following code snippet.
+&rarr; In the `<template>` inside of `drive-app.html`, replace `I’m a shiny new element` with the following code snippet.
 
 This code declares `<core-scaffold>` with some markup
 so that the app gets a **toolbar**, a **menu**,

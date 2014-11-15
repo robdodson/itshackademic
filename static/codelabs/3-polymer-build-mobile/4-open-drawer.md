@@ -40,7 +40,7 @@ Learn more about [declarative event mapping](http://www.polymer-project.org/docs
 Use Polymer's `this.$.myIdName` shorthand notation to get access to the
 `core-drawer-panel` element. Use its `togglePanel` method to delegate opening
 of the drawer. To learn more about the API for `core-drawer-panel`,
-visit its [Github page](https://www.polymer-project.org/docs/elements/core-elements.html#core-drawer-panel).
+visit its [documentation](https://www.polymer-project.org/docs/elements/core-elements.html#core-drawer-panel).
 
     <script>
       Polymer({
@@ -56,6 +56,13 @@ In *Developer Tools*, in the *Emulation* tab, pick *Nexus 5* from the dropdown, 
 &rarr; Refresh the page. The drawer should be hidden by default.
 Try clicking on the menu button in the toolbar.
 The drawer should open and close accordingly.
+
+<aside class="callout">
+<b>New in v0.5.1</b>
+<p>
+You can now toggle the drawer just by adding a `core-drawer-toggle` attribute to your `paper-icon-button`. Try adding the `core-drawer-toggle` to your `paper-icon-button` and removing the `on-click` and `toggleDrawer` method. See if you can get the same behavior as before.
+</p>
+</aside>
 
 ### Summary
 

@@ -54,7 +54,7 @@ To employ `<google-map>`, you need to:
 
 &rarr; Start editing `index.html`.
 
-&rarr; In the `<head`> of `index.html`, **remove** all existing imports and **add the following line**, making sure it's after the import of `platform.js`:
+&rarr; In the `<head`> of `index.html`, **remove** all existing imports and **add the following line**, making sure it's after the import of `webcomponents.js`:
 
     <link rel="import" href="bower_components/google-map/google-map.html">
 
@@ -67,7 +67,7 @@ When you're finished, the `<head>` of your document should look like this:
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
 
-      <script src="bower_components/platform/platform.js"></script>
+      <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
       
       <link rel="import" href="bower_components/google-map/google-map.html">
 

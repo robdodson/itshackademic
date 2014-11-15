@@ -112,7 +112,7 @@ This means you can use `{{}}` bindings on the `map` **attributes** to bind their
   properties are convenient to use because they support two-way data binding.</p>
 </aside>
 
-&rarr; In `index.html`, remove the `<script>` you added in Step 3.
+&rarr; In `index.html`, remove the `<script src="main.js">` you added in Step 3.
 
 &rarr; Wrap the existing markup in `<template is="auto-binding">`.
 
