@@ -35,7 +35,7 @@ Go to the `starter` directory and open the `index.html` file. The starting file 
   
   <link rel="stylesheet" href="app.css">
   
-  <script src="../components/platform/platform.js">
+  <script src="../components/webcomponentsjs/webcomponents.js">
   </script>
   
   <link rel="import"
@@ -44,7 +44,7 @@ Go to the `starter` directory and open the `index.html` file. The starting file 
 ```
 
 <ul class="side-by-side">
-  <li>This bare-bones file defines some styles and embeds the <code>platform.js</code> script, which supplies any missing Web Components features.</li>
+  <li>This bare-bones file defines some styles and embeds the <code>webcomponents.js</code> script, which supplies any missing Web Components features.</li>
   <li>The <code>link rel="import"</code> element is an <em>HTML import</em>, a new way of including resources into an HTML file.</li>
 </ul>
 
@@ -91,7 +91,7 @@ OK, time to write some code!
 &rarr; Add HTML import links to import the `<core-header-panel>`, `<core-toolbar>`, and `<paper-tabs>` elements:
 
 ```side-by-side
-<script src="../components/platform/platform.js">
+<script src="../components/webcomponentsjs/webcomponents.js">
 </script>
 
 <link rel="import" 
