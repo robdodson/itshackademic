@@ -42,7 +42,7 @@ a colored ripple propagates through the element.
 &rarr; Add `<paper-ripple>` at the bottom of the `.card` div.
 Add the `recenteringTouch` class to make it react to user actions.
 
-    <div flex class="card>
+    <div flex class="card">
       ...
       <paper-ripple class="recenteringTouch" fit></paper-ripple>
     </div>
