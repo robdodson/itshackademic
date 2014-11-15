@@ -22,7 +22,7 @@ In this section you'll learn about:
 </div>
 
 &rarr; Open `post-card.html` in your editor and add the
-<code><a href="/docs/elements/core-elements.html#core-icon-button">&lt;core-icon-button></a></code>
+<code><a href="//polymer-project.org/docs/elements/core-elements.html#core-icon-button">&lt;core-icon-button></a></code>
 element:
 
 ```side-by-side
@@ -222,7 +222,7 @@ Polymer({
   <li><code>this.$.service</code> returns a reference to the <code>&lt;post-service&gt;</code> element.
   Every element in a custom element's shadow DOM that has an <code>id</code>
   attribute is added to the <code>this.$</code> dictionary. This is called
-  <a href="/docs/polymer/polymer.html#automatic-node-finding">automatic node finding</a>.</li>
+  <a href="//polymer-project.org/docs/polymer/polymer.html#automatic-node-finding">automatic node finding</a>.</li>
   <li>If this was a real social networking service, the <code>setFavorite</code> method
   would persist the change to the server. As is, it doesn't do anything
   other than log a console message.</li>

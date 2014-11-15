@@ -58,7 +58,7 @@ In this section you'll learn about:
   <li>The file already includes an import for the <code>&lt;post-service&gt;</code>
   element, so it's ready to use.</li>
   <li>The <code>attributes="show"</code> attribute creates a 
-  <a href="/docs/polymer/polymer.html#published-properties">
+  <a href="//polymer-project.org/docs/polymer/polymer.html#published-properties">
   <em>published property</em></a> named <code>show</code>.
   </li>
 </ul>
@@ -183,7 +183,7 @@ If you have any problems, check your work against the files in the `step-4` fold
   <b>Explore:</b>
 
   <p>Open up `post-service.html` to see how the component works. Internally, it uses the <code>
-<a href="//polymer-projet.org/docs/elements/core-elements.html#core-ajax">&lt;core-ajax&gt;</a></code> element to make HTTP requests.</p>
+<a href="//polymer-project.org/docs/elements/core-elements.html#core-ajax">&lt;core-ajax&gt;</a></code> element to make HTTP requests.</p>
 </aside>
 
 ### Summary
