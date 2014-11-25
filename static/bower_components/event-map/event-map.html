@@ -9,7 +9,9 @@ An event map for GDG events around the world
 
 ##### Example
 
-    <event-map feed="events/event-markers.public?&start=1413331200&end=1418601600&tag=polymerpolytechnic"></event-map>
+    <event-map
+      feed="https://google-developers.appspot.com/events/event-markers.public?&start=1413331200&end=1418601600&tag=polymerpolytechnic">
+    </event-map>
 
 @element event-map
 @blurb An event map for GDG events around the world
@@ -24,7 +26,7 @@ An event map for GDG events around the world
 
     <!-- Grab the event feed from DevSite -->
     <core-ajax auto handleAs="json"
-        url="{{devsite}}/{{feed}}"
+        url="{{feed}}"
         response="{{response}}">
     </core-ajax>
 
@@ -50,7 +52,7 @@ An event map for GDG events around the world
               longitude="{{event.latlng.lng}}">
             <!-- Infobox -->
             <h3 class="event-title">
-              <a href="{{devsite}}/{{event.defaultEventUrl}}">
+              <a href="{{devsite}}{{event.defaultEventUrl}}">
                 {{event.name}}
               </a>
             </h3>
@@ -75,7 +77,7 @@ An event map for GDG events around the world
             </div>
           </template>
           <div class="event-name">
-            <a href="{{devsite}}/{{event.defaultEventUrl}}">{{event.name}}</a>
+            <a href="{{devsite}}{{event.defaultEventUrl}}">{{event.name}}</a>
           </div>
           <div class="event-location">{{event.location}}</div>
         </div>
@@ -100,7 +102,7 @@ An event map for GDG events around the world
        * The `feed` should point to an event feed json endpoint.
        * ex:
        *
-       * events/event-markers.json?&start=1413331200&end=1418601600&tag=polymerpolytechnic
+       * https://google-developers.appspot.com/events/event-markers.public?&start=1413331200&end=1418601600&tag=polymerpolytechnic
        *
        * @attribute feed
        * @type string
@@ -114,17 +116,11 @@ An event map for GDG events around the world
        *
        * @attribute devsite
        * @type string
-       * @default https://google-developers.appspot.com
+       * @default https://developers.google.com
        */
-      devsite: 'https://google-developers.appspot.com',
+      devsite: 'https://developers.google.com',
 
       selected: 'map',
-
-      ready: function() {
-        // Ready is a lifecycle callback.
-        // You can do setup work in here.
-        // More info: http://www.polymer-project.org/docs/polymer/polymer.html#lifecyclemethods
-      },
 
       toLongDate: function(time) {
         var date = moment.utc(time * 1000);
