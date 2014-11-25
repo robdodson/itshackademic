@@ -5,6 +5,13 @@
   box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.2);
   font-family: 'Roboto Condensed', 'Roboto', sans-serif;
 }
+.wrapper,
+.list {
+  height: 100%;
+}
+.list {
+  overflow: scroll;
+}
 google-map {
   display: block;
   height: 100%;
@@ -12,6 +19,8 @@ google-map {
 .switch-modes {
   border-top: 5px solid #287EC7;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 10;
   width: 100%;
 }

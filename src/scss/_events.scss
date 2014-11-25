@@ -1,7 +1,7 @@
 event-map {
   width: 100%;
   height: 300px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 @media (min-width: $md-media) {

@@ -3,6 +3,7 @@
 <link rel="import" href="../core-ajax/core-ajax.html">
 <link rel="import" href="../core-selector/core-selector.html">
 <link rel="import" href="moment-import.html">
+<link rel="import" href="moment-timezone-import.html">
 
 <!--
 An event map for GDG events around the world
@@ -38,50 +39,52 @@ An event map for GDG events around the world
       </core-selector>
     </div>
 
-    <!--
-    The map takes an event feed json and renders google-map-markers
-    using each event's latitude and longitude. Content for a custom
-    infobox is also generated.
-    -->
-    <google-map latitude="10" longitude="0" zoom="2"
-                hidden?="{{selected !== 'map'}}">
-      <template repeat="{{event in response}}">
-          <google-map-marker
-              icon="{{icon}}"
-              latitude="{{event.latlng.lat}}"
-              longitude="{{event.latlng.lng}}">
-            <!-- Infobox -->
-            <h3 class="event-title">
-              <a href="{{devsite}}{{event.defaultEventUrl}}">
-                {{event.name}}
-              </a>
-            </h3>
-            <p class="event-location">{{event.location}}</p>
-          </google-map-marker>
-        </template>
-    </google-map>
-
-    <!--
-    The list represents the event feed data as a simple list.
-    -->
-    <div hidden?="{{selected !== 'list'}}">
-      <template repeat="{{event in response}}">
-        <div class="event">
-          <template bind="{{event.start | toLongDate}}">
-            <div class="event-date" layout horizontal center>
-              <div class="event-date-numeric">{{numericDate}}</div>
-              <div class="event-date-container" layout vertical>
-                <div class="event-date-day">{{day}}</div>
-                <div class="event-date-month">{{month}}, {{year}}</div>
-              </div>
-            </div>
+    <div class="wrapper">
+      <!--
+      The map takes an event feed json and renders google-map-markers
+      using each event's latitude and longitude. Content for a custom
+      infobox is also generated.
+      -->
+      <google-map latitude="10" longitude="0" zoom="2"
+                  hidden?="{{selected !== 'map'}}">
+        <template repeat="{{event in response}}">
+            <google-map-marker
+                icon="{{icon}}"
+                latitude="{{event.latlng.lat}}"
+                longitude="{{event.latlng.lng}}">
+              <!-- Infobox -->
+              <h3 class="event-title">
+                <a href="{{devsite}}{{event.defaultEventUrl}}">
+                  {{event.name}}
+                </a>
+              </h3>
+              <p class="event-location">{{event.location}}</p>
+            </google-map-marker>
           </template>
-          <div class="event-name">
-            <a href="{{devsite}}{{event.defaultEventUrl}}">{{event.name}}</a>
+      </google-map>
+
+      <!--
+      The list represents the event feed data as a simple list.
+      -->
+      <div class="list" hidden?="{{selected !== 'list'}}">
+        <template repeat="{{event in response}}">
+          <div class="event">
+            <template bind="{{event | toLongDate}}">
+              <div class="event-date" layout horizontal center>
+                <div class="event-date-numeric">{{numericDate}}</div>
+                <div class="event-date-container" layout vertical>
+                  <div class="event-date-day">{{day}}</div>
+                  <div class="event-date-month">{{month}}, {{year}}</div>
+                </div>
+              </div>
+            </template>
+            <div class="event-name">
+              <a href="{{devsite}}{{event.defaultEventUrl}}">{{event.name}}</a>
+            </div>
+            <div class="event-location">{{event.location}}</div>
           </div>
-          <div class="event-location">{{event.location}}</div>
-        </div>
-      </template>
+        </template>
+      </div>
     </div>
 
   </template>
@@ -122,8 +125,10 @@ An event map for GDG events around the world
 
       selected: 'map',
 
-      toLongDate: function(time) {
-        var date = moment.utc(time * 1000);
+      toLongDate: function(event) {
+        var date = moment
+                    .utc(event.start * 1000)
+                    .tz(event.timezone_name);
         return {
           day: date.format('dddd'),
           numericDate: date.format('DD'),
