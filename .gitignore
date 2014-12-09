@@ -2,5 +2,5 @@
 .sass-cache
 node_modules
 *.sublime-project
-*.pyc
 *.sublime-workspace
+*.pyc

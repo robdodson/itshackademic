@@ -51,3 +51,7 @@ handlers:
 - url: /static
   application_readable: true
   static_dir: static
+
+skip_files:
+- ^(.*/)?node_modules/.*
+- ^(.*/)?bower_components/(?!platform)/.*
