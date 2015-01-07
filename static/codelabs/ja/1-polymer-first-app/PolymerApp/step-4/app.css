@@ -1,0 +1,24 @@
+body {
+  background-color: #E5E5E5;
+  font-family: 'RobotoDraft', sans-serif;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+core-toolbar {
+  background: #03a9f4;
+  color: white;
+}
+paper-tabs {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+@media (min-width: 481px) {
+  .container {
+    width: 400px;
+  }
+}

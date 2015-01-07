@@ -1,6 +1,7 @@
 <link rel="import" href="bower_components/core-selector/core-selector.html">
 <link rel="import" href="bower_components/core-icons/core-icons.html">
 <link rel="import" href="bower_components/core-icons/image-icons.html">
+<link rel="import" href="bower_components/core-menu/core-menu.html">
 <link rel="import" href="bower_components/core-ajax/core-ajax.html">
 <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="bower_components/paper-button/paper-button.html">
@@ -9,6 +10,8 @@
 <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
 <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
+<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="bower_components/paper-item/paper-item.html">
 <link rel="import" href="bower_components/flatiron-director/flatiron-director.html">
 <link rel="import" href="bower_components/highlightjs-element/highlightjs-element.html">
 <link rel="import" href="bower_components/marked-element/marked-element.html">
@@ -195,7 +198,7 @@ analytics.init();
   </script>
 </polymer-element>
 
-<polymer-element name="codelab-panel" attributes="codelab"
+<polymer-element name="codelab-panel" attributes="codelab locale"
     on-tap="{{togglePanel}}" on-mouseover="{{onMouseOver}}" on-mouseout="{{onMouseOut}}">
   <template>
     <style>
@@ -361,7 +364,7 @@ analytics.init();
       },
       goToCodelab: function(e, detail, sender) {
         e.stopPropagation();
-        window.location = '/static/codelabs/' + this. codelab.slug + '/';
+        window.location = '/static/codelabs/' + this.locale + '/' + this. codelab.slug + '/';
       },
       togglePanel: function(e, detail, sender) {
         this.open = !this.open;
@@ -471,7 +474,7 @@ analytics.init();
 </polymer-element>
 
 
-<polymer-element name="io-codelab" attributes="codelab">
+<polymer-element name="io-codelab" attributes="codelab locale">
   <template>
     <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css">
     <style>
@@ -734,7 +737,7 @@ analytics.init();
         margin: 20px auto 0 auto;
       }
     </style>
-    <core-ajax url="/metadata/" auto
+    <core-ajax url="/metadata/?locale={{locale}}" auto
                response="{{response}}" handleAs="json"></core-ajax>
 
     <flatiron-director route="{{selectedStep + 1}}" autoHash></flatiron-director>
@@ -744,7 +747,7 @@ analytics.init();
 
       <template repeat="{{step,i in steps}}">
         <div id="wrapper" class="{{ {'core-selected': selectedStep == i} | tokenList }}">
-          <core-ajax auto url="/static/codelabs/{{codelab}}/{{step.slug}}.md" response="{{step.response}}"
+          <core-ajax auto url="/static/codelabs/{{locale}}/{{codelab}}/{{step.slug}}.md" response="{{step.response}}"
                      on-core-response="{{onStepResponse}}"></core-ajax>
 
           <header>
@@ -834,6 +837,8 @@ analytics.init();
         }.bind(this));
 
         window.addEventListener('popstate', setSelectedStep_.bind(this));
+
+        this.locale = location.pathname.replace(/^.*codelabs\/(.*?)\/.*$/, '$1');
       },
       codelabChanged: function() {
         this.responseChanged();
@@ -841,7 +846,7 @@ analytics.init();
       responseChanged: function() {
         if (this.response) {
           // Get the slug for the current codelab.
-          var match = window.location.pathname.match(/\/static\/codelabs\/([a-z0-9-]+)\//)
+          var match = window.location.pathname.match(/\/static\/codelabs\/[a-z\-]+\/([a-z0-9-]+)\//)
           if (match) {
             this.currentCodelab = this.response.codelabs[match[1]];
           }
@@ -955,7 +960,7 @@ analytics.init();
 </polymer-element>
 
 
-<polymer-element name="codelist-dropdown" attributes="codelabs">
+<polymer-element name="codelist-dropdown" attributes="codelabs locale">
   <template>
     <style>
       :host {
@@ -995,14 +1000,14 @@ analytics.init();
         margin-left: 17px;
       }
     </style>
-    <core-ajax url="/metadata/" auto
+    <core-ajax id="ajax" url="/metadata/"
                  response="{{response}}" handleAs="json"></core-ajax>
 
     <paper-menu-button icon="arrow-drop-down">
       <template repeat="{{category,i in categories}}">
       <div class="nav-category {{category}}-label">{{category | ucFirst}}</div>
         <template repeat="{{codelab in cbc[category]}}">
-            <a href="/static/codelabs/{{codelab.slug}}/">
+            <a href="/static/codelabs/{{locale}}/{{codelab.slug}}/">
               <div class="codelab-title">{{codelab.title}}</div></a>
         </template>
       </template>
@@ -1010,8 +1015,16 @@ analytics.init();
   </template>
   <script>
     Polymer('codelist-dropdown', {
+      locale: '',
       codelabs: {},
+      localeChanged: function() {
+        this.$.ajax.url = '/metadata/?locale='+this.locale;
+        this.$.ajax.go();
+      },
       responseChanged: function() {
+        // Skip empty response. This happens when renew ajax url
+        if (!this.response) return;
+
         this.ucFirst = function(str) {
           return str.charAt(0).toUpperCase() + str.slice(1);
         }
@@ -1040,5 +1053,53 @@ analytics.init();
         return codelabSlugs;
       }
     });
+  </script>
+</polymer-element>
+
+
+<polymer-element name="locale-selector" attributes="locale">
+  <template>
+    <style media="screen">
+      paper-dropdown-menu {
+        background-color: transparent;
+        color: #111;
+      }
+      paper-dropdown-menu::shadow #control {
+        border: none;
+        color: white;
+        font-size: 1.3em;
+      }
+    </style>
+    <paper-dropdown-menu label="{{langs[locale]}}" icon="arrow-drop-down" on-core-select="{{onCoreSelect}}">
+      <template repeat="{{key in langKeys}}">
+        <paper-item lang="{{key}}" label="{{langs[key]}}"></paper-item>
+      </template>
+    </paper-dropdown-menu>
+  </template>
+  <script>
+    Polymer('locale-selector', {
+      publish: {
+        locale: 'en',
+        langs: {}
+      },
+      onCoreSelect: function(e, detail, sender) {
+        this.locale = detail.item.lang;
+      },
+      ready: function() {
+        this.langs = {
+          'en': 'English',
+          'ja': '日本語'
+        };
+        switch (navigator.language) {
+          case 'ja':
+            this.locale = 'ja';
+            break;
+          default:
+            this.locale = 'en';
+            break;
+        }
+        this.langKeys = Object.keys(this.langs);
+      }
+    })
   </script>
 </polymer-element>

@@ -1,0 +1,43 @@
+﻿title: "Polymer: Web Components を使った、コード不要の Google マップ アプリ作成"
+summary: "Polymer のコア要素を使用して、完全に動作する Google マップ アプリケーションを作成します。JavaScript は一切書きません。"
+
+description: "Polymer を使い、レスポンシブ デザイン、ルート案内、そして乗換モードがすべて備わった、完全に動作する Google マップ アプリを作成します。合わせて、Polymer のデータ バインディング機能とコア要素セットについても学びます。"
+
+prerequisites:
+  - HTML、CSS、およびウェブ開発の基礎知識
+  - MVC フレームワークの知識（必須ではないが、あれば役立つ）
+
+level: ビギナー向け
+logo: p-logo-square.png
+categories:
+  - web
+duration: 30 分
+keywords:
+  - ビギナー向け
+  - Chrome Dev Editor
+  - データ バインディング
+  - Google マップ
+  - HTML5
+  - ノード
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    title: "準備作業"
+    blurb: "Chrome Dev Editor を使って新しい Polymer アプリケーションの土台を作成します。"
+  -
+    title: "<google-map> を使用する"
+    blurb: " <google-map> 要素の使い方、Bower を使ってインストールする方法を学びます。"
+  -
+    title: "ルート案内を追加する"
+    blurb: "<google-map-directions> を使ってルート案内を地図に追加する方法を学びます。"
+  -
+    title: "データ バインディングを使用する"
+    blurb: "Polymer のデータ バインディング機能を使い、ユーザーがアドレスを入力できるようにする方法を学びます。"
+  -
+    title: "移動手段を変更する"
+    blurb: " <core-selector> を使ってトラベル モードを選択する方法を学びます。"
+  -
+    title: "おわりに"
+    blurb: "参考資料を紹介します。"

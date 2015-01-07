@@ -22,7 +22,7 @@
       <h2>codelabs</h2>
       <codelist-dropdown
           codelabs="{{codelabs}}"
-          on-codelab-list="{{onResponse}}">
+          on-codelab-list="{{onResponse}}" locale="{{locale}}" flex>
       </codelist-dropdown>
     </div>
     <div id="maincontent">
@@ -60,6 +60,7 @@
 (function() {
   document.addEventListener('polymer-ready', function(e) {
     var t = document.querySelector('#t');
+    t.locale = 'en';
     t.addEventListener('template-bound', function() {
       var gplus = document.querySelector('.button-gplus');
       var options = {

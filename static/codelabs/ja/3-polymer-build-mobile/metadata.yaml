@@ -1,0 +1,51 @@
+﻿title: "Polymer: ペーパー要素を使ったマテリアル デザイン採用のモバイル ウェブ アプリ作成"
+summary: "Polymer のペーパー要素を使用して、レスポンシブな美しいモバイル ウェブ アプリを作成します。"
+
+description: "Polymer のペーパー要素を使い、メモ アプリ（モバイル ウェブ アプリ）を作成します。アプリには、レスポンシブ デザイン、ペーパー ウィジェット、インク効果などを使用します。また、Polymer のデータ バインディング機能とコールバックについても学びます。"
+
+prerequisites:
+  - HTML、CSS、およびウェブ開発の基礎知識
+  - JavaScript プロトタイプの知識（必須ではないが、あれば役立つ）
+
+level: 中級者向け
+logo: p-logo-square.png
+categories:
+  - web
+duration: 45 分
+keywords:
+  - Chrome Dev Editor
+  - データ バインディング
+  - HTML5
+  - 中級者向け
+  - マテリアル デザイン
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    blurb: "Chrome Dev Editor を使って新しい Polymer アプリケーションの土台を作成します。"
+    title: "準備作業"
+  -
+    blurb: "Bower を使って core-* 要素をインストールします。"
+    title: "コア要素をインストールする"
+  -
+    blurb: "core-* 要素を使ってアプリにレイアウトを追加します。"
+    title: "レスポンシブ レイアウトを作成する"
+  -
+    blurb: "core-drawer-panel のレスポンシブ機能を使用します。"
+    title: "ドロワーを開く"
+  -
+    blurb: "ペーパー要素を使ってアプリの中核的要素を作成します。"
+    title: "ペーパー要素を使用する"
+  -
+    blurb: "ローカル ストレージを宣言的に使用します。"
+    title: "メモをローカルに保存する"
+  -
+    blurb: "ボタン、スライダー、アラート要素を実際に使ってみます。"
+    title: "コントロール要素を使用する"
+  -
+    blurb: "アプリに視覚的な魅力を与えます。"
+    title: "ペーパー効果を追加する"
+  -
+    blurb: "おつかれさまでした！"
+    title: "おわりに"

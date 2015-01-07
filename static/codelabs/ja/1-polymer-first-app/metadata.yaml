@@ -1,0 +1,42 @@
+title: "Polymer: はじめての Polymer アプリケーション"
+summary: "このチュートリアルでは、簡単な Polymer アプリケーション（ソーシャル ネットワーキング サービス用のごく基本的なクライアント アプリケーション）を作っていきます。"
+
+description: "このプロジェクトでは、Polymer を使う上で重要なコンセプトのほとんどを紹介します。すべてを理解できなくても心配はいりません。ここで紹介するコンセプトは、Polymer のドキュメントで一つ一つ詳しく説明されています。"
+
+prerequisites:
+  - HTML、CSS、およびウェブ開発の基礎知識
+  - MVC フレームワークの知識（必須ではないが、あれば役立つ）
+
+level: ビギナー向け
+logo: p-logo-square.png
+categories:
+  - web
+duration: 60 分
+keywords:
+  - ビギナー向け
+  - Chrome Dev Editor
+  - データ バインディング
+  - HTML5
+  - ノード
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    title: "準備作業"
+    blurb: "Chrome Dev Editor を使って新しい Polymer アプリケーションの土台 を作成します。"
+  -
+    title: "アプリ構造を作成する"
+    blurb: "あらかじめ用意されている Polymer 要素の一部を使って、ツールバーとタブを持つ基本的なアプリケーション構造を作成します。"
+  -
+    title: "独自の要素を作成する"
+    blurb: "`<post-card>` 要素を作成します。`<post-card>` 要素は、自身の子のレイアウトとスタイルを制御する要素です。"
+  -
+    title: "データ バインディングを使用する"
+    blurb: "ウェブ サービスからデータを引っ張って来て、Polymer のデータ バインディングを使用してデータを一連のカードにして表示させます。"
+  -
+    title: "仕上げをする"
+    blurb: "お気に入りボタンをカードに追加し、タブを `<post-list>` コントロールに接続して、アプリを完成させます。"
+  -
+    title: "おわりに"
+    blurb: "参考資料を紹介します。"

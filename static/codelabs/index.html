@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>Polymer Polytechnic CodeLab</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/shadowdom-shim.css" shim-shadowdom>
+  <script src="/static/bower_components/platform/platform.js"></script>
+  <link rel="import" href="/static/vulcanized.html">
+</head>
+<body unresolved>
+
+<core-header-panel mode="waterfall">
+  <template is="auto-binding" id="t">
+    <div class="core-header" layout horizontal>
+      <div class="core-header-logo" layout horizontal center>
+        <a href="/" layout horizontal center>
+          <img src="/static/images/polymer-logo-outline.png">
+          <h2>Polytechnic</h2>
+        </a>
+      </div>
+      <h2>codelabs</h2>
+      <codelist-dropdown locale="{{locale}}" flex></codelist-dropdown>
+      <locale-selector locale="{{locale}}"></locale-selector>
+    </div>
+    <div id="maincontent">
+      <io-codelab locale="{{locale}}"></io-codelab>
+    </div>
+  </template>
+</core-header-panel>
+<script src="/static/codelabs/common.js"></script>
+</body>
+</html>

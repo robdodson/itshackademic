@@ -1,0 +1,44 @@
+﻿title: "Polymer: Google マップと WebGL を使ったデータ視覚化"
+summary: "Polymer、Google Maps JavaScript API v3、カスタム WebGL ウェブ コンポーネンツを使って、地理データの視覚化を実現し、カスタマイズします。"
+
+description: "Google Maps JavaScript API v3 を使いながら、Polymer のデータ バインディング機能について、および宣言を使って視覚化を記述する方法について学びます。"
+
+prerequisites:
+  - HTML、CSS、およびウェブ開発の基礎知識
+  - JavaScript による開発経験が多少あること
+  - 詳しく学びたい場合を除き、WebGL の経験は不要
+
+level: 中級者向け
+logo: p-logo-square.png
+categories:
+  - web
+duration: 45 分
+keywords:
+  - Chrome Dev Editor
+  - データ バインディング
+  - Google マップ
+  - HTML5
+  - 中級者向け
+  - Polymer
+  - 視覚化
+  - Web Components
+  - WebGL
+
+steps:
+  -
+    title: "準備作業"
+    blurb: "Chrome Dev Editor を使って新しい Polymer アプリケーション作成を開始します。"
+  -
+    title: "<google-map> を使用する"
+    blurb: "Bower を使って <google-map> 要素をインストールして使用する方法を学びます。"
+  -
+    title: "地図のスタイルを設定する"
+    blurb: "地図にスタイルを追加して、地図をデータ視覚化用キャンバスに適した状態にします。"
+  -
+    title: "<canvas-layer> を追加する"
+    blurb: "<canvas-layer> 要素を追加して、地図上にデータを表示させます。"
+  -
+    title: "大量のデータを表示する"
+    blurb: "大量のデータセットをロードして、すべてを一度に表示させます。"
+  - title: "完成！"
+    blurb: "大量の地図データ視覚化の第一歩を踏み出しました。"

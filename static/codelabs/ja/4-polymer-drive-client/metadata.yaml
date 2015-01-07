@@ -1,0 +1,47 @@
+﻿title: "Polymer: モバイル ドライブ クライアントの構築"
+summary: "Web Components をベースに、モバイル フレンドリーな Google ドライブ クライアントを構築しながら、Polymer について学びます。どこからでもファイルをアップロードできるようにしましょう！"
+description: "Polymer を使い、Web Component をベースにしたモバイル フレンドリーなGoogle ドライブ クライアントを構築します。このアプリでは、選択操作およびドラッグ＆ドロップ操作によるファイル選択をサポートします。さらにアプリでは、選択したファイルをアップロードして、Google ドライブ アカウントに保存します。"
+prerequisites:
+  - 若干のプログラミングの経験（どのプログラミング言語でも可）
+level: 中級者向け
+logo: polymer-logo.png
+categories:
+  - web
+duration: 60 分
+keywords:
+  - Chrome Dev Editor
+  - Google ドライブ
+  - HTML5
+  - 中級者向け
+  - モバイル
+  - Polymer
+  - Web Components
+
+steps:
+  -
+    title: "はじめに"
+    blurb: "これから作成するアプリについて説明します。"
+  -
+    title: "準備作業"
+    blurb: "Chrome Dev Editor を使って新しい Polymer アプリケーションの土台を作成します。"
+  -
+    title: "最初の Polymer 要素を作成する"
+    blurb: "新しい Polymer 要素を作成する方法を学びます。"
+  -
+    title: "要素をインストールする"
+    blurb: "Bower を使って既存の要素をインストールします。"
+  -
+    title: "Polymer 要素を再利用する"
+    blurb: "インストールした要素の使用方法を学びます。"
+  -
+    title: "サインイン後のビューの土台を作成する"
+    blurb: "サインインしたユーザー向けのビューを作成します。"
+  -
+    title: "ファイルをGoogle ドライブへアップロードする"
+    blurb: "選択したファイルをドライブ アカウントにアップロードする方法、イベントを接続する方法を学びます。"
+  -
+    title: "Google サインイン サポートを追加する"
+    blurb: "Google アカウントの認証サポートを追加する方法を学びます。"
+  -
+    title: "おわりに"
+    blurb: "Polymer を使った Google ドライブ クライアントの完成です！"
