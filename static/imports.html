@@ -1069,6 +1069,9 @@ analytics.init();
         color: white;
         font-size: 1.3em;
       }
+      paper-dropdown-menu::shadow #control div {
+        padding-top: 0.3em;
+      }
     </style>
     <paper-dropdown-menu label="{{langs[locale]}}" icon="arrow-drop-down" on-core-select="{{onCoreSelect}}">
       <template repeat="{{key in langKeys}}">
@@ -1079,26 +1082,26 @@ analytics.init();
   <script>
     Polymer('locale-selector', {
       publish: {
-        locale: 'en',
-        langs: {}
+        locale: {
+          value: 'en',
+          reflect: true
+        },
+        langs: {
+          'en': 'English',
+          'ja': '日本語'
+        },
+        langKeys: []
+      },
+      created: function() {
+        this.langKeys = Object.keys(this.langs);
       },
       onCoreSelect: function(e, detail, sender) {
         this.locale = detail.item.lang;
       },
-      ready: function() {
-        this.langs = {
-          'en': 'English',
-          'ja': '日本語'
-        };
-        switch (navigator.language) {
-          case 'ja':
-            this.locale = 'ja';
-            break;
-          default:
-            this.locale = 'en';
-            break;
+      localeChanged: function(e, detail, sender) {
+        if (this.langKeys.indexOf(this.locale) === -1) {
+          this.locale = 'en';
         }
-        this.langKeys = Object.keys(this.langs);
       }
     })
   </script>

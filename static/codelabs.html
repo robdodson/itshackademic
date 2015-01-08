@@ -41,13 +41,17 @@
 <script>
 (function() {
   document.addEventListener('polymer-ready', function(e) {
+    // Detect locale setting in query parameter
+    var query = window.location && location.search.match(/locale=([a-z]{2})/);
+    locale = query && query[1];
+    if (locale === null) {
+      // Detect locale setting in browser setting
+      locale = navigator.language.substr(0, 2);
+    }
+
     var t = document.querySelector('#t');
 
-    t.locale = 'en';
-
-    t.localeChanged = function(e, detail, sender) {
-      console.log(detail);
-    };
+    t.locale = locale;
 
     t.onResponse = function(e, detail, sender) {
       this.filtered = detail.orderedCodelabs;
