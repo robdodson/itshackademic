@@ -1,6 +1,6 @@
 {
   "name": "its-hackademic",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "dependencies": {
     "grunt-cli": "latest",
     "grunt-contrib-concat": "latest",
