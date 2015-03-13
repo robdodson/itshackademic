@@ -28,8 +28,14 @@ An event map for GDG events around the world
     <!-- Grab the event feed from DevSite -->
     <core-ajax auto handleAs="json"
         url="{{feed}}"
-        response="{{response}}">
+        response="{{response}}"
+        on-core-response="{{handleResponse}}">
     </core-ajax>
+
+    <div class="loading-indicator" hidden?="{{!isLoading}}"
+         fit layout horizontal center-center>
+      <div class="loading-message">Loading...</div>
+    </div>
 
     <!-- Toggle switches for Map/List -->
     <div class="switch-modes" layout horizontal center-justified>
@@ -123,6 +129,8 @@ An event map for GDG events around the world
        */
       devsite: 'https://developers.google.com',
 
+      isLoading: true,
+
       selected: 'map',
 
       toLongDate: function(event) {
@@ -135,6 +143,10 @@ An event map for GDG events around the world
           month: date.format('MMMM'),
           year: date.format('YYYY')
         };
+      },
+
+      handleResponse: function(e, detail, sender) {
+        this.isLoading = false;
       }
 
     });

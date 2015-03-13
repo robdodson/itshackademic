@@ -3,13 +3,16 @@
 <html>
 <head>
 
-  <script src="../platform/platform.js"></script>
+  <script src="../webcomponentsjs/webcomponents.min.js"></script>
   <link rel="import" href="../core-component-page/core-component-page.html">
 
 </head>
 <body unresolved>
 
-  <core-component-page></core-component-page>
+  <core-component-page
+     moduleName="google-apis"
+     sources='["google-client-api.html", "google-jsapi.html", "google-maps-api.html", "google-plusone-api.html", "google-realtime-api.html", "google-youtube-api.html"]'>
+  </core-component-page>
 
 </body>
 </html>

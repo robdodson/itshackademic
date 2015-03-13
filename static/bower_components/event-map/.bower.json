@@ -1,6 +1,6 @@
 {
   "name": "event-map",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "keywords": [
     "seed",
     "polymer",
@@ -8,10 +8,10 @@
   ],
   "main": "event-map.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.4.1",
-    "google-map": "GoogleWebComponents/google-map#~0.3.1",
-    "core-ajax": "Polymer/core-ajax#~0.4.2",
-    "core-selector": "Polymer/core-selector#~0.4.2",
+    "polymer": "Polymer/polymer#^0.5.0",
+    "google-map": "GoogleWebComponents/google-map#^0.4.0",
+    "core-ajax": "Polymer/core-ajax#^0.5.0",
+    "core-selector": "Polymer/core-selector#^0.5.0",
     "moment-timezone": "~0.2.5",
     "moment": "~2.8.4"
   },
@@ -33,13 +33,14 @@
     "test",
     "tests"
   ],
-  "_release": "1.2.0",
+  "_release": "1.4.0",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.0",
-    "commit": "36d94fc675a19fa154c189ca7e95940c54a6380a"
+    "tag": "v1.4.0",
+    "commit": "093cb19c15cc054a0ca81e76ca489af412f16011"
   },
   "_source": "git://github.com/robdodson/event-map.git",
   "_target": "^1.2.0",
-  "_originalSource": "robdodson/event-map"
+  "_originalSource": "robdodson/event-map",
+  "_direct": true
 }

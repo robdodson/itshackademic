@@ -1,6 +1,6 @@
 {
   "name": "event-map",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "keywords": [
     "seed",
     "polymer",
@@ -8,10 +8,10 @@
   ],
   "main": "event-map.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.4.1",
-    "google-map": "GoogleWebComponents/google-map#~0.3.1",
-    "core-ajax": "Polymer/core-ajax#~0.4.2",
-    "core-selector": "Polymer/core-selector#~0.4.2",
+    "polymer": "Polymer/polymer#^0.5.0",
+    "google-map": "GoogleWebComponents/google-map#^0.4.0",
+    "core-ajax": "Polymer/core-ajax#^0.5.0",
+    "core-selector": "Polymer/core-selector#^0.5.0",
     "moment-timezone": "~0.2.5",
     "moment": "~2.8.4"
   },

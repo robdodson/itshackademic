@@ -16,6 +16,6 @@
     "commit": "e3e62c060b105bedd975f440ddec1f933bd8bec5"
   },
   "_source": "git://github.com/Polymer/core-ajax.git",
-  "_target": "^0.4.0",
+  "_target": "~0.4.2",
   "_originalSource": "Polymer/core-ajax"
 }

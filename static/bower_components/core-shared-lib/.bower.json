@@ -16,6 +16,6 @@
     "commit": "9c9ac782c1d84d0fabf11414b7c4a5ef38233f9d"
   },
   "_source": "git://github.com/Polymer/core-shared-lib.git",
-  "_target": "^0.4.0",
+  "_target": "~0.4.0",
   "_originalSource": "Polymer/core-shared-lib"
 }
