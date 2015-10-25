@@ -51,7 +51,7 @@ h3 {
 .badge-blue {
   width: 300px;
   height: 300px;
-  background: url(../images/badge_blue.png) no-repeat center center;
+  background: url(../images/polytechnic-badge.png) no-repeat center center;
   background-size: contain;
 }
 
@@ -217,6 +217,13 @@ h3 {
 .welcome-msg time {
   min-width: 150px;
   font-weight: 600;
+}
+
+.content-area {
+  background-color: #eff2f3;
+  background-image: url("../images/bg1.png");
+  background-size: 30px 17.25px;
+  background-position: top center;
 }
 
 .wait-list-banner {
@@ -439,6 +446,195 @@ paper-button.anchor-button {
 
 schedule-grid, speakers-grid {
   min-height: 90vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+/* clearfix */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-left,
+.col-right {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.resource {
+  background-color: white;
+  position: relative;
+  margin-bottom: 1.5%;
+}
+
+.resource paper-material {
+  height: 100%;
+}
+
+.resource-title {
+  background-color: #41a4f4;
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  padding: 16px 0;
+  margin: 0;
+  line-height: 1.1;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  color: white;
+  font-weight: bold;
+}
+
+.resource-inner {
+  color: #445963;
+  box-sizing: border-box;
+  padding: 24px 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.resource-inner p {
+  margin-top: 0;
+  line-height: 1.8;
+}
+
+.resource-inner ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-inner a {
+  color: #6c6c6c;
+}
+
+.resource-inner paper-button {
+  width: 100%;
+  text-align: left;
+}
+
+.resource-inner paper-button .label-button {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.resource:nth-child(even) .resource-title {
+  background-color: #ff5c92;
+}
+
+@media screen and (min-width: 768px) {
+
+  /* clearfix */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .resource {
+    width: 32%;
+    float: left;
+    margin-right: 1.5%;
+    height: 380px;
+  }
+
+  .resource:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+}
+
+.faq {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #445963;
+}
+
+.faq ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq label {
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  font-weight: bold;
+  font-size: 24px;
+  display: block;
+  background-color: white;
+  padding: 20px 20px 20px 60px;
+  cursor: pointer;
+  line-height: 1.4;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.faq label:active {
+  background-color: #eff2f3;
+}
+
+.faq label::before {
+  content: url(../images/icon-plus.svg);
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  height: 16px;
+  width: 16px;
+  background-color: #6c6c6c;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 0;
+  text-align: center;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.faq li div {
+  max-height: 0;
+  overflow-y: hidden;
+  background-color: #445963;
+  color: white;
+  box-sizing: border-box;
+  padding: 0 24px 2px 24px;
+}
+
+.faq li p {
+  line-height: 1.8;
+  -webkit-font-smoothing: initial;
+}
+
+.faq li.open label::before {
+  content: url(../images/icon-minus.svg);
+  background-color: #445963;
+}
+
+.faq li.open div {
+  max-height: initial;
+  padding: 20px 20px 20px 60px;
 }
 
 @media (min-width: 801px) {

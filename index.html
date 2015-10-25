@@ -39,6 +39,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta property="og:type" content="Event">
 
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300">
 
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="src/elements.html">
@@ -53,9 +54,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <div class="nav fit" drawer>
         <iron-selector class="menu" selected="[[page]]" activate-event="click" attr-for-selected="name">
-          <a name="home" class="menu-item" href="">HOME</a><br>
-          <a name="schedule" class="menu-item" href="schedule">SCHEDULE</a><br>
-          <a name="speakers" class="menu-item" href="speakers">SPEAKERS</a>
+          <a class="menu-item" href="">HOME</a><br>
+          <a class="menu-item" href="#events">FIND AN EVENT</a><br>
+          <a class="menu-item" href="#resources">RESOURCES</a>
+          <a class="menu-item" href="#faq">FAQ</a>
         </iron-selector>
       </div>
 
@@ -67,8 +69,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <div class="flex horizontal center-center layout">
               <iron-selector class="wide-only" selected="[[page]]" activate-event="click" attr-for-selected="name">
-                <a name="schedule" class="tab" href="schedule">SCHEDULE</a>
-                <a name="speakers" class="tab" href="speakers">SPEAKERS</a>
+                <a class="tab" href="#events">FIND AN EVENT</a>
+                <a class="tab" href="#resources">RESOURCES</a>
+                <a class="tab" href="#faq">FAQ</a>
               </iron-selector>
             </div>
 
@@ -84,14 +87,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </app-toolbar>
         </app-header>
 
-        <div class="speakers-banner blue-banner home-page-hidden responsive horizontal center-center layout">
-          <div class="horizontal center layout">
-            <div>18 Speakers</div><div class="dot-separator"></div><div>10 Code labs</div>
-          </div>
-          <div class="dot-separator wide-only"></div>
-          <div>Monday & Tuesday</div>
-        </div>
-
         <iron-pages selected="{{page}}" attr-for-selected="name" selected-attribute="showing">
 
           <section name="home">
@@ -101,67 +96,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </header>
 
             <div class="date-loc-banner blue-banner responsive horizontal center-center layout">
-              <div class="location">Amsterdam, Netherlands</div>
+              <div class="location">Learn Polymer at your local event, or start one yourself</div>
               <div class="dot-separator wide-only"></div>
-              <time>September 14-15, 2015</time>
+              <div>#itshackademic!</div>
             </div>
 
-            <div>
+            <div class="content-area">
               <div class="welcome-msg">
                 <section class="bottom-spacer responsive horizontal layout">
-                  <time>September 14</time>
-                  <div class="flex-auto">Join us for an evening of breakout sessions and code labs for hands-on learning.</div>
-                </section>
-                <section class="responsive horizontal layout">
-                  <time>September 15</time>
-                  <div class="flex-auto">Come out for an all-day summit of Polymer tech talks and an after hours event.</div>
+                  <div class="flex-auto">Polymer is a new kind of library, built atop Web Components, that enables developers to create their own encapsulated, custom HTML elements. With Polymer and Web Components, we can componentize the web!</div>
                 </section>
               </div>
             </div>
 
-            <div class="wait-list-banner">
-              <div>
-                <span>Whoa! We’re already at capacity.</span>
-                <a class="pink-arrow-btn " target="_blank" href="https://polymer.eventfarm.com/orders/soldOut/7fff5387-0000-4556-a4c1-610d82a69538">Join the Waiting List</a>
-              </div>
-              <div>
-                <span>Or,</span>
-                <a class="signup-live-stream-btn pink-arrow-btn " target="_blank" href="https://services.google.com/fb/forms/polymer2015/">Sign up</a>
-                <span>to watch the livestream from anywhere.</span>
-              </div>
-            </div>
-
-            <a class="amsterdam-bg" target="_blank" data-outbound="image-map"
-                href="https://www.google.com/maps/place/Muziekgebouw+aan+'t+IJ/@52.3783041,4.9131203,15z/data=!4m2!3m1!1s0x0:0x84b02f41a342e459"></a>
-
-            <div class="amsterdam-info responsive horizontal layout">
-              <div class="about-waterfront flex vertical center layout">
-                <section>
-                  <h3>Waterfront. Amsterdam.</h3>
-                  <p>Muziekgebouw aan ‘t IJ is a leading, open and welcoming stage which excels in concerts of contemporary music and related genres of classical, jazz, electronic pop and world music.</p>
-                </section>
-              </div>
-              <div class="getting-there flex vertical center layout">
-                <section>
-                  <h3>Getting There.</h3>
-                  <div class="direction">Piet Heinkade 1, 1019 BR Amsterdam, Netherlands (Near the Amsterdam Central train station)</div>
-                  <div>BY FOOT</div>
-                  <div class="direction">Approx 15 minutes from Central Station</div>
-                  <div>BY TRAM</div>
-                  <div class="direction">Line 26, ‘stop Muziegebouw / Bimhuis’</div>
-                  <div>BY CAR</div>
-                  <div class="direction">5 minutes from the A10 ring road motorway</div>
-                </section>
-              </div>
-            </div>
+            <!-- <a class="amsterdam-bg" target="_blank" data-outbound="image-map"
+                href="https://www.google.com/maps/place/Muziekgebouw+aan+'t+IJ/@52.3783041,4.9131203,15z/data=!4m2!3m1!1s0x0:0x84b02f41a342e459"></a> -->
 
             <div class="misc-banner">
-              <h3>SUMMIT EXTENDED</h3>
+              <h3 id="events">FIND AN EVENT</h3>
               <div class="divider"></div>
               <div class="desc">Be There From Anywhere</div>
             </div>
 
-            <div class="horizontal center-center layout">
+            <div class="horizontal center-center layout content-area">
+              <img src="images/map.png" alt="" style="margin: 120px 32px;"/>
+            </div>
+
+            <div class="misc-banner">
+              <h3 id="resources">RESOURCES</h3>
+              <div class="divider"></div>
+              <div class="desc">Learn and Build with the Polymer Team</div>
+            </div>
+
+            <!-- <div class="horizontal center-center layout content-area">
               <paper-material class="misc-card responsive horizontal layout">
                 <section class="misc-card-content flex-auto">
                   <h3>Can’t make it this year?</h3>
@@ -185,30 +152,297 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   </a>
                 </div>
               </paper-material>
+            </div> -->
+
+            <div class="content-area">
+              <div class="container">
+                <div class="col-full">
+                  <div class="row">
+
+                    <div class="resource">
+                      <paper-material elevation="1">
+                        <div class="resource-title">Tech Talk</div>
+                        <div class="resource-inner">
+                          <p>Host a talk to show off what makes Polymer 'hackademic'.</p>
+                          <ul>
+                            <li>
+                              <a data-outbound="speaker-deck" href="https://docs.google.com/presentation/d/1qGAaAZFaHW2W4fKfpW2KEdHEUbW5Snfi6X4fse_2HRI">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="drive-presentation" aria-label="drive-presentation" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,16H5V8h14V16z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Speaker Deck</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="training-video" href="http://youtu.be/qN_IQ49lusw">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="drive-video" aria-label="drive-video" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M18,4l2,4h-3l-2-4h-2l2,4h-3l-2-4H8l2,4H7L5,4H4C2.9,4,2,4.9,2,6l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4H18z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Training Video</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </paper-material>
+                    </div>
+
+                    <div class="resource">
+                      <paper-material elevation="1">
+                        <div class="resource-title">Curriculum</div>
+                        <div class="resource-inner">
+                          <p>School is in session. Don't miss our guided hands-on Code Labs</p>
+                          <ul>
+                            <li>
+                              <a href="/codelabs">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="social:school" aria-label="school" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M5,13.2v4l7,3.8l7-3.8v-4L12,17L5,13.2z M12,3L1,9l11,6l9-4.9V17h2V9L12,3z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Code Labs</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="polymer-patterns" href="https://github.com/PolymerLabs/polymer-patterns">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="social:post-github" aria-label="post-github" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M7.2 6.6h-.1c-.5 1.4-.2 2.3-.1 2.6-.6.7-1 1.6-1 2.6 0 3.8 2.4 4.6 4.6 4.9-.2 0-.6.2-.8.8-.4.2-1.8.7-2.6-.7 0 0-.5-.8-1.3-.9 0 0-.8 0-.1.5 0 0 .6.3.9 1.3 0 0 .5 1.7 3 1.1v3.1h5v-3.5c0-1-.4-1.5-.8-1.8 2.2-.2 4.6-1 4.6-4.8 0-1.1-.4-2-1-2.6.1-.3.4-1.2-.1-2.6 0 0-.8-.3-2.7 1-.8-.2-1.6-.3-2.5-.3-.8 0-1.7.1-2.5.3-1.4-1-2.2-1-2.6-1zm12.8 15.4h-16c-1.1 0-2-.9-2-2v-16c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Polymer Patterns</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="debugging-tips" href="https://www.polymer-project.org/docs/polymer/debugging.html">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="bug-report" aria-label="bug-report" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M20,8h-2.8c-0.5-0.8-1.1-1.5-1.8-2L17,4.4L15.6,3l-2.2,2.2C13,5.1,12.5,5,12,5s-1,0.1-1.4,0.2L8.4,3L7,4.4L8.6,6C7.9,6.5,7.3,7.2,6.8,8H4v2h2.1C6,10.3,6,10.7,6,11v1H4v2h2v1c0,0.3,0,0.7,0.1,1H4v2h2.8c1,1.8,3,3,5.2,3s4.2-1.2,5.2-3H20v-2h-2.1c0.1-0.3,0.1-0.7,0.1-1v-1h2v-2h-2v-1c0-0.3,0-0.7-0.1-1H20V8z M14,16h-4v-2h4V16z M14,12h-4v-2h4V12z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Debugging Tips</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </paper-material>
+                    </div>
+
+                    <div class="resource">
+                      <paper-material elevation="1">
+                        <div class="resource-title">Plan</div>
+                        <div class="resource-inner">
+                          <p>Create your own lesson plan &amp; use Polymer to get straight A's.</p>
+                          <ul>
+                            <li>
+                              <a data-outbound="event-guide" href="https://docs.google.com/document/d/1vLlo2_c6t9_ubp8UEddmthFfgsPimH6y16kURKWl1p0/edit#heading=h.2hvb7o3am2rf">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="event" aria-label="event" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M17,12h-5v5h5V12z M16,1v2H8V1H6v2H5C3.9,3,3,3.9,3,5l0,14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5c0-1.1-0.9-2-2-2h-1V1H16z M19,19H5V8h14V19z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Event Guide</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="hackathon-tips" href="https://docs.google.com/document/d/1SAbHa6eFb-lyWJ1c4CeqmsGWdb0TSWl21AjGYvGQvE4/edit?usp=sharing">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="thumb-up" aria-label="thumb-up" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M1,21h4V9H1V21z M23,10c0-1.1-0.9-2-2-2h-6.3l1-4.6c0-0.1,0-0.2,0-0.3c0-0.4-0.2-0.8-0.4-1.1L14.2,1L7.6,7.6C7.2,7.9,7,8.4,7,9v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1c0.1-0.2,0.1-0.5,0.1-0.7V10L23,10C23,10.1,23,10,23,10z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Hackathon Tips</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </paper-material>
+                    </div>
+
+                    <div class="resource">
+                      <paper-material elevation="1">
+                        <div class="resource-title">Graphic Assets</div>
+                        <div class="resource-inner">
+                          <p>Emblazen your event or gear with Polymer visuals.</p>
+                          <ul>
+                            <li>
+                              <a data-outbound="polymer-logo" href="https://drive.google.com/folderview?id=0B55wxScz_BJtdlJqSlRXc2hDSDg&amp;usp=drive_web">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="polymer" aria-label="polymer" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><polygon points="19,4 15,4 7.1,16.6 4.5,12 9,4 5,4 0.5,12 5,20 9,20 16.9,7.4 19.5,12 15,20 19,20 23.5,12 "></polygon></g></svg></core-icon> -->
+                                  <span class="label-button">Polymer Logo</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="polytechnic-sticker" href="https://drive.google.com/folderview?id=0B55wxScz_BJtVm40Q1ptYnpJbFk&amp;usp=drive_web">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="favorite" aria-label="favorite" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M12,21.4L10.6,20C5.4,15.4,2,12.3,2,8.5C2,5.4,4.4,3,7.5,3c1.7,0,3.4,0.8,4.5,2.1C13.1,3.8,14.8,3,16.5,3C19.6,3,22,5.4,22,8.5c0,3.8-3.4,6.9-8.6,11.5L12,21.4z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Polytechnic Sticker</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="polytechnic-shirt" href="https://drive.google.com/folderview?id=0B55wxScz_BJtLXFsZ2laeGppZ1k&amp;usp=drive_web">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="favorite" aria-label="favorite" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M12,21.4L10.6,20C5.4,15.4,2,12.3,2,8.5C2,5.4,4.4,3,7.5,3c1.7,0,3.4,0.8,4.5,2.1C13.1,3.8,14.8,3,16.5,3C19.6,3,22,5.4,22,8.5c0,3.8-3.4,6.9-8.6,11.5L12,21.4z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Polytechnic Shirt</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="polytechnic-flyer" href="https://drive.google.com/folderview?id=0B55wxScz_BJtY0dXLWQ0XzNzaVE&amp;usp=drive_web">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="favorite" aria-label="favorite" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M12,21.4L10.6,20C5.4,15.4,2,12.3,2,8.5C2,5.4,4.4,3,7.5,3c1.7,0,3.4,0.8,4.5,2.1C13.1,3.8,14.8,3,16.5,3C19.6,3,22,5.4,22,8.5c0,3.8-3.4,6.9-8.6,11.5L12,21.4z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Editable Flyer</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </paper-material>
+                    </div>
+
+                    <div class="resource">
+                      <paper-material elevation="1">
+                        <div class="resource-title">Polymer Experts</div>
+                        <div class="resource-inner">
+                          <p>The Polymer team will run Q&amp;A sessions to prep speakers.</p>
+                          <ul>
+                            <li>
+                              <a data-outbound="qa-hangout1" href="https://www.youtube.com/watch?v=TcqxNRwT27w">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="social:people" aria-label="people" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M16,11c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C13,9.7,14.3,11,16,11z M8,11c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3C6.3,5,5,6.3,5,8C5,9.7,6.3,11,8,11z M8,13c-2.3,0-7,1.2-7,3.5V19h14v-2.5C15,14.2,10.3,13,8,13z M16,13c-0.3,0-0.6,0-1,0.1c1.2,0.8,2,2,2,3.4V19h6v-2.5C23,14.2,18.3,13,16,13z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Q &amp;A Hangout 1</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="qa-hangout2" href="https://www.youtube.com/watch?v=8HTm0o6XyJ4">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="social:people" aria-label="people" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M16,11c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C13,9.7,14.3,11,16,11z M8,11c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3C6.3,5,5,6.3,5,8C5,9.7,6.3,11,8,11z M8,13c-2.3,0-7,1.2-7,3.5V19h14v-2.5C15,14.2,10.3,13,8,13z M16,13c-0.3,0-0.6,0-1,0.1c1.2,0.8,2,2,2,3.4V19h6v-2.5C23,14.2,18.3,13,16,13z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Q &amp;A Hangout 2</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </paper-material>
+                    </div>
+
+                    <div class="resource">
+                      <paper-material elevation="1">
+                        <div class="resource-title">Communities</div>
+                        <div class="resource-inner">
+                          <p>Connect with Polymer devs over Google+ and email</p>
+                          <ul>
+                            <li>
+                              <a data-outbound="community-gplus" href="https://plus.google.com/communities/115626364525706131031">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="social:post-gplus" aria-label="post-gplus" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M11.2,8.9c0-1-0.6-3-2.1-3c-0.6,0-1.3,0.4-1.3,1.7c0,1.2,0.6,2.9,2,2.9C9.8,10.5,11.2,10.4,11.2,8.9z M10.6,13.8c-0.1,0-0.2,0-0.3,0h0c-0.3,0-1.2,0.1-1.8,0.3C7.8,14.3,7,14.8,7,15.8c0,1.1,1,2.2,3,2.2c1.5,0,2.4-1,2.4-2C12.4,15.3,11.9,14.8,10.6,13.8z M20,2H4C2.9,2,2,2.9,2,4l0,16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M9.1,19.2c-2.8,0-4.1-1.6-4.1-3c0-0.5,0.1-1.6,1.5-2.4c0.8-0.5,1.8-0.8,3.1-0.9c-0.2-0.2-0.3-0.5-0.3-1c0-0.2,0-0.3,0.1-0.5H9c-2,0-3.2-1.5-3.2-3c0-1.7,1.3-3.6,4.1-3.6h4.2l-0.3,0.3l-0.7,0.7L13,5.9h-0.7c0.4,0.4,0.9,1.1,0.9,2.2c0,1.4-0.7,2.1-1.6,2.7c-0.2,0.1-0.4,0.4-0.4,0.7c0,0.3,0.2,0.5,0.4,0.6c0.1,0.1,0.3,0.2,0.5,0.3c0.8,0.6,1.9,1.3,1.9,2.9C14,17.1,12.7,19.2,9.1,19.2z M19,12h-2v2h-1v-2h-2v-1h2V9h1v2h2V12z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Polymer G+</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                            <li>
+                              <a data-outbound="community-mailing-list" href="https://groups.google.com/forum/#!forum/polymer-dev">
+                                <paper-button role="button" tabindex="0">
+                                  <!-- <core-icon icon="question-answer" aria-label="question-answer" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M21,6h-2v9H6v2c0,0.6,0.4,1,1,1h11l4,4V7C22,6.4,21.6,6,21,6z M17,12V3c0-0.6-0.4-1-1-1H3C2.4,2,2,2.4,2,3v14l4-4h10C16.6,13,17,12.6,17,12z"></path></g></svg></core-icon> -->
+                                  <span class="label-button">Polymer devs</span>
+                                </paper-button>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </paper-material>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="misc-banner">
-              <h3>POLYMER CODE LABS</h3><div class="divider"></div>
-              <div class="desc">Learn and Build with the Polymer Team</div>
+              <h3 id="faq">FAQ</h3><div class="divider"></div>
+              <div class="desc">Frequently Asked Questions</div>
             </div>
 
-            <div class="horizontal center-center layout">
-              <paper-material class="misc-card">
-                <div class="codelabs">
-                  <h3>Code labs will be happening during the Summit,</h3>
-                  <p>but even if you won’t be attendance these will be available online for you to work from the comfort of your own home...or favorite coffee shop.</p>
+            <div id="faq" class="faq content-area">
+              <div class="container">
+                <div class="col-full">
+                  <ul>
+                    <li>
+                      <label>What is Polymer Polytechnic?</label>
+                      <div>
+                        <p>Polymer Polytechnic is an event series of in-person, community-run events to help developers learn Polymer. These events are run by local Google Developer Groups or other developer meetups all over the world. Each event is a little different, but generally, Polymer Polytechnic can include a tech talk, series of code labs, and time for personal hacking.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Why are you guys doing this?</label>
+                      <div>
+                        <p>The Polymer team wants to help developers all over the world try this future facing technology. They also want to hear developer feedback as they continue to develop the product.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>What hashtag do I use to talk about Polymer Polytechnic on social media?</label>
+                      <div>
+                        <p>Great questions! Please use #itshackademic and be sure to follow and mention <a href="http://twitter.com/polymer">@polymer</a>.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>I’d like to organize my Polytechnic event, do we have to do the events in November?</label>
+                      <div>
+                        <p>Not necessarily, but Google is planning to support and promote groups that run their event in November You can run a Polymer Polytechnic event any time, but may not get first-class support.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>I’d like to organize my own Polytechnic event, how is Google supporting these events?</label>
+                      <div>
+                        <p>The Polymer team will provide instructional materials like slide decks, code labs, and videos reviewing this content. In the two weeks leading up to November, the team will also host two Hangout On Air sessions for potential speakers to answer questions and explain the content. We’ll also be sending awesome Polymer swag to Polytechnic events. Depending on the resources at local offices, Google will also be hosting and directly sponsoring many events.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>I’d like to organize my own Polytechnic event, are there specific things we should be talking about?</label>
+                      <div>
+                        <p>Polymer is very targeted at building mobile web apps, and client side apps in general. The design goal should be to compose your apps out of well encapsulated elements, like building blocks. Polymer is also a wonderful tool for creating mashups and componentizing APIs and services.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>I’d like to organize my own Polytechnic event, when is the content going to be ready?</label>
+                      <div>
+                        <p>If you completed the event interest form, you will be invited to the organizer mailing list and Google+ community. We will be releasing updated content to this community by mid-October, so stay tuned for updates in these groups.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>How do I meet other Polytechnic organizers?</label>
+                      <div>
+                        <p>Organizers are invited to join a private Google+ community. You must sign up to run an event and provide a name that matches your Google+ identity.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>I’m excited about learning about Polymer right now, and don’t want to wait for a Polytechnic event. What should I do?</label>
+                      <div>
+                        <p>Check out the content that’s already available on <a href="https://www.polymer-project.org">polymer-project.org</a> and <a href="http://webcomponents.org">webcomponents.org</a>. You can also find other Polymer devs on the <a href="https://groups.google.com/forum/#!forum/polymer-dev">polymer-dev mailing list</a> and <a href="https://plus.google.com/communities/115626364525706131031">community run G+ group</a>. The team also regularly answers questions on <a href="http://stackoverflow.com/tags/polymer">StackOverflow</a>.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>I’d like to organize my own Polytechnic event, what do I have to do to request a swag packet?</label>
+                      <div>
+                        <p>We will be providing details in the organizer community on how to request a swag packet. If you signed up to run an event, you will be invited into this community, so stay tuned!</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Will Google help sponsor these Polytechnic events?</label>
+                      <div>
+                        <p>Venue, food, and other direct sponsorship will be handled at the local level. It will depend on local resource constraints and the specific of your event. Please work with your Google regional lead. If you don’t know who your regional lead is, ping <a href="https://plus.google.com/u/0/+AdrianaCerundolo/posts">+Adriana Cerundolo</a>.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Are the Polytechnic events official Google events?</label>
+                      <div>
+                        <p>Polytechnic events listed on this site are not official Google events. The Polytechnic events are produced by local developer communities, Google Developer Groups, meetups, or other organizations.</p>
+                      </div>
+                    </li>
+                    <li>
+                      <label>Are the Polytechnic events vetted by Google?</label>
+                      <div>
+                        <p>The Polytechnic events listed on this site are not vetted by Google.</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <a tabindex="-1" target="_blank" href="">
-                  <paper-button class="anchor-button blue" disabled raised>Coming Soon!</paper-button>
-                </a>
-              </paper-material>
+              </div>
             </div>
 
           </section>
-
-          <schedule-grid name="schedule" schedule="{{schedule}}" narrow-layout="{{narrowLayout}}"></schedule-grid>
-
-          <speakers-grid name="speakers" speakers="{{speakers}}" narrow-layout="{{narrowLayout}}"></speakers-grid>
 
         </iron-pages>
 
