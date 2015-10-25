@@ -36,6 +36,10 @@ h3 {
   padding: 0;
 }
 
+app-header {
+  z-index: 100 !important;
+}
+
 .bottom-spacer {
   margin-bottom: 24px;
 }
@@ -565,14 +569,13 @@ schedule-grid, speakers-grid {
   color: #445963;
 }
 
-.faq ul {
-  list-style: none;
+.faq-items {
   margin: 0;
   padding: 0;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
-.faq label {
+.faq-item label {
   position: relative;
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
@@ -591,11 +594,11 @@ schedule-grid, speakers-grid {
   user-select: none;
 }
 
-.faq label:active {
+.faq-item label:active {
   background-color: #eff2f3;
 }
 
-.faq label::before {
+.faq-item label::before {
   content: url(../images/icon-plus.svg);
   position: absolute;
   top: 25px;
@@ -613,7 +616,7 @@ schedule-grid, speakers-grid {
   border-radius: 2px;
 }
 
-.faq li div {
+.faq-item div {
   max-height: 0;
   overflow-y: hidden;
   background-color: #445963;
@@ -622,19 +625,32 @@ schedule-grid, speakers-grid {
   padding: 0 24px 2px 24px;
 }
 
-.faq li p {
+.faq-item p {
   line-height: 1.8;
   -webkit-font-smoothing: initial;
 }
 
-.faq li.open label::before {
+.faq-item.iron-selected label::before {
   content: url(../images/icon-minus.svg);
   background-color: #445963;
 }
 
-.faq li.open div {
+.faq-item.iron-selected div {
   max-height: initial;
   padding: 20px 20px 20px 60px;
+}
+
+
+event-map {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  event-map {
+    height: 500px;
+  }
 }
 
 @media (min-width: 801px) {
