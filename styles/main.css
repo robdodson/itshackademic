@@ -358,6 +358,10 @@ paper-button iron-icon {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
+.faq-item a {
+  border-bottom: 1px dotted;
+}
+
 .faq-item label {
   position: relative;
   font-family: 'Roboto Condensed', sans-serif;
