@@ -59,18 +59,10 @@ app-header {
   background-size: contain;
 }
 
-.badge-white {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  background: url(../images/badge_white.png) no-repeat center center;
-  background-size: contain;
-}
-
 .badge-blue-small {
   width: 100px;
-  height: 60px;
-  background: url(../images/badge_blue_small.png) no-repeat center center;
+  height: 100px;
+  background: url(../images/polytechnic-badge-small.png) no-repeat center center;
   background-size: contain;
 }
 
@@ -86,37 +78,9 @@ app-header {
   background-color: #4FB6F7;
 }
 
-.header-layout:not([page=home]) > .main-header {
-  background-color: #fff;
-}
-
-.header-layout:not([page=home]) .tab:not(.iron-selected) {
-  color: #4FB6F7;
-  border-color: #eee;
-}
-
-.header-layout:not([page=home]) .tab.iron-selected {
-  border-color: #FC6C9C;
-}
-
-.header-layout[page=home] .home-page-hidden {
-  display: none !important;
-}
-
-.header-layout:not([page=home]) .home-page-only {
-  display: none !important;
-}
-
 .main-toolbar {
   position: relative;
   height: 80px;
-}
-
-.toolbar-badge {
-  position: absolute;
-  left: 24px;
-  top: 10px;
-  transition: opacity 0.1s, visibility 0.1s;
 }
 
 .header-tools {
@@ -128,11 +92,6 @@ app-header {
 .header-social-icon {
   padding: 18px 12px;
   color: #147BCC;
-}
-
-.header-layout[page=home] .main-header:not([threadhold-matches]) .toolbar-badge {
-  opacity: 0;
-  visibility: hidden;
 }
 
 .tab {
@@ -184,7 +143,7 @@ app-header {
   background-color: #147BCC;
 }
 
-.date-loc-banner, .speakers-banner {
+.announce-banner {
   position: relative;
   padding: 48px 0;
   box-sizing: border-box;
@@ -194,11 +153,7 @@ app-header {
   color: #fff;
 }
 
-.speakers-banner {
-  font-weight: 300;
-}
-
-.date-loc-banner::after {
+.announce-banner::after {
   content: '';
   position: absolute;
   top: 0;
@@ -211,18 +166,6 @@ app-header {
   border-left: none;
 }
 
-.welcome-msg {
-  max-width: 600px;
-  padding: 64px 16px;
-  margin: 0 auto;
-  line-height: 32px;
-}
-
-.welcome-msg time {
-  min-width: 150px;
-  font-weight: 600;
-}
-
 .content-area {
   background-color: #eff2f3;
   background-image: url("../images/bg1.png");
@@ -230,104 +173,11 @@ app-header {
   background-position: top center;
 }
 
-.wait-list-banner {
-  position: relative;
-  padding: 24px 16px;
+.welcome-msg {
+  max-width: 600px;
+  padding: 64px 16px;
   margin: 0 auto;
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 30px;
-  line-height: 46px;
-  color: #fff;
-  /* pink pattern */
-  background:
-    url(../images/Pink_BG_Pattern/Desktop/Summit_PinkBGPattern_Left.png) center left repeat-y,
-    url(../images/Pink_BG_Pattern/Desktop/Summit_PinkBGPattern_Right.png) center right repeat-y;
-  background-color: #FC6C9C;
-  background-size: 25%;
-}
-
-.pink-arrow-btn {
-  display: inline-block;
-  position: relative;
-  padding: 16px;
-  margin: 0 16px;
-  background-color: #E45484;
-  font-size: 23px;
-  line-height: 24px;
-}
-
-.pink-arrow-btn::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 14px);
-  right: -14px;
-  width: 0;
-  height: 0;
-  border-color: transparent #E45484;
-  border-width: 14px 0 14px 14px;
-  border-style: solid;
-  -webkit-transform: scaleY(2.0);
-  transform: scaleY(2.0);
-}
-
-.signup-live-stream-btn {
-  margin-right: 24px;
-}
-
-.amsterdam-bg {
-  display: block;
-  position: relative;
-  height: 600px;
-  background: url(../images/muziekgebouw.jpg) no-repeat center 0%;
-  background-size: cover;
-}
-
-.amsterdam-scrim {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.56);
-}
-
-.amsterdam-info h3 {
-  padding-bottom: 8px;
-  margin: 16px 0;
-  border-bottom: 2px solid;
-}
-
-.about-waterfront h3 {
-  color: #4FB6F7;
-}
-
-.getting-there h3 {
-  color: #147BCC;
-}
-
-.amsterdam-info section {
-  max-width: 400px;
-}
-
-.about-waterfront {
-  padding: 48px 24px 24px 16px;
-  color: #147BCC;
-}
-
-.about-waterfront h3 {
-  color: #4FB6F7;
-}
-
-.getting-there {
-  padding: 48px 8px 24px 24px;
-  background-color: #4FB6F7;
-  color: #fff;
-}
-
-.getting-there .direction {
-  font-size: 18px;
-  margin-bottom: 16px;
+  line-height: 32px;
 }
 
 .misc-banner {
@@ -361,63 +211,12 @@ app-header {
   font-style: italic;
 }
 
-.misc-card {
-  max-width: 900px;
-  margin: 120px 32px;
-  padding: 32px;
-  color: #147BCC;
-  background-color: #fff;
-}
-
-.misc-card h3 {
-  color: #4FB6F7;
-}
-
-.misc-card-content {
-  margin-right: 24px;
-}
-
-.misc-card > .tools {
-  min-width: 400px;
-}
-
-.misc-card > .tools > a {
-  display: block;
-}
-
-.misc-card paper-button {
-  width: 100%;
-  text-transform: none;
-}
-
-paper-button.anchor-button {
-  margin: 0;
-}
-
-.anchor-button.blue {
-  background-color: #4FB6F7;
-  color: #fff;
-}
-
-.anchor-button.red {
-  background-color: #FC6C9C;
-  color: #fff;
-}
-
-paper-button iron-icon {
-  margin-right: 8px;
-}
-
 .extended-gplus-link {
   margin-right: 16px;
 }
 
 .extended-icon {
   margin-right: 4px;
-}
-
-.codelabs {
-  margin: 48px;
 }
 
 .home-bottom-banner {
@@ -452,10 +251,6 @@ paper-button iron-icon {
   color: #333;
 }
 
-schedule-grid, speakers-grid {
-  min-height: 90vh;
-}
-
 .container {
   width: 90%;
   max-width: 820px;
@@ -485,6 +280,10 @@ schedule-grid, speakers-grid {
   background-color: white;
   position: relative;
   margin-bottom: 1.5%;
+}
+
+paper-button iron-icon {
+  margin-right: 8px;
 }
 
 .resource paper-material {
@@ -534,35 +333,8 @@ schedule-grid, speakers-grid {
   text-align: left;
 }
 
-.resource-inner paper-button .label-button {
-  vertical-align: middle;
-  margin-left: 4px;
-}
-
 .resource:nth-child(even) .resource-title {
   background-color: #ff5c92;
-}
-
-@media screen and (min-width: 768px) {
-
-  /* clearfix */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .resource {
-    width: 32%;
-    float: left;
-    margin-right: 1.5%;
-    height: 380px;
-  }
-
-  .resource:nth-of-type(3n) {
-    margin-right: 0;
-  }
-
 }
 
 .faq {
@@ -644,17 +416,36 @@ schedule-grid, speakers-grid {
   padding: 20px 20px 20px 60px;
 }
 
-
 event-map {
   width: 100%;
   height: 300px;
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+
+  /* clearfix */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .resource {
+    width: 32%;
+    float: left;
+    margin-right: 1.5%;
+    height: 380px;
+  }
+
+  .resource:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
   event-map {
     height: 500px;
   }
+
 }
 
 @media (min-width: 801px) {
@@ -678,95 +469,24 @@ event-map {
     display: none !important;
   }
 
-  .date-loc-banner > .location, .wait-list-banner > h3 {
+  .announce-banner > .location {
     margin-bottom: 16px;
   }
 
-  .wait-list-banner > :first-child {
-    margin-bottom: 24px;
-  }
-
-  .speakers-banner {
-    padding: 24px 0 8px;
-  }
-
-  .speakers-banner > * {
-    margin-bottom: 16px;
-  }
-
-  .about-waterfront, .getting-there {
-    padding: 16px;
-  }
-
-  .about-waterfront > section, .getting-there > section {
-    width: 400px;
-  }
-
-  .codelabs {
-    margin: 0;
-  }
-
-  .misc-card {
-    margin: 16px;
-    padding: 16px;
-  }
-
-  paper-material[elevation].misc-card {
-    box-shadow: none;
-  }
-
-  .misc-card-content {
-    margin: 0;
-  }
-
-  .misc-card > .tools {
-    min-width: 0;
-  }
-
-  .wait-list-banner {
-    background: #FC6C9C url(../images/Pink_BG_Pattern/Mobile/Summit_PinkBGMobile.png) center center;
-    background-size: cover;
-  }
 }
 
 @media (max-width: 420px) {
+
   .welcome-msg {
     padding: 32px 16px;
   }
 
-  .amsterdam-bg {
-    height: 400px;
-  }
-
-  .amsterdam-info section {
-    width: 100%;
-  }
-
-  .amsterdam-info h3 {
-    font-size: 30px;
-  }
-
-  .misc-card {
-    margin: 0;
-    padding: 16px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .amsterdam-bg {
-    height: 960px;
-  }
 }
 
 /* high resolution devices */
 @media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .badge-blue {
-    background: url(../images/badge_blue@2x.png) no-repeat center center;
-    background-size: contain;
-  }
-
-  .badge-white {
-    background: url(../images/badge_white@2x.png) no-repeat center center;
+    background: url(../images/polytechnic-badge@2x.png) no-repeat center center;
     background-size: contain;
   }
 
@@ -783,14 +503,6 @@ event-map {
     background-color: #147BCC;
   }
 
-  .wait-list-banner {
-    background:
-      url(../images/Pink_BG_Pattern/Desktop/Summit_PinkBGPattern_Left@2x.png) center left repeat-y,
-      url(../images/Pink_BG_Pattern/Desktop/Summit_PinkBGPattern_Right@2x.png) center right repeat-y;
-    background-color: #FC6C9C;
-    background-size: 25%;
-  }
-
   .misc-banner {
     background:
       url(../images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Sm@2x.png) center center,
@@ -798,12 +510,5 @@ event-map {
       url(../images/Angle_Pattern/DkBlue_Royal_Footer/Summit_AnglePattern_Lg@2x.png) center center;
     background-size: 420px 210px, 600px 300px, 600px 600px;
     background-color: #1F1F35;
-  }
-}
-
-@media (max-width: 800px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .wait-list-banner {
-    background: #FC6C9C url(../images/Pink_BG_Pattern/Mobile/Summit_PinkBGMobile@2x.png) center center;
-    background-size: cover;
   }
 }
