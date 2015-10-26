@@ -404,6 +404,10 @@ paper-button.anchor-button {
   color: #fff;
 }
 
+paper-button iron-icon {
+  margin-right: 8px;
+}
+
 .extended-gplus-link {
   margin-right: 16px;
 }
