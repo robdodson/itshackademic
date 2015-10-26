@@ -40,6 +40,12 @@ app-header {
   z-index: 100 !important;
 }
 
+/* This is a hack that relies on Shady DOM behavior */
+/* https://github.com/PolymerLabs/app-layout/issues/10 */
+app-scrim {
+  z-index: 101 !important;
+}
+
 .bottom-spacer {
   margin-bottom: 24px;
 }
@@ -174,10 +180,11 @@ app-header {
 }
 
 .welcome-msg {
-  max-width: 600px;
-  padding: 64px 16px;
+  max-width: 768px;
+  padding: 64px 16px 48px;
   margin: 0 auto;
-  line-height: 32px;
+  line-height: 36px;
+  text-align: center;
 }
 
 .misc-banner {
