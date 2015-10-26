@@ -157,6 +157,7 @@ app-scrim {
   font-size: 28px;
   font-weight: 600;
   color: #fff;
+  line-height: 30px;
 }
 
 .announce-banner::after {
@@ -286,7 +287,7 @@ app-scrim {
 .resource {
   background-color: white;
   position: relative;
-  margin-bottom: 1.5%;
+  margin-bottom: 16px;
 }
 
 paper-button iron-icon {
