@@ -418,6 +418,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <iron-media-query query="(max-width: 643px)" query-matches="{{narrowLayout}}"></iron-media-query>
 
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting>
+      <platinum-sw-cache default-cache-strategy="fastest"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+
   </template>
 
   <script src="scripts/app.js"></script>

@@ -12,59 +12,46 @@ handlers:
 - url: /favicon.ico
   static_files: dist/static/favicon.ico
   upload: dist/static/favicon.ico
-  secure: never
 
 - url: /manifest.json
   static_files: dist/static/manifest.json
   upload: dist/static/manifest.json
-  secure: never
 
 - url: /sw-import.js
   static_files: dist/static/sw-import.js
   upload: dist/static/sw-import.js
-  secure: never
 
 - url: /bootstrap
   static_dir: dist/static/bower_components/platinum-sw/bootstrap
-  secure: never
 
 - url: /sw-toolbox
   static_dir: dist/static/bower_components/sw-toolbox
-  secure: never
 
 - url: /cache-config.json
   static_files: dist/static/cache-config.json
   upload: dist/static/cache-config.json
-  secure: never
 
 - url: /scripts
   static_dir: dist/static/scripts
-  secure: never
 
 - url: /styles
   static_dir: dist/static/styles
-  secure: never
 
 - url: /bower_components
   static_dir: dist/static/bower_components
-  secure: never
 
 - url: /elements
   static_dir: dist/static/elements
-  secure: never
 
 - url: /images
   static_dir: dist/static/images
-  secure: never
 
 - url: /code-of-conduct.html
   static_files: dist/static/code-of-conduct.html
   upload: dist/static/code-of-conduct.html
-  secure: never
 
 - url: .*
   script: main.app
-  secure: never
 
 skip_files:
 - ^(.*/)?app\.yaml
