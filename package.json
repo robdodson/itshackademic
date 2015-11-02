@@ -1,0 +1,32 @@
+{
+  "name": "its-hackademic",
+  "version": "4.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robdodson/zuperkulblog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robdodson/zuperkulblog/issues"
+  },
+  "homepage": "https://github.com/robdodson/zuperkulblog#readme",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "glob": "^5.0.15",
+    "gulp": "^3.9.0",
+    "gulp-crisper": "0.0.7",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-shell": "^0.5.1",
+    "gulp-uglify": "^1.4.2",
+    "gulp-vulcanize": "^6.0.1",
+    "http2-push-manifest": "0.0.2",
+    "merge-stream": "^1.0.0",
+    "web-component-shards": "git+ssh://git@github.com/PolymerLabs/web-component-shards.git#workDir"
+  }
+}
