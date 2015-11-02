@@ -1,5 +1,5 @@
 application: its-hackademic
-version: 4-0-1
+version: 4-1-0
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -50,8 +50,9 @@ handlers:
   static_files: dist/static/code-of-conduct.html
   upload: dist/static/code-of-conduct.html
 
-- url: .*
-  script: main.app
+- url: /$
+  static_files: dist/static/index.html
+  upload: dist/static/index.html
 
 skip_files:
 - ^(.*/)?app\.yaml
